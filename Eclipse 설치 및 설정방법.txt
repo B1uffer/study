@@ -1,0 +1,8 @@
+이클립스 사이트에서 다운로드
+    -   Download Packages - > 우측 More Downloads - Older Versions -> 2020-09 - > Try the Eclipse Installer(windows)
+    -   다운로드에서 작업파일 경로를 C:\DEV\eclipse-workspace 폴더로 설정
+    -   이클립스 실행시 좌측 상단의 File - New - Java project에서 JRE - Use an execution environment JRE : JaavaSE-11로 설정되었는지 확인
+    -   안되었을경우 window - preferences - java - compiler - JDK Compliance - Compiler compliance level : 11 로 설정
+    -   이후 Installed JREs - Location 경로를 수정(Edit)해서 Zulu11이 있는 폴더로 지정 (C:\DEV\zulu11)
+    -   General - Workspace에서  Text File Encoding : Other이 UTF-8로 지정되었는지 확인
+    -   Window - 

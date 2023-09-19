@@ -50,7 +50,34 @@ Dongjin 클래스를 하나의 소스파일에 둘 이상을 넣으려면 java �
 
 }
 
+소스파일의 이름 : Hello2.java
+public class Hello2 {}
+            class Hello3 {}
 
+소스파일의 이름 : Hello2.java
+public class Hello2 {}
+public class Hello3 {}              // 이건 틀린 작성법
+
+각 클래스(public)를 별도의 소스파일에 나눠서 저장
+
+Hello2.java
+public class Hello2 {
+    
+}
+    class fuck you;
+
+Hello3.java
+public class Hello3 {
+
+    class i'm sorry it's just joke lul;
+
+}
+
+※ JAVA는 대문자와 소문자를 구분한다
+
+
+public static void main(String[] args)
+public static void main(String[] args)
 
 ※주석 많이많이 반드시 적기
 
