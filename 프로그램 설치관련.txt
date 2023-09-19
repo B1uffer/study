@@ -1,1 +1,28 @@
 안녕하세요! 세계를 선도하는 JAVA 입니다.
+
+JDK : Java Development Kit
+
+Adoptium : home 실무에서는 8버전을 사용함 11도 사용함
+설치시 Java_Home_variable도 함께 설치
+확인방법 cmd - > java -version
+
+환경 변수 설정을 하는 방법
+Win - > 시스템 환경 변수 편집 - > 환경 변수 - > 시스템 변수에서 JAVA_HOME을 클릭한 후 편집 클릭
+※ 환경 변수가 제대로 설정되지 않았을 때
+새로 만들기 - > 변수 이름 : JAVA_HOME  // 변수 값 : 디렉터리 찾아보기 - > Program files -> Java -> jdk xxxxx 클릭 후 확인
+
+환경 변수 설정 하는 방법 두번째
+시스템 변수에서 Path 편집 - > jdk 경로가 없다면, 텍스트 편집 - > 변수 값에 경로\Program files\Java\Jdk.8.0버전-hotspot\bin 까지 설정
+※ C:\Program files\Java\jdk-8.0버전-hotspot 을 다른 경로로 대체하는 방법
+%JAVA_HOME%\bin;
+
+
+IDE : Integrated Development Environment 설치하기 : Intellij
+JAVA 활용 프로그램
+
+
+서버 쪽 프로그래밍을 위한 서블릿(servlet), JSP(Java Server Pages)
+
+자바가상머신(JVM) : 일종의 에뮬레이터
+자바 응용프로그램은 운영체제, 하드웨어가 아닌 JVM하고만 통신하고 JVM이 자바 응용프로그램으로부터 전달받은 명령을 해당 운영체제가 이해할 수 있도록 변환함
+JAVA 응용 프로그램 - > JVM -> 운영체제
