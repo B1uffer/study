@@ -1,4 +1,4 @@
-package ch5;						// 배열
+package ch5;						// int 배열
 
 public class ArrayEx1 {
 
