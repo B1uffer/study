@@ -26,7 +26,7 @@ class Tv {
 		
 		power = !power; }
 	
-	void channelUp() { 
+	void channelUp() { // 이걸로 tv를 작동시킨다 이게 메서드다
 		
 		++channel; }
 	
@@ -44,9 +44,8 @@ public class TvTest	{
 		
 		Integer i = new Integer(0);
 		int i2 = 0;
-		
-
-		Tv t = new Tv();
+									
+		Tv t = new Tv();    	// t (      )  
 		
 		t.channel = 7;
 		t.channelDown();
