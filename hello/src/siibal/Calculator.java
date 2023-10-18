@@ -1,5 +1,7 @@
 package siibal;
 
+import java.util.Scanner;
+
 // 계산기
 // 1. Scanner로 두개의 값을 입력받습니다.
 // 2. +, -, *, / % 연산을 메소드로 구현하세요.
@@ -29,46 +31,51 @@ public class Calculator {
 
 	}
 
-	static int remain(int num1, int num2) {
+	static int mod(int num1, int num2) {
 
 		return num1 % num2;
 	}
 	
 
-
+	// scanner
+	Scanner scanner = new Scanner(System.in);
+	
+	
 
 	public static void main(String[] args) {
 		
 		int result = 0;
 		int num1 = 0;
 		int num2 = 0;
-		char cal = ' ';
+		String cal = " ";
 		
 		switch(cal) {
 		
-		case '+':
+		case "+":
 			result = plus();
 		    break;
 		
-		case '-':
+		case "-":
 			result = minus();
 			break;
 			
-		case '*':
+		case "*":
 			result = multi();
 			break;
 			
-		case '/':
+		case "/":
 			result = divide();
 			break;
 			
-		case '%':
-			result = remain();
+		case "%":
+			result = mod();
 			break;
 			
-			default :
+			default :			// default값이 입력되었을 때 scanner로 다시 돌아가는 무한루트 만들기
 				System.out.println("올바른 값을 입력해주세요.");
-				continue;
+				break;		// while문으로 무한루트를 돌리기
+							// 반복문을 활용해서 무한루프 만들기
+							// boolean을 활용해서 true면 플래그를 바꾸기 종료합니다 이런식
 			
 		}
 		
