@@ -1,0 +1,41 @@
+group by 사용예제
+
+- 부서(DEPTNO), 관리자(MGR) 급여평균 계산  - > avg();
+
+SELECT DEPTNO, avg(MGR) from EMP
+
+GROUP BY DEPTNO, MGR;       // 부서, 관리자 순으로 정렬한다.
+
+
+- 직업별(JOB) 급여합계 { sum() } 중에 급여(SAL) 합계가 1,000 이상인 직업 - > sum(), having절
+
+급여합계가 들어가므로 sum(), 합계가 1000 이상이므로 having 칼럼 > 1000
+
+'직업별' 이므로 group by를 통해 job으로 정렬시킨다.
+
+
+select job, sum(SAL) from EMP
+
+group by job        // group by를 통해 job으로 정렬
+
+having sum(SAL) > 1000;     // 급여 합계 sum(SAL) 1000 이상인 놈들만 조회한다
+
+
+- 사원번호 1000 ~ 1003번의 부서별 급여 합계         -- > where between 데이터 and 데이터 
+
+사원번호(EMPNO)는 데이터, 필요한 칼럼은 부서, 그리고 '급여'의 합계이다
+
+사잇값을 조회해야 하므로 where 칼럼 between 1000 and 1003을 실행한다. 
+
+부서'별' 급여 합계이기 때문에 부서별로 정렬한다.
+
+/** between A and B - > A와 B를 포함한 데이터값을 조회한다
+        not between A and B - > A와 B, 그리고 그 사잇값들을 제외한 데이터값을 조회한다. **/
+
+
+select DEPTNO, sum(SAL) from EMP        // 부서와 급여의 합계 칼럼을 EMP 테이블에서 조회
+
+where EMPNO between 1000 and 1003       // 1000과 1003을 포함한 EMPNO, 사원번호를 조회
+
+group by DEPTNO;        // 부서별로 정렬
+

@@ -1,0 +1,13 @@
+WITH 구문
+
+    - with 구문은 서브쿼리(Subquery)를 사용해서 임시 테이블이나 뷰처럼 사용할 수 있는 구문임.
+    - 서브쿼리 블록에 별칭을 지정할 수 있음.
+    - 옵티마이저는 SQL을 인라인 뷰나 임시 테이블로 판단함.
+
+    with viewData as
+        /** (select * from EMP
+                union all
+               select * from emp
+              )     **/                                 sub query를 사용해서 임시 테이블을 만듬
+
+        select * from viewData where empno = 1000; // 메인 테이블

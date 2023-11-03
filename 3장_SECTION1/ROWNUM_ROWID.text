@@ -1,0 +1,43 @@
+ROWNUM과 ROWID
+
+ROWNUM (Oracle)
+
+    - ROWNUM은 Oracle DB의 SELECT문 결과에 대한 논리적 일련번호를 부여함.
+    - ROWNUM은 조회되는 행 수를 제한할 때 많이 사용된다.
+    - rownum은 화면에 데이터를 출력할 때 부여되는 논리적 순번.
+            만약 rownum을 사용해서 페이지 단위 출력을 하기 위해선 인라인 뷰(inline view)를 사용해야함.
+
+            * 인라인 뷰 (inline view)
+                inline view는 select문에서 from절에 사용되는 서브 쿼리를 의미한다.
+
+                select * from   // main query
+                (select * from emp) a;      // sub query (inline view)
+            
+            rownum의 값을 1, 2, 3, 4, 5, 6, ... 같이 순차적으로 증가하는 rownum 데이터를 얻고 싶을 땐
+            inline view를 사용한다.
+
+
+            * SQL server의 top 구문과 mysql의 limit 구문
+                Oracle은 ROWNUM을 사용하지만 SQL server는 top 구문을 사용하며 Mysql은 limit구를 사용한다.
+                
+                - SQL server
+                    select top(10) from emp;
+                
+                -MYSQL
+                    select * from emp limit 10;
+
+
+    특정 행의 리스트 조회 (웹 게시판 형태)
+
+    select * from (select rownum list, ename from emp)
+    where list between 5 and 10;
+
+
+
+ROWID문 (Oracle)
+    - ROWID는 Oracle DB 내에서 데이터를 구분할 수 있는 유일한 값이다.
+    - rowid는 "select rowid, empno from emp" 같은 select문으로 확인할 수 있다.
+    - rowd를 통해서 데이터가 어떤 데이터 파일, 어느 블록에 저장되어 있는지 알 수 있음.
+
+    select rowid, wineTypeName from winetype;
+    

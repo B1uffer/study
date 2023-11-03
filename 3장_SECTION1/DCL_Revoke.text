@@ -1,0 +1,7 @@
+REVOKE
+    - REVOKE문은 DB 사용자에게 부여된 권한을 회수한다.
+
+    REVOKE privileges ON object FROM user;
+        -- > user에게 object 테이블에 대한 권한을 회수함. 
+
+    * grant는 on ~ to , revoke는 on ~ from

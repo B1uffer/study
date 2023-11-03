@@ -1,0 +1,9 @@
+HAVING문 사용
+
+GROUP BY에 조건절을 사용하려면 HAVING을 사용해야 한다.
+
+만약, WHERE절에 조건문을 사용하게 되면 조건을 충족하지 못하는 데이터들은 GROUP BY 대상에서 제외된다.
+
+SELECT DEPTNO, SUM(SAL) FROM EMP
+GROUP BY DEPTNO
+HAVING SUM(SAL) > 10000;  -- > GROUP BY 결과에서 급여 합계(SUM(SAL))가 10,000 이상만 조회한다.
