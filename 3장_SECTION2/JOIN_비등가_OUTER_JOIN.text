@@ -1,0 +1,17 @@
+
+    non - EQUI(비동기) JOIN
+        Non - EQUI JOIN은 두 개의 테이블 간에 조인하는 경우, =를 사용하지 않고 ">", "<", ">=", "<=" 등을 사용함.
+        Non - EQUI JOIN은 정확하게 일치하지 않는 것을 조인한다.
+
+    OUTER JOIN
+        - OUTER JOIN은 두 개의 테이블 간에 교집합(EQUI JOIN)을 조회하고 한 쪽 테이블에만 있는 데이터도
+        포함시켜서 조회한다.
+        - EMP 테이블과 DEPT 테이블을 OUTER JOIN 하면 CODE가 같은 것을 조회하고 DEPT 테이블에만 있는
+        RNAME도 포함시킨다.
+        
+        - 이 때 왼쪽 테이블이면 LEFT OUTER JOIN을, 오른쪽 테이블은 RIGHT OUTER JOIN을 한다.
+
+        - FULL OUTER JOIN은 LEFT와 RIGHT 두 가지 모두 하는것이다.
+
+        Oracle DB에서는 OUTER JOIN을 할 때 "(+)" 기호를 사용할 수 있다.
+        

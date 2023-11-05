@@ -1,0 +1,12 @@
+MINUS - 차집합을 만듬
+
+ - MINUS 연산은 두 개의 테이블에서 차집합을 조회한다.
+ - 먼저 쓴 SELECT문에는 존재하고 뒤에 쓰는 SESLECT문에는 없는 집합을 조회한다.
+  
+  * MS-SQL에서는 MINUS와 동일한 연산이 EXCEPT이다. (Oracle은 MINUS, MySQL은 EXCEPT)
+
+  select deptno from dept
+  MINUS
+  select deptno from emp;
+
+

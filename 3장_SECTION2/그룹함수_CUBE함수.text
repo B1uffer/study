@@ -1,0 +1,13 @@
+CUBE 함수
+
+    - cube는 cube 함수에 제시한 칼럼에 대해 결합 가능한 모든 집계를 계산한다.
+    - 다차원 집계를 제공하여 다양하게 데이터를 분석할 수 있게 한다.
+    - ex : 부서와 작업을 cube로 사용하면 부서별 합계, 직업별 합계, 부서별 직업별 합계, 전체합계가 조회된다.
+
+    제시한 칼럼에 대해 결합 가능한 모든 집계, 즉 조합할 수 있는 모든 경우의 수가 큐브처럼 조회된다.
+
+    select deptno, job, sum(sal) from emp2
+    group by cube(deptno, job);
+
+    ** 이것도 MySQL에서는 동작하지 않는다.....
+            https://www.sqltutorial.org/sql-cube/

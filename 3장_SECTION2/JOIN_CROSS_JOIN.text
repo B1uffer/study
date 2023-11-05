@@ -1,0 +1,8 @@
+CROSS JOIN
+
+    - CROSS JOIN은 조인 조건부 없이 2개의 테이블을 하나로 조인한다.
+    - 조인구가 없기 때문에 카테시안 곱이 발생한다.
+        - > 행이 14개가 있는 테이블과 행이 4개 있는 테이블을 조인하면 총 56개의 행이 조회된다.
+    - CROSS JOIN은 FROM절에 "CROSS JOIN"을 사용하면 된다
+
+    select * from emp cross join dept; 

@@ -1,0 +1,24 @@
+ GROUPING SETS 함수 (이거 MySQL에서 안써짐 ㅅㅂ)
+
+     - GROUPING SETS 함수는 GROUP BY에 나오는 칼럼의 순서와 관계없이 다양한 소계를 만들 수 있다.
+     - GROUPING SETS 함수는 GROUP BY에 나오는 칼럼의 순서와 관계 없이 개별적으로 모두 처리한다.
+
+     select deptno, job, sum(sal) from emp2
+     group by grouping sets(deptno, job);
+
+
+     grouping sets 함수는 group by의 확장된 형태로, 하나의 group by 절에 여러 개의 그룹 조건을 적을 수 있다.
+
+     grouping sets 함수의 결과는 각 그룹 조건에 대해서 별도록 group by 한 결과를 union all 한 결과와 동일하다.
+
+     grouping sets 함수를 사용하면 union all 등을 사용하여 복잡하게 SQL문장을 작성했던 것을 간단하게 한 문장으로 해결할 수 있음.
+
+     위의 SQL을 길게 써내리면 다음과 같다.
+
+     select NULL deptno, job, sum(sal) from emp2
+     group by job
+     union all
+     select deptno, NULL job, sum(sal) from emp2
+     group by deptno;
+
+            ** null은 deptno 합계와 job의 합계가 서로 관계가 없다는 것을 grouping sets에서 알려주기 때문에 적어야한다.

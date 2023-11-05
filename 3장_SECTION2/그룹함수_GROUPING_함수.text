@@ -1,0 +1,12 @@
+GROUPING 함수
+
+    - GROUPING 함수는 WITH ROLLUP(ROLLUP), CUBE, GROUPING SETS에서
+        생성되는 합계값을 구분하기 위해 만들어진 함수임.
+
+    - ex : 소계, 합계 등이 계산되면 GROUPING 함수는 1을 반환하고 그렇지 않으면 0을 반환해서 "합계값을 식별할 수 있다".
+
+    select deptno, GROUPING(deptno), job, GROUPING(job), sum(sal) from emp2
+    group by deptno, job WITH ROLLUP;
+
+    -- > FUNCTION test1.grouping does not exist
+
