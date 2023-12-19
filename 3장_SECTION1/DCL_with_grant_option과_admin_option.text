@@ -1,0 +1,18 @@
+WITH GRANT OPTION, ADMIN OPTION
+
+WITH GRANT OPTION
+    - 특정 사용자에게 권한을 부여할 수 있는 권한을 부여한다.
+    - A 사용자가 B에게 권한을 부여하고, B가 다시 C를 부여한 후에 권한을 취소(REVOKE)하면 
+        모든 권한이 회수된다. (C까지 전부 회수됨)
+
+WITH ADMIN OPTION
+    - 테이블에 대한 모든 권한을 부여한다.
+    - A 사용자가 B에게 권한을 부여하고 다시 C에게 부여한 후에 권한을 취소(REVOKE) 하면
+        B 사용자의 권한만 취소된다. (C는 회수가 되지 않음)
+
+
+GRANT select, insert, update, delete
+    ON EMP
+    TO limbest WITH GRANT OPTION;
+        --> limbest 사용자에게 emp 테이블에 대해
+            select, insert, update, delete 권한을 부여할 수 있는 권한을 부여한다.

@@ -1,0 +1,10 @@
+
+집계함수 종류
+
+    count()     - > 행 수를 조회한다.
+    sum()         - > 합계를 계산한다.
+    avg()         - > 평균을 계산한다.   average
+    max()와 min()       - > 각각 최댓값과 최솟값을 계산한다.
+    STDDEV()        - > 표준편차를 계산한다.    standard deviation
+    VARIANCE()      - > 분산을 계산한다. var
+    

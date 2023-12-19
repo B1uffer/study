@@ -1,0 +1,7 @@
+INTEREST 연산 (아마도 Oracle, mysql에서 작동 안됨)
+ - interest 연산은 두 개의 테이블에서 교집합을 조회한다.
+ - 두 개의 테이블에서 공통된 값을 조회한다.
+
+ select code from emp
+ INTEREST
+ select code from dept;

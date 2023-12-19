@@ -1,0 +1,26 @@
+DCL(Data control Language)
+
+GRANT
+    - grant문은 DB 사용자에게 권한을 부여한다.
+    - DB 사용을 위해서는 권한이 필요하다. 연결, 입력, 수정, 삭제, 조회 등을 할 수 있다.
+
+    GRANT privileges ON object TO user;
+        * privileges는 권한을 의미한다.
+        * object는 테이블 명이다.
+        * user은 Oracle DB 사용자를 지정하면 된다.
+
+Privileges(권한) 종류
+    - SELECT : 지정된 테이블에 대해 SELECT 권한을 부여함.
+    - INSERT : 지정된 테이블에 대해 INSERT 권한을 부여.
+    - UPDATE : 지정된 테이블에 대해 UPDATE 권한을 부여.
+    - DELETE : 지정된 테이블에 대해 DELETE 권한을 부여.
+    - REFERENCES : 지정된 테이블을 참조하는 제약조건을 생성하는 권한을 부여함.
+    - ALTER : 지정된 테이블에 대해 수정할 수 있는 권한을 부여함.
+    - INDEX : 지정된 테이블에 대해 인덱스를 생성할 수 있는 권한을 부여.
+    - ALL : 테이블에 대한 모든 권한을 부여함.
+
+    GRANT select, insert, update, delete
+    ON emp
+    TO LIMBEST;
+            -- > LIMBEST 사용자에게 emp 테이블에 대해서 select, insert, update, delete 권한을 부여함.
+            

@@ -1,0 +1,31 @@
+TCL(Transaction Control Language)
+
+COMMIT
+    - COMMIT은 insert, update, delete문으로 변경한 데이터를 DB에 반영한다.
+    - 반영 이전 데이터는 잃어버린다.
+        - > A값을 B로 변경하고 commit을 하면 A값은 잃어버리고 B값만 반영하게 된다.
+    
+    - 다른 모든 DB 사용자는 변경된 데이터를 볼 수 있다.
+    - COMMIT가 완료되면 DB 변경으로 인한 LOCK이 해제(UNLOCK)된다.
+    - COMMIT이 완료되면 다른 DB 사용자는 변경된 데이터를 조작할 수 있다.
+    - COMMIT을 실행하면 하나의 트랜잭션 과정을 종료한다.
+
+
+
+    insert, update, delete -- > Transaction
+
+    commit //
+
+    기존 DB는 날아가고 변경 후 데이터를 DB에 저장함
+
+        * Oracle DB는 암시적 트랜잭션 관리를 한다.
+            Oracle DB로 트랜잭션을 시작하고, 트랜잭션의 종료는 Oracle DB 사용자가
+            COMMIT 혹은 ROLL-BACK으로 처리해야 한다.
+
+
+        * Auto commit
+            SQL*PLUS 프로그램을 정상적으로 종료하는 경우, 자동으로 COMMIT 된다.
+            DDL 및 DCL을 사용하는 경우 자동으로 COMMIT 된다.
+            "set autocommit on"을 SQL*PLUS에서 실행하면 자동으로 COMMIT 된다.
+
+            

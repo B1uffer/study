@@ -1,0 +1,12 @@
+connect by 키워드
+
+    LEVEL : 검색 항목의 깊이를 의미함. 즉 계층구조에서 가장 상위 레벨은 1이 됨. LEVEL - 1 = 0
+    CONNECT_BY_ROOT : 계층 구조에서 가장 최상위 값을 표시한다.      // ROOT
+    CONNECT_BY_ISLEAF : 계층 구조에서 가장 최하위 값을 표시한다.        // ISLEAF
+    SYS_CONNECT_BY_PATH : 계층 구조의 전체 전개 경로를 표시함.
+    NOCYCLE : 순환 구조가 발생지점까지만 전개됨.
+    CONNECT_BY_ISCYCLE : 순환 구조 발생 지점을 표시함.
+
+connect by구는 순방향 조회와 역방향 조회가 있다.
+    순방향 조회 : 부모 엔터티로부터 자식 엔터티를 찾아가는 검색
+    역방향 조회 : 자식 엔터티로부터 부모 엔터티를 찾아가는 검색

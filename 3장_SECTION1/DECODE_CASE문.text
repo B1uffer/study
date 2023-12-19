@@ -1,0 +1,31 @@
+DECODE문 (Oracle 전용) - > mysql은 if문
+
+    - DECODE문으로 IF문을 구현할 수 있음.
+        특정 조건이 참이라면 A, 거짓이라면 B로 응답한다.
+
+        decode(EMPNO, 1000, 'true', 'false')
+
+
+CASE문
+
+    - case문은 if~then ~else - end 처럼 조건문을 사용할 수 있다.
+    - 조건을 when구에 사용한다.
+    - 해당 조건이 참이면 then이 실행되고 거짓이면 else구가 실행된다.
+
+    case [expression]
+        WHEN condition_1 THEN result_1
+        WHEN condition_2 THEN result_2
+
+        WHEN condition_n THEN result_n
+
+        ELSE result
+    END
+
+select *
+    when age = 15 then '15살'
+    when age = 16 then '16살'
+    when age = 17 then '17살'
+    else '상했음'
+end
+    from student2;
+        

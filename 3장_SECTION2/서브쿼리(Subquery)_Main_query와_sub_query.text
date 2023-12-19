@@ -1,0 +1,26 @@
+Main query & Sub query      (MySQL 사용 가능)
+
+    - Sub query는 SELECT문 내에 다시 SELECT문을 사용하는 SQL문이다.
+
+    - Sub query의 형태는 FROM구에 SELECT문을 사용하는 인라인 뷰(inline view)와
+            SELECT문에 Subquery를 사용하는 스칼라 서브쿼리(Scala Subquery) 등이 존재한다.
+
+    - WHERE구에 SELECT문을 사용하면 서브쿼리(subquery)라고 한다.
+
+    select * from emp2
+    WHERE deptno = (SELECT empno FROM emp WHERE empno = 1000);
+
+        위의 예에서 WHERE구에 있는 SELECT문은 서브쿼리(sub query)이고 괄호 내에 SELECT문을 사용한다.
+
+
+        ** 서브쿼리 밖에 있는 SELECT문은 메인쿼리(Main Query) 이다.
+
+        select * FROM (SELECT rownum num, ename FROM emp) a
+            WHERE num < 5;
+
+                    ** FROM구에 있는 SELECT문을 인라인 뷰(inline view) 라고 한다.
+
+                - FROM구에 SELECT문을 사용하여 가상의 테이블을 만드는 효과를 얻을 수 있다.
+                - FROM에 SELECT문을 사용한 것이 인라인 뷰(Inline View) 이다.
+
+

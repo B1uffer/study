@@ -1,0 +1,46 @@
+다중 행 서브쿼리(Multi row subquery)
+
+    - Muti row subquery는 서브쿼리의 결과 여러 개의 행을 반환하는 것으로 
+        다중 행 연산자 IN, ANY, ALL, EXISTS를 사용해야함.
+    
+    다중 행 비교 연산자
+        IN(Subquery) : Main Query의 비교조건이 Sub Query의 결과 중 하나"만" 동일하면 참이 된다. (OR) 
+
+        ALL(Subquery) : Main Query와  Sub Query의 결과가 모두 동일하면 참이 된다. (AND) ALL = AND
+                < ALL : 최솟값을 반환한다.
+                > ALL : 최댓값을 반환한다.
+
+        ANY(Subquery) : Main Query의 비교조건이 Sub Query의 결과 중 하나 "이상이" 동일하면 참이 된다.
+                < ANY : 하나라도 크게 되면 참이 된다.
+                > ANY : 하나라도 작게 되면 참이 된다.
+
+        EXISTS(Subquery) : Main Query와 Sub Query의 결과가 하나라도 존재하면 참이 된다.
+
+
+IN : 반환되는 여러 개의 행 중에서 하나만 참이 되어도 참이 되는 연산.
+
+    select ename, rname, sal from emp2, dept
+    where emp2.deptno = dept.code
+    and emp2.empno
+        IN (SELECT empno FROM emp2 WHERE sal > 2000);       // SAL(급여)가 2,000보다 큰 EMPNO(사원번호)를 조회한 후 emp2.empno를 조회한다.
+            
+            EMP2 테이블에서 SAL이 2000 초과인 EMPNO를 반환하고 
+            반환된 EMPNO와 Main Query에 있는 EMPNO와 비교해서(emp2.empno) 같은 것을 조회한다.
+
+
+ALL : 메인 쿼리와 서브 쿼리의 결과가 모두 동일하면 참이 된다.
+    select * from emp2
+    where deptno <= ALL (20, 30);                   //   cmd MySQL에서 사용 안됨
+
+            deptno가 20, 30보다 작거나 같으면 조회된다.
+
+EXISTS : Sub Query로 어떤 데이터 존재 여부를 확인하는 것이다.
+    - EXISTS의 결과는 참과 거짓이 반환된다.
+
+    select ename, rname, sal from emp2, dept
+    where emp2.deptno = dept.code
+    and EXISTS (SELECT 1 from emp2 WHERE sal > 2000);
+
+        직원 중에서 급여가 2000이상이 있으면 참이 반환되고, 없으면 거짓이 반환된다.
+
+            

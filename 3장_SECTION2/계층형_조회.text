@@ -1,0 +1,78 @@
+계층형 조회(CONNECT BY) - Oracle에서만 지원하며 Oracle DB에서만 작동함...
+
+계층형 조회는 Oracle DB에서 지원하는 것으로, 계층형 데이터를 조회할 수 있다. (트리 형태의 구조)
+ ex : 부장에서 차장, 차장에서 과장, 과장에서 대리, 대리에서 사원 순으로 트리 형태의 구조를 위해
+        아래로 탐색하면서 조회하는 것. 
+
+        역방향 조회도 물론 가능하다.
+
+        create table emp(
+            empno number(int)(10) primary key,
+            ename varchar2(varchar)(20),
+            deptno number(int)(10),
+            mgr number(int)(10),
+            job varchar2(varchar)(20),
+            sal number(int)(10)
+        );
+
+            INSERT INTO EMP VALUES(1000, 'TEST1', 20, NULL, 'CLERK', 800);
+            INSERT INTO EMP VALUES(1001, 'TEST2', 30, 1000, 'SALESMAN', 1600);
+            INSERT INTO EMP VALUES(1002, 'TEST3', 30, 1000, 'SALESMAN', 1250);
+            INSERT INTO EMP VALUES(1003, 'TEST4', 20, 1000, 'MANAGER', 2975);
+            INSERT INTO EMP VALUES(1004, 'TEST5', 30, 1000, 'SALESMAN', 1250);
+            INSERT INTO EMP VALUES(1005, 'TEST6', 30, 1001, 'MANAGER', 2850);
+            INSERT INTO EMP VALUES(1006, 'TEST7', 10, 1001, 'MANAGER', 2450);
+            INSERT INTO EMP VALUES(1007, 'TEST8', 20, 1006, 'ANALYST', 3000);
+            INSERT INTO EMP VALUES(1008, 'TEST9', 30, 1006, 'PRESIDENT', 5000);
+            INSERT INTO EMP VALUES(1009, 'TEST10', 30, 1002, 'SALESMAN', 1500);
+            INSERT INTO EMP VALUES(1010, 'TEST11', 20, 1002, 'CLERK', 1100);
+            INSERT INTO EMP VALUES(1011, 'TEST12,', 30, 1001, 'CLERK', 950);
+            INSERT INTO EMP VALUES(1012, 'TEST13', 20, 1000, 'ANALYST', 3000);
+            INSERT INTO EMP VALUES(1013, 'TEST14', 10, 1000, 'CLERK', 1300);
+
+            COMMIT
+
+
+    select MAX(LEVEL)       // LEVEL에는 계층값을 가지고 있다..
+    from Limbest.emp
+    START WITH mgr IS null
+    CONNECT BY PRIOR empno = mgr;
+
+            *** PRIOR ?? - > 바로 직전에 출력된 행을 의미한다.
+
+            * connect by는 트리 형태의 구조로 질의를 수행하는 것으로, 
+            * START WITH구는 시작 조건을 의미하고
+            * CONNECT BY PRIOR은 조인 조건이다.
+            * root 노드로부터 하위 노드의 질의를 실행한다.
+            * 위의 SQL에서 MAX(LEVEL)은 4이다.
+                    - > 왜인가?
+                    START WITH 구문에서 mgr is null을 적었기 때문에
+                    null 값을 가진 mgr부터 트리가 형성이 된다.
+
+    계층형 조회 결과를 명확하게 보기 위해서 LPAD 함수를 사용할 수 있다.
+
+    SELECT LEVEL, LPAD('    ', 4 * (LEVEL - 1) ) | empno,
+                    mgr, CONNECT_BY_ISLEAF
+    FROM emp
+    START WITH mgr is null
+    CONNECT BY PRIOR empno = mgr;
+
+                4 * (LEVEL - 1)  == > LEVEL 값이 Root이면 1이 된다. 따라서 4 * (1 - 1) = 0이 된다.
+                즉, ROOT 일때는 LPAD('  ', 0) 이므로 아무런 의미가 없다.
+                하지만 LEVEL 값이 2가 되면 4*(2-1) = 4가 된다.
+                LPAD('  ', 4) 이므로 왼쪽 공백 4칸을 화면에 찍는다는 의미가 된다.
+
+                결과적으로 LPAD는 트리 형태를 확인하기 위해 사용하는 것이다.
+                왜냐하면 LEVEL값은 Root에 1을 되돌리고 그 다음은 2, 다음은 3이 나오기 때문이다.
+
+
+
+connect by 키워드
+
+    LEVEL : 검색 항목의 깊이를 의미함. 즉 계층구조에서 가장 상위 레벨은 1이 됨. LEVEL - 1 = 0
+    CONNECT_BY_ROOT : 계층 구조에서 가장 최상위 값을 표시한다.      // ROOT
+    CONNECT_BY_ISLEAF : 계층 구조에서 가장 최하위 값을 표시한다.        // ISLEAF
+    SYS_CONNECT_BY_PATH : 계층 구조의 전체 전개 경로를 표시함.
+    NOCYCLE : 순환 구조가 발생지점까지만 전개됨.
+    CONNECT_BY_ISCYCLE : 순환 구조 발생 지점을 표시함.
+

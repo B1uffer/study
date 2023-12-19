@@ -1,0 +1,27 @@
+그룹 함수(Group Function)
+
+    ROLLUP
+
+    - ROLLUP은 GROUP BY의 칼럼에 대해 Subtotal을 만들어준다.
+    - ROLLUP을 할 때 GROUP BY구에 칼럼이 두 개 이상이 오면 순서에 따라 결과값이 달라진다.
+
+                    ** MySQL의 경우에는 Group by 칼럼명 with rollup; 형태를 사용한다고 한다.
+
+
+       - 아래의 SQL은 Oracle DB 전용이다.
+    select DECODE(deptno, null, '전체 합계', deptno), sum(sal) from emp2
+    GROUP BY ROLL UP(deptno);
+
+        - MySQL
+        select deptno, empno, ename, sum(sal) from emp2
+        GROUP BY deptno, empno WITH ROLLUP;
+
+                    ** MySQL에서는 with rollup을 사용하는 모습이다.
+
+
+
+                부서별(deptno), 직업별(job) with rollup을 실행하면 부서벌, 직업별, 전체 합계가 모두 조회된다.
+                with rollup으로 실행되는 칼럼별로 subtotal을 만들어줄 수 있다.
+
+                select deptno, job, sum(sal) from emp2
+                group by deptno, job with rollup;

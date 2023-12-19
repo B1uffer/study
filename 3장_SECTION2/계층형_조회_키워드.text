@@ -1,0 +1,31 @@
+계층형 조회 키워드
+
+    START WITH 조건 : 계층 전개의 시작 위치를 지정하는 것.
+    PRIOR 자식 = 부모 : 부모에서 자식 방향으로 검색을 수행하는 순방향 전개. (부모 - > 자식)
+    PRIOR 부모 = 자식 : 자식에서 부모 방향으로 검색을 수행하는 역방향 전개. (자식 - > 부모)
+          
+            // PRIOR A = B 에서, B가 A에게 주는 형태이다.
+
+    NOCYCLE : 데이터를 전개하면서 이미 조회된 데이터를 다시 조회하면 하나의 CYCLE이 형성된다.
+                        이 때 NOCYCLE은 이 CYCLE을 발생하지 않게 한다.
+    Order siblings by 칼럼명 : 동일한 LEVEL인 형제 노드 사이에서의 정렬을 수행한다.     order siblings
+
+    mgr(관리자)로부터 empno(사원)을 조회하는 순방향 조회
+    select LEVEL, LPAD('    ', 4 * (LEVEL-1))   | | empno, mgr, CONNECT_BY_ISLEAF ISLEAF // isleaf는 최하위 조회
+        from emp
+                                                    // 4는 MAX(LEVEL)의 갯수
+    START WITH mgr is null
+    CONNECT BY PRIOR empno = mgr;       // empno = mgr에서 mgr이 부모, empno가 자식
+
+
+
+    역방향 전개를 위해 순방향 전개를 실행하여 leaf 노드의 사원번호를 확인함.
+        ex : leaf 노드의 사원번호가 1008번이라고 했을 때
+
+
+        select LEVEL, LPAD('    ', 4 * (LEVEL - 1)) | | empno, mgr, CONNECT_BY_ISLEAF ISLEAF
+            from emp
+            START WITH empno = 1008     // root의 시작을 1008번부터
+            CONNECT BY PRIOR mgr = empno;       // 역방향 조회를 실행한다.
+
+    

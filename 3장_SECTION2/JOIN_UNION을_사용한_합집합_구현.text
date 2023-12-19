@@ -1,0 +1,22 @@
+UNION을 사용한 합집합 구현
+
+UNION
+    - UNION 연산은 두 개의 테이블을 하나로 만드는 연산.
+    - 2개의 테이블을 하나로 합치는 것.
+        * 두 개 테이블의 칼럼 수, 칼럼의 데이터 형식 모두 일치해야 한다.
+            만약 두 개의 테이블에 UNION 연산이 사용 될 때 칼럼 수 혹은 데이터 형식이 다르다면 오류가 발생한다.
+
+    - UNION 연산은 두 개의 테이블을 하나로 합치면서 중복된 데이터를 제거한다.
+    - UNION 연산은 정렬(Sort) 과정을 발생시킨다.
+
+    select deptno from emp
+    UNION
+    select deptno from emp;
+
+UNION ALL
+    - UNION ALL은 두 개의 테이블을 하나로 합치는 것임.
+    * UNION처럼 중복을 제거하거나 정렬을 유발하지 않는다.
+
+    select deptno from emp
+    UNION ALL
+    select deptno from emp;
