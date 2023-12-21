@@ -32,7 +32,7 @@ public class ex12_기본형및참조형매개변수4 {
 			
 		}
 		
-		return sum;
+		return sum;		// static 'int'이기 때문에 반환값도 int로
 
 		
 	}
