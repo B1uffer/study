@@ -1,6 +1,6 @@
 package 객체지향_프로그래밍1;
 
-public class ex2_메서드사용법2 {
+public class ex02_메서드사용법2 {
 
 	public static void main(String[] args) {
 		
