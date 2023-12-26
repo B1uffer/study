@@ -20,14 +20,14 @@ public class ex20_인스턴스와클래스메서드의참조와호출 {
 		
 	}
 	
-	void instanceMethod1() {
+	void instanceMethod1() {			// 인스턴스 메서드
 		System.out.println(cv);
 		System.out.println(iv); 		// 인스턴스 메서드에서는 인스턴스 변수를 바로 사용할 수 있음
 		
 		
 	}
 	
-	static void staticMethod2() {
+	static void staticMethod2() {		// 클래스 메서드 2
 		staticMethod1();
 		// instanceMethod1();		클래스 메서드에선 인스턴스 메서드를 바로 불러올 수 없고 객체를 생성해야함
 		ex20_인스턴스와클래스메서드의참조와호출 c = new ex20_인스턴스와클래스메서드의참조와호출();		// 객체 생성
@@ -35,7 +35,7 @@ public class ex20_인스턴스와클래스메서드의참조와호출 {
 		
 	}
 	
-	void instanceMethod2() {		// 인스턴스 메서드
+	void instanceMethod2() {		// 인스턴스 메서드 2
 		
 		staticMethod1();			// 인스턴스 메서드에선 클래스 메서드, 인스턴스 메서드 모두 호출가능
 		instanceMethod1();			// 인스턴스 생성 없이 가능하다
