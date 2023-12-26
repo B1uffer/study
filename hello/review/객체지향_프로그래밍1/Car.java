@@ -7,6 +7,7 @@ public class Car {
 	int door;			// 문의 갯수
 	
 	Car() {
+	
 		
 	}
 	
@@ -16,4 +17,6 @@ public class Car {
 		door = d;
 		
 	}
+	
+	
 }
