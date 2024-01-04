@@ -20,4 +20,5 @@ public class Point {
 		return("("+ x +", "+ y +")");		// x와 y의 값을 문자열로 반환한다
 		
 	}
+
 }
