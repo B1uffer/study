@@ -1,6 +1,6 @@
 package 객체지향_프로그래밍2;
 
-public class ex1_상속 {
+public class ex01_상속 {
 
 	public static void main(String[] args) {
 		
