@@ -1,6 +1,6 @@
 package 객체지향_프로그래밍2;
 
-public class Deck {
+class Deck {
 
 	final int CARD_NUM = 52; // 카드의 총 갯수
 	Card cardArr[] = new Card[CARD_NUM]; // Card 객체 배열 포함하기 Card[52]가 되는거임

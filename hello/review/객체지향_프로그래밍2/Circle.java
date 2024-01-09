@@ -1,6 +1,6 @@
 package 객체지향_프로그래밍2;
 
-public class Circle extends Shape {		// Shape를 포함함
+class Circle extends Shape {		// Shape를 포함함
 	
 	Point center;		// point 클래스는 x, y좌표를 저장하기 위한 멤버변수를 가지고 있다
 	int r;
