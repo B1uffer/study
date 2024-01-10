@@ -1,6 +1,6 @@
 package 객체지향_프로그래밍2;
 
-public class ex2_클래스의관계 {
+public class ex02_클래스의관계 {
 
 	public static void main(String[] args) {
 		
