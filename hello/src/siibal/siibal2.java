@@ -4,7 +4,12 @@ public class siibal2 {
 
 	public static void main(String[] args) { // main도 하나의 메서드다
 		
-		hello();
+		siibal2 hello = new siibal2();
+		
+		hello.hello();
+		
+		
+		//hello();		// static이 붙으면 인스턴스를 생성하지 않아도 불러올 수 있음
 
 		helloMan("철수");
 		
@@ -22,7 +27,7 @@ public class siibal2 {
 	
 	// 1. 메소드명 : hello, 매개변수 없음, 반환값 없음, hello! 출력하기
 	
-	static void hello() {
+	 void hello() {
 		
 		System.out.println("Hello!");
 		
