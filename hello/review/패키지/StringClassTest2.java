@@ -140,6 +140,9 @@ public class StringClassTest2 {
 		String date = String.valueOf(dat);
 		System.out.println(date);
 		
+		
+		// CharSequence는 JDK 1.4부터 추가된 인터페이스로 String, StringBuffer 등의 클래스가 구현했음
+		// contains(CharSequence s), replace(CharSequence old, CharSequence nw)는 JDK 1.5부터 추가됨
 	}
 
 }
