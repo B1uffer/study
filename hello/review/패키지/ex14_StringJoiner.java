@@ -6,7 +6,7 @@ public class ex14_StringJoiner {
 
 	public static void main(String[] args) {
 		
-		// join()과 StringJointer에 대해
+		// join()과 StringJointer에 대해서
 		
 		String animals = "dog,cat,bear";
 		String[] arr = animals.split(",");
