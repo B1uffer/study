@@ -6,6 +6,8 @@ public class ex42_StringTokenizer5 {
 
 	public static void main(String[] args) {
 		
+		// 구분자를 ','로 하는 문자열 데이터를 String 클래스의 split()과 StringTokenizer로 잘라서 결과를 비교하는 예제
+		
 		String data = "100,,,200,300";
 		
 		String[] result = data.split(",");
