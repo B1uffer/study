@@ -2,9 +2,11 @@ package 패키지;
 
 // import static java.lang.Math.*;
 
+import java.math.*;
+
 public class MathTest {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		// static double abs(double a)
 		// staitc float abs(float f)
@@ -95,6 +97,53 @@ public class MathTest {
 		double d14 = 90.7552;
 		double d15 = Math.round(d14*100)/100.0;		// 9076 / 100
 		System.out.println(d15);
+		
+		System.out.println();
+		
+		BigDecimal val = new BigDecimal(1.0e-22);
+		System.out.println(val.toPlainString());
+		System.out.println(val.toString());
+		
+		System.out.println();
+		
+		BigDecimal val2 = new BigDecimal(3.141592);
+		System.out.println(val2.toPlainString());
+		System.out.println(val2.toString());
+		
+		System.out.println();
+		
+		BigDecimal bd1 = new BigDecimal("123.456");
+		System.out.println(bd1);
+		System.out.println(bd1.scale());
+		System.out.println(bd1.unscaledValue());
+		System.out.println(bd1.precision());
+		System.out.println();
+		
+		BigDecimal bd2 = new BigDecimal("1.0");
+		System.out.println(bd2);
+		System.out.println(bd2.scale());
+		System.out.println(bd2.unscaledValue());
+		System.out.println(bd2.precision());
+		System.out.println();
+		
+		BigDecimal bd3 = bd2.multiply(bd1);
+		System.out.println(bd3);
+		System.out.println(bd3.scale());
+		System.out.println(bd3.unscaledValue());
+		System.out.println(bd3.precision());
+		System.out.println();
+		
+		BigDecimal bigd = new BigDecimal("1.0");
+		BigDecimal bigd2 = new BigDecimal("3.0");
+		// System.out.println(bigd.divide(bigd2)); java.lang.ArithmeticException이 발생한다
+		System.out.println(bigd.divide(bigd2, 3, RoundingMode.HALF_UP));		// 5 이상에서 반올림, 5 미만에서 내림
+		System.out.println();
+		
+		BigDecimal bd4 = new BigDecimal("123.456");
+		BigDecimal bd5 = new BigDecimal("1.0");
+		System.out.println(bd4.divide(bd5, 2, RoundingMode.HALF_UP));
+		System.out.println(bd4.divide(bd5, new MathContext(2, RoundingMode.HALF_UP)));
+		// MathContext()는 정수와 소수점 이하를 모두 포함한 자릿수를 의미한다
 		
 		
 	}
