@@ -2,6 +2,8 @@ package 날짜와시간_형식화;
 
 public class convertDateToDay {
 	
+	// 년월일을 입력받은 후 일단위로 변환한다
+	
 	isLeapYear l = new isLeapYear();
 	endOfMonth m = new endOfMonth();
 	
