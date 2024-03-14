@@ -70,6 +70,36 @@ public class Period_DurationTest {
 		
 		System.out.println();
 		
+		// between(), until()
+		
+		LocalDate today = LocalDate.now();
+		LocalDate myBirthDay = LocalDate.of(2010, 1, 15);
+		
+		//Period pe1 = Period.between(today, myBirthDay);
+		Period pe1 = today.until(myBirthDay);
+		System.out.println(pe1);
+		long dday = today.until(myBirthDay, ChronoUnit.DAYS);
+		System.out.println(dday);
+		
+		LocalTime endTime = LocalTime.of(19, 30);
+		
+		long sec3 = LocalTime.now().until(endTime, ChronoUnit.SECONDS);
+		System.out.println(sec3);
+		
+		System.out.println();
+		
+		// of(), with()
+		
+		Period pe2 = Period.of(1, 12, 31);
+		System.out.println(pe2);
+		Duration du1 = Duration.of(60, ChronoUnit.SECONDS);
+		System.out.println(du1);
+		
+		pe2 = pe2.withYears(2);
+		System.out.println(pe2);
+		du1 = du1.withSeconds(120);
+		System.out.println(du1);
+		
 		
 	}
 
