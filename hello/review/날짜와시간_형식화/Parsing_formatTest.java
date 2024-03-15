@@ -8,6 +8,8 @@ public class Parsing_formatTest {
 
 	public static void main(String[] args) {
 		
+		// 파싱과 포맷 테스트
+		
 		LocalDate date = LocalDate.of(2016, 1, 2);
 		
 		String yyyymmdd = DateTimeFormatter.ISO_LOCAL_DATE.format(date);
@@ -21,7 +23,7 @@ public class Parsing_formatTest {
 		System.out.println(formatter);
 		String shortFormat = formatter.format(LocalDate.now());
 		System.out.println(shortFormat);
-
+		
 	}
 
 }
