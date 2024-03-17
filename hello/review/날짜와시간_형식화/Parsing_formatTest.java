@@ -24,6 +24,23 @@ public class Parsing_formatTest {
 		String shortFormat = formatter.format(LocalDate.now());
 		System.out.println(shortFormat);
 		
+		System.out.println();
+		
+		LocalDate newDate = LocalDate.parse("2001-01-01");
+		System.out.println(newDate);
+		LocalTime newTime = LocalTime.parse("23:59:59");
+		System.out.println(newTime);
+		LocalDateTime newDateTime = LocalDateTime.parse("2001-01-01T23:59:59");
+		System.out.println(newDateTime);
+		
+		System.out.println();
+		
+		//ofPattern()
+		DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		LocalDateTime endOfYear = LocalDateTime.parse("2015-12-31 23:59:59", pattern);
+		
+		System.out.println(endOfYear);
+		
 	}
 
 }
