@@ -2,7 +2,7 @@ package 컬렉션_프레임워크;
 
 import java.util.*;
 
-public class ex1_ArrayList {
+public class ex01_ArrayList {
 
 	public static void main(String[] args) {
 		
