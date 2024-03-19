@@ -14,15 +14,15 @@ public class ex02_ArrayList {
 		
 		List list = new ArrayList(length/LIMIT + 10);
 		
-		for(int i=0; i< length; i+=LIMIT) {
+		for(int i=0; i< length; i+=LIMIT) {		// i는 0부터 source.length()까지, i를 LIMIT만큼 더한다
 			
-			if(i + LIMIT < length) {
+			if(i + LIMIT < length) {		// i와 LIMIT를 더한 값이 length값보다 작다면
 				
-				list.add(source.substring(i, i+LIMIT));
+				list.add(source.substring(i, i+LIMIT));		// list는 source의 i부터 i+LIMIT까지의 값을 얻는다
 				
-			} else {
+			} else {	//그 외엔
 				
-				list.add(source.substring(i));
+				list.add(source.substring(i));		// list에 source의 i까지의 값을 저장한다
 				
 			}
 				
