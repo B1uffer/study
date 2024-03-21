@@ -2,7 +2,7 @@ package 컬렉션_프레임워크;
 
 import java.util.*;
 
-public class VectorClass implements List {
+public class ex04_VectorClass implements List {
 
 		// Vector 클래스의 실제 코드를 재구성한 것
 		
@@ -10,7 +10,7 @@ public class VectorClass implements List {
 		int capacity = 0;			// 용량
 		int size = 0;				// 크기
 		
-		public VectorClass(int capacity) {
+		public ex04_VectorClass(int capacity) {
 			
 			if(capacity <0) {
 				
@@ -20,7 +20,7 @@ public class VectorClass implements List {
 			
 		}
 		
-		public VectorClass() {
+		public ex04_VectorClass() {
 			
 				this(10);	// 크기를 지정하지 않으면 자동적으로 크기를 10으로 설정함
 			
@@ -36,7 +36,7 @@ public class VectorClass implements List {
 			
 		}
 		
-		public boolean add(Object obj) {
+		public boolean add(Object obj) {		// add는 매개변수가 Object 타입인 boolean 인스턴스이다
 			
 			ensureCapacity(size+1);
 			// 새로운 객체를 저장하기 전, 저장할 공간을 확보함
