@@ -6,6 +6,15 @@ public class ex32_HashMap3 {
 
 	static HashMap phoneBook = new HashMap();
 	
+	// HashMap은 데이터와 키, 값을 모두 Object값으로 저장하기 때문에 HashMap의 값(value)으로 HashMap을 다시 저장할 수 있음
+	
+	// 존나 이해가 안되니 순서
+	
+	// 1. 먼저 전화번호를 만들 그룹을 만든다 (phoneBook = new HashMap())
+	// 2. 그룹 안에 다시 이름과 전화번호를 저장하도록 한다
+	// 		이 때, 이름대신 전화번호를 키로 사용했다. value는 name  ..... addPhoneNo 참조
+	// 
+	
 	public static void main(String[] args) {
 		
 		addPhoneNo("친구", "김병신", "010-1111-2222");
