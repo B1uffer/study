@@ -7,6 +7,8 @@ public class ex39_Collections {
 
 	public static void main(String[] args) {
 		
+		//
+		
 		List list = new ArrayList();
 		
 
