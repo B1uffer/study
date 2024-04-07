@@ -7,7 +7,7 @@ public class ex39_Collections {
 
 	public static void main(String[] args) {
 		
-		//
+		// 정처기 공부중
 		
 		List list = new ArrayList();
 		
