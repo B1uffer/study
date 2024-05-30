@@ -56,7 +56,7 @@ public class ex04_VectorClass implements List {
 				
 			}
 			
-			return data[index];
+			return data[index];		// data[index]를 반환한다 먼소리냐면 data에 index값이 들간단 소리임
 			
 		}
 		
@@ -64,7 +64,7 @@ public class ex04_VectorClass implements List {
 			
 			// 지정된 위치(index)에 있는 객체를 삭제하고 삭제한 객체를 반환하도록 작성됨
 			
-			Object oldObj = null;
+			Object oldObj = null;		// 객체 생성
 			
 			if(index < 0 || index >= size) {
 				
