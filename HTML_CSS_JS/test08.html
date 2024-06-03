@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* 시멘틱 태그 연습 */
+
+    #wrap {
+
+        width : 960px;
+        background-color : yellow;
+        padding : 10px;
+        color : white;  /* text에 색을 주고 싶으면 color */
+
+    }
+
+    header {
+
+        background-color : green;
+        height : 100px;
+        
+    }
+
+    section {
+        width : 70%;
+        height : 300px;
+        background-color : blue;
+        float : right;      /* 좌, 우 이동*/
+    }
+
+    aside {
+
+        float : left;
+        width : 30%;
+        height : 300px;
+        background-color : orange;
+
+    }
+
+    footer {
+
+        height : 50px;
+        background-color : black;
+        clear : both;   /* section, aside로 인해 조져진 배열을 clear : both를 통해 원래 자리로 잡아준다 */
+    }
+
+    #content {
+        border : 1px, solid, red;
+    }
+
+    .clearfix::after {  /* float을 해제하는 방법 */
+
+        display : block;
+        content : " ";
+        clear : both;   /* 얘가 있으면 footer의 clear : both가 필요없다 */
+
+    }
+
+    #wrap header nav h1 {   /* 하위 선택자를 이용해서 h1간 class를 다르게 만드는 법 */
+
+        width : 100px;
+        height : 50px;
+        background-color : paleturquoise;
+        float : left;
+        margin : 0;
+
+    }
+
+    #wrap header nav p {
+
+        width : 100px;
+        height : 50px;
+        background-color : chartreuse;
+        float : right;
+        margin : 0;
+
+    }
+
+    nav {
+
+        border : 2px, solid, #ffffff;
+
+    }
+
+</style>
+
+<body>
+
+    <div id = "wrap">
+    
+        <header>
+
+            <nav class = "clearfix">
+
+                <h1>로고</h1>
+                <p>내용</p>
+
+            </nav>
+
+        </header>
+
+        <div  class = "clearfix" id = "content">
+            <aside>
+                
+                에이사이드
+
+            </aside>
+
+            <section>
+
+                <h1>섹션</h1>
+
+            </section>
+        </div>
+
+        <footer>
+            
+            푸터
+
+        </footer>
+    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #wrap {
+        width : 600px;
+        background-color : aliceblue;
+        padding : 10px;
+    }
+
+    #header {
+        width : 600px;
+        height : 100px;
+        background-color : antiquewhite;
+    }
+
+    #contents {
+        width : 600px;
+        height : 300px;
+        background-color : aqua;
+    }
+
+    #footer {
+        width : 600px;
+        height : 100px;
+        background-color : aquamarine;
+    }
+
+    .box1 {
+        width : 200px;
+        height : 50px;
+        background-color : beige;
+        float : left;
+    }
+
+    .box2 {
+        width : 100px;
+        height : 50px;
+        background-color : bisque;
+        float : right;
+    }
+
+    /*
+        float를 통해 박스를 좌, 우로 이동시킬 수 있음
+    */
+
+</style>
+<body>
+    <div id = "wrap">
+
+        <div id = "header">헤더</div>
+        <div id = "contents">
+            <div class = "box1">박스1</div>
+            <div class = "box2">박스2</div>
+        </div>
+        <div id = "footer">푸터</div>
+
+    </div>
+    
+</body>
+</html>
