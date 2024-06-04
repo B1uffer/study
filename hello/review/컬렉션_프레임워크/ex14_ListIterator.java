@@ -15,6 +15,7 @@ public class ex14_ListIterator {
 		System.out.println(list);
 		
 		ListIterator it = list.listIterator();
+		// ListIterator 타입의 it 인스턴스는 list 내 listIterator 메서드를 쓴다
 		
 		while(it.hasNext()) {
 			

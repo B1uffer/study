@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <h2>Hello, World!</h2>
+    <h3>Hello, World!</h3>
+    <h4>Hello, World!</h4>
+    <h5>Hello, World!</h5>
+    <h6>Hello, World!</h6>
+    <p>Hello, World!</p><br>
+    <p>
+        본문에 사용되는 태그 중 <b>이런 식으로 굵게</b> 사용하는 느낌으로 사용할 수 있다.<br>
+        또한 줄을 바꿀 땐 이렇게 바꾼다<br>
+        <em>이탤릭체는 이렇게 사용한다</em><br>
+        <i>이거도 이탤릭체다</i><br>
+        이 모든게 p태그 하나 안에서 이루어진다<br>
+    </p>
+    <p>
+        자 병신아 이제 List를 만들어보자<br>
+        이건 비순차목록이다 ul, li로 써라</p>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용4</li>
+        <li>내용3</li>
+    </ul>
+
+    <p>
+        아래는 순차목록이고 ol, li로 사용한다<br>
+        속성값으로 type = "A", type = "i", type = "l" 이런걸 쓸 수 있다<br>
+    </p>
+
+    <ol type = "A">
+        <li>카레가루 100g</li>
+        <li>닭가슴살 200g</li>
+        <li>감자 1개</li>
+    </ol>
+
+    <ol type = "i">
+        <li>카레가루 100g</li>
+        <li>닭가슴살 200g</li>
+        <li>감자 1개</li>
+    </ol>
+
+    <p>
+        아래는 정의형 목록이고 dl, /dl 안에 dt로 제목을, dd로 내용을 적을 수 있다<br>
+    </p>
+
+    <dl>
+        <dt>웹 표준 수업과목</dt>
+        <dd>XHTML</dd>
+        <dd>HTML5</dd>
+        <dd>CSS</dd>
+        <dd>CSS3</dd>
+        <dd>JavaScript</dd>
+        <dd>jQuery</dd>
+    </dl>
+
+    <p>
+        이미지 삽입해보기<br>
+    </p>
+
+    <img src = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS" alt = "강아지">
+
+    <p>
+        이미지에 width와 height를 통해 지름과 높이를 설정해보기<br>
+    </p>
+
+    <img src = "https://www.petpost.com.au/cdn/shop/articles/caring-for-your-first-rabbit-110131.jpg?v=1669701799" alt = "토끼" width = "500" height = "200">
+
+    <p>
+        하이퍼링크 만들어봐라 병신아<br>
+    </p>
+
+    /*
+    하이퍼링크를 달 때 커서를 올리면 나오는 이미지값은 title로 작성한다 alt 아님
+    또한 href 구문 끝나고 img를 넣고 나서 다 작성하면 마지막에 /a를 달아준다
+    */
+    <a href = "https://www.federalreserve.gov/monetarypolicy/fomc.htm" title = "네이버"><img src = "https://www.petpost.com.au/cdn/shop/articles/caring-for-your-first-rabbit-110131.jpg?v=1669701799" alt = "토끼" width = "500" height = "200"></a>
+
+</body>
+</html>

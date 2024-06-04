@@ -56,7 +56,7 @@ public class ex04_VectorClass implements List {
 				
 			}
 			
-			return data[index];
+			return data[index];		// data[index]를 반환한다 먼소리냐면 data에 index값이 들간단 소리임
 			
 		}
 		
@@ -64,7 +64,7 @@ public class ex04_VectorClass implements List {
 			
 			// 지정된 위치(index)에 있는 객체를 삭제하고 삭제한 객체를 반환하도록 작성됨
 			
-			Object oldObj = null;
+			Object oldObj = null;		// 객체 생성
 			
 			if(index < 0 || index >= size) {
 				
@@ -85,6 +85,12 @@ public class ex04_VectorClass implements List {
 				// int destPos : 복사본에서 자료를 받을 때 어느 부분부터 쓸 것인지 시작 위치를 정해줌
 				// int length : 원본에서 복사본으로 데이터를 읽어서 쓸 데이터 길이, 원본에서 복사본까지 얼마나 읽어 올지 입력하는 것
 				// 자세한건 p.594 참고
+
+				// System.arraycopy(src, srcPos, dest, destPos, length)
+				// src를 srcPos만큼 읽고 dest에다가 destPos부터 시작해서 dest의 길이만큼 복사하는 것
+				// src를 dest에다가 복사하는 것이다
+				// 복사당하는 새기가 dest임
+				
 			}
 			
 			data[size-1] = null;		// 데이터의 마지막을 null로 함. 배열은 0부터 시작하기 때문에 size-1
