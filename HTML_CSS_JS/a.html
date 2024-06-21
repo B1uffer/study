@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doughnuts</title>
+    <style>
+        * {  /* 모든 함수에 대한 선언 */
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        ul {
+
+            list-style : none;
+
+        }
+
+        body {
+
+            background-color : #ffecee;
+
+        }
+
+        .wrap {
+
+            width : 1200px;
+            margin : 50px auto;
+            
+        }
+
+        .wrap .box {
+
+            width : 360px;
+            height : 380px;
+            border-radius : 25px;
+            background-color : #ffffff;
+            text-align : center;
+            display : inline-block;
+
+        }
+
+        .wrap .box h2 {
+
+            font-size : 24px;
+            letter-spacing : -1px;
+
+        }
+
+        .wrap .box h3 {
+
+            font-size : 17px;
+            letter-spacing : -1px;
+
+        }
+
+
+
+        .box_margin {
+
+            margin : 0 50px;
+
+        }
+
+        .box:hover {
+
+            color : #ffffff;
+            background : linear-gradient(45deg, #f9987c, #f277b2);
+            cursor : pointer;
+
+        }
+
+
+
+        /* 박스 안에 있는 점 3개 표현하기*/
+
+        .box .circle li {
+
+            width : 6px;
+            height : 6px;
+            border-radius : 50%;
+            display : inline-block; /* 세로로 나열된 배열들을 가로로 정렬함 */
+
+        }
+
+        .box .circle li:nth-child(1) {
+
+            background-color : #fc5b0b;
+
+        }
+
+        .box .circle li:nth-child(2) {
+
+            background-color : #f83d4d;
+            margin : 0 5px;
+
+        }
+
+        .box .circle li:nth-child(3) {
+
+            background-color : #ef0a87;
+
+        }
+
+
+
+        /* 버 튼 */
+
+        .bt1 {
+
+            width : 170px;
+            height : 56px;
+            border-radius : 30px;
+            background : linear-gradient(90deg, #fe835a, #f44ca5);
+            text-align : center;        /* bt1 안에 있는 text를 가운데로 */
+            line-height : 50px;
+            color : #ffffff;
+            border : 2px solid #ffffff;
+            margin : 0 auto;                    /* bt1을 가운데로 */
+
+            /* margin : 상 좌우 하 */
+        }
+
+        .bt1:hover {
+
+            cursor : pointer;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "wrap">
+        <div class = "box">
+            <img src = "images/doughnut01.png" alt = "sweetDualHeart">
+            <h2>스위트 듀얼하트</h2>
+            <ul class = "circle">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>딸기&연유필링을 듀얼로 채우고<br>
+            하트 스프링클을 토핑한 도넛</h3>
+        </div>
+   
+
+        <div class = "box box_margin">
+            <img src = "images/doughnut02.png" alt = "kakaoDoughnut">
+            <h2>카카오 후로스티드</h2>
+            <ul class = "circle">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>카카오의 진한 맛과<br>
+            부드러운 도넛이 조화된 제품</h3>
+        </div>
+    
+        <div class = "box">
+            <img src = "images/doughnut03.png" alt = "milkDoughnut">
+            <h2>켈로그 우유 도넛</h2>
+            <ul class = "circle">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>우유 반죽에 화이트 코팅과<br>
+            푸로스트를 토핑하여 식감을 살린 도넛</h3>
+        </div>
+   
+
+        <div class = "bt1">
+            VIEW MORE
+        </div>
+</body>
+</html>

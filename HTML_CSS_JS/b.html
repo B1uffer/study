@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+         /* 디폴트 */
+
+        * {
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        ul {
+
+            list-style : none;
+
+        }
+
+
+        body {
+
+            background-color : #ffecee;
+
+        }
+
+        h2 {
+
+            letter-spacing : -1px;
+
+        }
+
+        h3 {
+            font-size : 14px;
+            letter-spacing : -1px;
+
+        }
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+        a:hover {
+
+            text-decoration : underline;
+
+        }
+
+
+
+
+        /* 랩 */
+
+        .wrap {
+
+            width : 1200px;
+            margin : 50px auto;
+        }
+
+        .wrap .box {
+
+            width : 350px;
+            height : 350px;
+            background-color : #ffffff;
+            border-radius : 15%;
+            text-align : center;
+            display : inline-block;
+            padding-top : 20px;
+        }
+
+        .box:hover {
+
+            background : linear-gradient(45deg, #f9987c, #f277b1);
+            color : #ffffff;
+            cursor : pointer;
+        }
+
+
+        .center_margin {
+
+            margin : 0 50px;
+
+        }
+
+
+
+
+
+
+        /* 점 3개 */
+
+        .box .point li {
+
+            width : 6px;
+            height : 6px;
+            border-radius : 50%;
+            display : inline-block;
+            margin : 5px;
+
+        }
+
+        .box .point li:nth-child(1) {
+
+            background-color : red;
+
+        }
+
+        .box .point li:nth-child(2) {
+
+            background-color : orange;
+            
+        }
+
+        .box .point li:nth-child(3) {
+
+            background-color : greenyellow;
+
+        }
+
+
+        /* 버튼 */
+
+        .bt2 {
+
+            width : 180px;
+            height : 50px;
+            border-radius : 30px;
+            background : linear-gradient(90deg, #f9987c, #f277b1);
+            color : #ffffff;
+            text-align : center;
+            line-height : 50px;
+            cursor : pointer;
+            margin : 0 auto;
+
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class = "wrap">
+        <div class = "box">                                         <!-- box -->
+            <img src = "images/doughnut04.png" alt = "poketBall">
+            <h2>가라! 몬스터볼</h2>
+                <ul class = "point">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            <h3>몬스터볼 모양의<br>
+                달콤한 딸기 필링 도넛</h3>
+        </div>
+
+        <div class = "box center_margin">                           <!-- box / center_margin -->
+            <img src = "images/doughnut05.png" alt = "pokemon">
+            <h2>피카츄 옐로우링</h2>
+                <ul class = "point">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            <h3>옐로우 코팅이 되어있는<br>
+                바나나 피카츄링 도넛</h3>
+        </div>
+
+        <div class = "box h3_plus">                                         <!-- box -->
+            <img src = "images/doughnut06.png" alt = "cookie">
+            <h2>블랙홀릭 쿠키앤크림</h2>
+                <ul class = "point">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            <h3>블랙카카오로 반죽한 블랙도넛에<br>
+                초코&화이트 크림을 채우고 쿠키를 토핑한 제품</h3>
+        </div>
+
+        <!--<div class = "box">                                        
+            <img src = "images/doughnut06.png" alt = "cookie">
+            <h2>블랙홀릭 쿠키앤크림</h2>
+                <ul class = "point">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            <h3 class = "h3_plus">블랙카카오로 반죽한 블랙도넛에<br>
+                초코&화이트 크림을 채우고<br>
+                쿠키를 토핑한 제품</h3>
+        </div> -->
+
+    </div>      <!-- /wrap -->
+
+    <div class = bt2>
+        <a href = 'https://www.google.com/' target = '_blank'>
+            VIEW MORE
+        </a>
+
+        <!-- 하이퍼링크의 밑줄을 제거하고 싶을 땐 class에 선언하는 것이 아니고 a에 선언해야만 한다 -->
+        <!-- a 안에 있는 href가 a의 지역변수라서 bt2에다가 선언하면 안먹히나봄 -->
+    </div>
+</body>
+</html>
