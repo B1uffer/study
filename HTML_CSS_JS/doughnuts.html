@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        div {
+
+            margin-bottom : 20px;
+
+        }
+
+        .box1 {
+
+            width : 300px;
+            height : 300px;
+            background-color : yellow;
+            /* 보더 모서리값 조절, 왼쪽위 오른쪽위 왼쪽아래 오른쪽아래 border-radius */
+            border-radius : 12px 30px 0 45px;
+            /* box1을 초과하는 부분은 보이지 않게끔 함, overflow */
+            overflow : hidden;
+
+        }
+
+        .box1 img {
+
+            width : 300px;
+            height : 300px;
+
+        }
+
+        .box2 {
+
+            width : 300px;
+            height : 300px;
+            border-radius : 12px 30px 0 45px;
+            /* 배경 이미지를 삽입한다. 텍스트가 보이게 됨*/
+            background-image : url(image/flower.jpg);
+            /* 배경 이미지의 크기를 조절함 background-size : 가로, 세로(%)*/
+            background-size : 100% 100%;
+            /* 문자열을 정렬함 */
+            text-align : center;
+            /* 문자열의 높이를 지정한다 */
+            line-height : 275px;
+
+        }
+
+        .box3 {
+
+            width : 300px;
+            height : 300px;
+            /* 보더라인의 모서리 비율을 모두 50%로 지정해주면 원이 된다 */
+            border-radius : 50%;
+            background-color : cornsilk;
+            text-align : center;
+            line-height : 275px;
+
+        }
+
+        .box4 {
+
+            width : 625px;
+            background-color : aqua;
+            border-width : 1px 0 1px 0;
+            border-style : solid;
+            border-color : crimson;
+
+        }
+
+        .box4 ul {
+
+            margin : 0;
+            padding : 0;
+            
+        }
+
+        .box4 ul li {
+
+            /* ul, li 리스트 앞에 오는 점을 사라지게 해줌*/
+            list-style : none;
+            /* 너비 및 높이를 주면서 한줄로 */
+            display : inline-block;
+            width : 19%;
+            text-align : center;
+            background-color : yellow;
+            padding : 8px 0 12px 0;
+
+        }
+
+        .box4 ul li a {
+
+            color : black;
+            /* 밑줄을 지움 */ 
+            text-decoration : none;
+
+        }
+
+        .box4 ul li a:hover {   /* 마우스 포인터를 올렸을 때 */
+
+            color : red;
+            text-decoration : underline;
+
+        }
+
+        .box5 ul {
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        .box5 ul li {
+
+            list-style : none;
+            width : 6px;
+            height : 6px;
+            border-radius : 50%;
+            /* 한줄로 */
+            display : inline-block;
+        }
+
+        .box5 ul li:nth-child(1) {
+
+            background-color : #fc5b0b;
+            
+        }
+
+        .box5 ul li:nth-child(2) {
+
+            background-color : #f83d4d;
+            margin : 0;
+        }
+
+        .box5 ul li:nth-child(3) {
+
+            background-color : #ef0a87;
+
+        }
+
+        .box6 {
+
+            width : 360px;
+            height : 380px;
+            border-radius : 25%;
+            /* deg(degree)는 그라데이션의 각도를 지정해준다 */
+           /* background : linear-gradient(90deg, yellow, green); */
+           background-color : skyblue;
+           text-align : center;
+           padding : 40px 0;
+           box-sizing : border-box;
+           box-shadow : 6px 5px 12px rgba(0, 0, 0, 0.5);
+           text-shadow : 6px 5px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .box6:hover {
+
+            background : linear-gradient(90deg, yellow, green);
+            cursor : pointer;
+            color : #ffffff;
+            box-shadow : 6px 5px 12px rgba(0, 0, 0, 0.5);
+            text-shadow : 6px 5px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .box7 {
+
+            width : 170px;
+            height : 50px;
+            border-radius : 30px;
+            background : linear-gradient(45deg, #fe835a, #f44ca5);
+            text-align : center;
+            line-height : 50px;
+            color : #ffffff;
+            border : 2px solid crimson;
+        }
+
+        .box7:hover {
+
+            background : white;
+            border : 2px solid #ffffff;
+            color : #000000;
+            cursor : pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class = "box1">
+        <img src = "image/flower.jpg" alt = "flower">
+    </div>
+
+    <div class = "box2">
+        꼘롈ㄹㄹㄹㄹ
+    </div>
+
+    <div class = "box3">
+        정원
+    </div>
+
+    <div class = "box4">
+        <ul>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">brand</a></li>
+            <li><a href=#">store</a></li>
+            <li><a href="#">event</a></li>
+            <li><a href='#'>community</a></li>
+        </ul>
+    </div>
+
+    <div class = "box5">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class = "box6">
+        <img src = "image/tomato.png" alt = "tomato">
+        <h2>토마토</h2>
+    </div>
+    
+    <div class = "box7">
+        <b>VIEW MORE</b>
+    </div>
+</body>
+</html>
