@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꼬끼오 꼬꼬꼬꼮</title>
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+        }
+
+        ul {
+
+            list-style : none;      /* ul, li 앞에 들어가는 동그라미를 없애줌 */
+
+        }
+
+        body {
+
+            background-color : #ffecee;
+
+        }
+
+        a {     /* 링크걸린 문자들에 대해 */
+
+            color : #333333;
+            text-decoration : none;     /* 밑줄 없애기 */
+        }
+
+        #wrap {
+
+            width : 1920px;
+            height : 636px;
+            background-image : url(images/bg_top.png);
+            background-repeat : no-repeat;      /* 배경 반복에 대한 여분 */
+
+        }
+
+        #header {
+
+            width : 100%;
+            padding-top : 15px;
+        }
+
+        #header .hd_inner {     /* header 최상단 이모티콘에 대해 */
+
+            width : 1200px;
+            margin : 0 auto;
+            
+        }
+
+        #header .hd_inner a {       /* hd_inner 안에 있는 모든 a에 대해 */
+
+            color : #ffffff;
+
+        }
+
+        #header .hd_inner .sns {        /* 하위 선택자 */
+
+            width : 180px;
+            float : left;       /* 왼쪽으로 정렬함*/
+
+        }
+
+        #header .hd_inner .sns ul li {
+
+            display : inline-block;     /* 한 줄에 여러 요소를 배치하면서 너비, 높이를 주고 싶을 때 */
+            margin-right : 5px;
+
+        }
+
+        #header .hd_inner .etc {
+
+            width : 180px;
+            float : right;      /* 오른쪽으로 정렬함 */
+
+        }
+
+        #header .hd_inner .etc ul li {
+
+            display : inline-block;
+            margin-left : 7px;
+
+        }
+
+        #header .hd_inner .etc ul li img {
+
+            vertical-align : middle;        /* 정렬 */
+
+        }
+
+        #header .hd_inner h1 {
+
+            clear : both;       /* float을 해제함 */
+            text-align : center;
+            padding : 30px 0 25px 0;
+
+        }
+
+
+        /* header 끝 */
+
+        #header #nav {
+
+            width : 100%;
+            border-width : 1px 0 1px 0;     /* 위 오른쪽 아래 왼쪽 */
+            border-style : solid;
+            border-color : rgba(255, 255, 255, 0.5);        /* 0.5는 투명도 */
+
+        }
+
+        #header #nav .gnb {
+
+            width : 1200px;
+            margin : 0 auto;
+            
+        }
+
+        #header #nav .gnb ul li {
+
+            display : inline-block;     /* 한줄로 */
+            width : 19%;
+            text-align : center;
+            padding : 12px 0 12px 0; /* height를 주면 귀찮아지니까 여백을 줌 */
+
+        }
+
+        #header #nav .gnb ul li a {     /* 링크가 걸려있으니 문자에 대해선 링크 a에게 */
+
+            color : #ffffff;
+            font-size : 20px;
+            
+        }
+
+        .main {
+
+            width : 1200px;
+            margin : 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <haedar id = "header">
+            <div class = "hd_inner">
+                <div class = "sns">     <!-- header 최상단 이모티콘 -->
+                    <ul>
+                        <li>
+                            <a href = "#">
+                                <img src = "images/sns01.png" alt = "인스타그램">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <img src = "images/sns02.png" alt = "페이스북">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <img src = "images/sns03.png" alt = "유튜브">
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class = "etc">     <!-- 최상단 우측 로그인, 조인, 검색 -->
+
+                    <ul>
+                        <li>
+                            <a href = "#">LOGIN</a>
+                            <a href = "#">JOIN</a>
+                            <a href = "#">
+                                <img src = "images/search.png" alt = "검색">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <h1>
+                    <a href = "index.html" title = "메인페이지">
+                        <img src = "images/logo.png" alt = "logo">
+                    </a>
+
+                </h1>
+            </div>
+
+            <div id = "nav">        <!-- header 하단 메뉴바 -->
+                <div class = "gnb">
+                    <ul>
+                        <li>
+                            <a href = "#">MENU</a>
+                        </li>
+                        <li>
+                            <a href = "#">BRAND</a>
+                        </li>
+                        <li>
+                            <a href = "#">STORE</a>
+                        </li>
+                        <li>
+                            <a href = "#">EVENT</a>
+                        </li>
+                        <li>
+                            <a href = "#">COMMUNITY</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+        </haedar>   <!-- header 끝-->
+        <div class = "main">
+            <img src = "images/slide01.png" alt = "도넛">
+        </div>
+    </div>
+</body>
+</html>
