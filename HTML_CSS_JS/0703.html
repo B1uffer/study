@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+
+            cursor : pointer;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <a href = "Untitled-1.html#section5">메인2 페이지의 섹션5</a>
+    <p>
+        <a href = "javascript: alert('클릭 이벤트!');">JavaScript Click Event</a>
+    </p>
+    <p>
+        <a href = "javascript: void(0);">웹페이지 이동을 막음</a>
+    </p>
+    <p>     <!-- abbr은 약어를 표현한다 -->
+        <abbr title = "Hyper Text Markup Language">HTML</abbr> &
+        <abbr title = "Cascading Style Sheets">CSS3</abbr>
+    </p>
+
+    <p>
+        텍스트 내용 중 <b>강조</b> 하고자
+    </p>
+    
+    <p>
+        <bdo dir = "rtl">       <!-- bdo -->
+            텍스트 방향이 right에서 left로 지정
+        </bdo>
+    </p>
+
+    <p>
+        내용 중간에 줄을 <br>
+        바꾸려면 <br>
+        break 태그를 쓰세요.<br>
+        두 줄도 <br><br>
+        삽가능
+    </p>
+
+    <p>     <!-- Button -->
+        <button type = "button"> Click Button</button>
+        <button> Click </button>
+    </p>
+
+    <p>     <!-- 이텔릭체로 표현됨 -->
+        삽입문자 표시 또는 <cite>인용한 내용</cite>
+    </p>
+
+    <p>     <!-- <code></code> 사이의 문자를 코드 형태로 -->
+        HTML에서 사용되는 <code>button</code> 태그는..?
+    </p>
+
+    <p>     <!-- dfn은 정의 요소 -->
+        <dfn title = "Hyper Text MarkUp Language">HTML5는 정말 멋져</dfn>
+    </p>
+
+    <p>
+        <dfn><abbr title = "Hyper Text MarkUp Language">HTML5</abbr></dfn>는 너무 멋져요
+    </p>
+
+    <p>
+        <em>내용 강조, 강하게 읽어줌</em>
+    </p>
+
+    <!-- input 태그 -->
+     <div>
+        <input type = "text" id = "fname" name = "fname" value = "" placeholder = "이름을 입력하세요">
+
+        <input type = "button" id = "fbutton" value = "중복확인버튼">
+     </div>
+
+        <!-- radio는 boolean마냥 둘 중 하나만, checkbox는 여러 항목 선택가능 -->
+
+     <div>
+        <input type = "checkbox" id = "fcheckbox1" name = "fcheckbox1" value = "골프">골프
+        <!-- value값이 서버에 전송된다 -->
+        <input type = "checkbox" id = "fcheckbox2" name = "fcheckbox2" value = "축구">축구
+        <input type = "checkbox" id = "fcheckbox3" name = "fcheckbox3" value = "야구">야구
+        <input type = "checkbox" id = "fcheckbox4" name = "fcheckbox4" value = "탁구">탁구
+     </div>
+
+     <div>
+        <input type = "color" id = "fcolor" name = "fcolor" value = "#ffffff">
+     </div>
+
+     <!-- 연월일 -->
+     <div>
+        <input type = "date" id = "fdate" name = "fdate" value = "">
+     </div>
+
+     <div>
+        <input type = "datetime-local" id = "fdatetime-local" name = "fdatetime-local" value = "">
+     </div>
+
+     <div>
+        <input type = "month" id = "fmonth" name = "fmonth" value = "">
+     </div>
+
+     <!-- 파일 첨부할 때 -->
+     <div>
+        <input type = "file" id = "ffile" name = "ffile" value = "">
+     </div>
+
+     <div>
+        <input type = "hidden" id = "fhidden" name = "fhidden" value = "hidden">
+     </div>
+
+     <div>
+        <input type = "image" src = "../img/agency-img1.jpg" id = "fimage" name = "fimage" width = "250px" height = "250px" value = "">
+     </div>
+
+     <!-- 숫자 입력 -->
+      <div>
+        <input type = "number" name = "fnumber" id = "fnumber" max = "99" min = "1" value = "1">
+      </div>
+</body>
+</html>
