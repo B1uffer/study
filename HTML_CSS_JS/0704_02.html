@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        FORM 연락처
+    </h2>
+    <!-- method의 post, get을 자주 씀 -->
+    <form name = "phone_form" id = "phone_form" method = "get" action = "phone.php">
+        
+        <!-- 테두리를 쳐줌 -->
+        <fieldset>
+
+            <legend>학생관리폼</legend>
+
+                <!-- label for -->
+                <div>
+                    <div>
+                        <label for = "fname">이름 :</label>
+                    </div>
+                    <input type = "text" id = "fname" name = "fname" value = "" placeholder = "이름을 입력하세요">
+                    <div>
+                        <label for = "ftel">연락처 :</label>
+                    </div>
+                    <input type = "tel" id = "ftel" name = "ftel" value = "" placeholder = "000-0000-0000">
+                </div>
+                
+                <br><br>
+
+                <label for = "select_food">취미 :<br> 
+
+                    <select name = "select_food" id = "select_food" size = "1">
+
+                        <option value = "" selected>좋아하는 식사는?</option>
+                        <option value = "아침">아침</option>
+                        <option value = "점심">점심</option>
+                        <option value = "저녁">저녁</option>
+                        <option value = "기타">기타</option>
+                        
+                    </select>
+
+                </label>
+
+                <br><br>
+                <h3>좋아하는 것은?</h3>
+
+                <input type = "checkbox" id = "vehicle1" name = "vehicle1" value = "bike">
+                <label for = "vechicle1">오토바이</label>
+                <input type = "checkbox" id = "vehicle2" name = "vehicle2" value = "car">
+                <label for = "vehicle2">자동차</label>
+                <input type = "checkbox" id = "vehicle3" name = "vehicle3" value = "boat">
+                <label for = "vehicle3">배</label>
+                <br><br>
+
+                <input type = "submit" id = "fsubmit" name = "fsubmit" value = "Submit">
+                <input type = "reset" id = "freset" name = "freset" value = "Cancel">
+
+         </fieldset>
+
+    </form>
+</body>
+</html>
