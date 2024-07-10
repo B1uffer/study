@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form {
+
+            text-align : center;
+
+        }
+
+        fieldset {
+            /* 반응형은 아님 */
+            display : inline-block;
+            margin : 20px auto;
+            padding : 15px 40px 20px 40px;
+            border : 3px solid lightskyblue;
+        }
+
+        legend {
+
+            text-align : left;
+            font-size : 16px;
+            color : #333333;
+            padding : 0 10px 0 10px;
+
+            /* 글자간격 조절*/
+            letter-spacing: -1px;
+        }
+
+        /* input의 4번째 요소들에 대해서 */
+         input:nth-of-type(4) {
+
+            margin-left : 20px;
+
+         }
+
+         /* ??? */
+         input:default + label {
+
+            color : lightcoral;
+
+         }
+
+         /* check 된 것(checked)한테만 */
+         input:checked + label {
+
+            color : lightsalmon;
+
+         }
+
+
+         #input3 input:enabled + label {
+
+            color : lightslategray;
+
+         }
+
+         #input3 input:disabled + label {
+
+            color : lightpink;
+
+         }
+         
+    </style>
+</head>
+<body>
+    <form action = "abc1.php" name = "form1" id = "form1" method = "post">
+
+        <fieldset id = "input1">
+
+            <!-- 제목 -->
+            <legend>[예제1] DEFAULT</legend>
+
+            <!-- input type = " " 에 들어갈 값은 정해져 있다. checkbox, radio, ... 등 멋대로 못적는거임 -->
+            <!-- input의 id = "idSave1"과 label의 for = "idSave1"의 값은 서로 같아야 한다 -->
+            <input type = "checkbox" name = "idSave" id = "idSave1" value = "아이디저장">
+            <label for = "idSave1">아이디 저장</label>
+
+            <input type = "checkbox" name = "autoLogin" id = "autoLogin1" value = "자동로그인">
+            <label for = "autoLogin1">자동 로그인</label>
+
+            <input type = "checkbox" name = "security" id = "secLogin1" value = "보안접속">
+            <label for = "secLogin1">보안 로그인</label>
+
+            <input type = "radio" name = "check" id = "travel1" value = "여행">
+            <label for = "travel1">여행</label>
+
+            <input type = "radio" name = "check" id = "exercise1" value = "운동">
+            <label for = "exercise1">운동</label>
+        </fieldset>
+
+        <br>
+
+        <fieldset id = "input2">
+            <legend>[예제2]DEFAULT & CHECKED</legend>
+
+            <!-- checked -->
+            <input type = "checkbox" name = "idSave" id = "idSave2" checked value = "아이디저장">
+            <label for = "idSave2">아이디 저장</label>
+
+            <input type = "checkbox" name = "autoLogin" id = "autoLogin2" value = "자동로그인">
+            <label for = "autoLogin2">자동로그인</label>
+
+            <input type = "radio" name = "security" id = "secLogin2" value = "보안접속">
+            <label for = "secLogin2">보안접속</label>
+
+        </fieldset>
+
+        <br>
+        
+        <fieldset id = "input3">
+            <legend>[예제3]ENABLED & DISABLED </legend>
+            
+            <input type = "checkbox" name = "idSave" id = "idSave3" enabled value = "아이디저장">
+            <label for = "idSave3">아이디저장</label>
+
+            <input type = "checkbox" name = "autoLogin" id = "autoLogin3" disabled value = "자동로그인">
+            <label for = "autoLogin3">자동로그인</label>
+
+            <input type = "radio" name = "security" id = "secLogin3" enabled value = "보안접속">
+            <label for = "secLogin3">보안접속</label>
+
+            <input type = "radio" name = "travel" id = "travel3" disabled value = "여행">
+            <label for = "travel3">여행</label>
+        </fieldset>
+    </form>
+</body>
+</html>

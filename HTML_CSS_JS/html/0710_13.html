@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    input[type = "text"] {
+
+        width : 60%;
+        height : 20px;
+        border : 1px solid lightpink;
+        background : lightblue;
+        padding : 10px;
+        color : white;
+        font-size : 18px;
+    }
+    /* placeholder는 반드시 콜론 2개를 사용함 :: */
+    input[type = "text"]::placeholder {
+
+        color : white;
+
+    }
+</style>
+</head>
+<body>
+    <form>
+        <label for="fid">*아이디(id)</label>
+        <input type = "text" name = "fid" id = "fid" placeholder = "ID는 2자 ~ 10자 이내">
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        ul {
+
+            list-style : circle;
+
+        }
+
+        ul li {
+
+            line-height : 30px;
+
+        }
+
+        /* li가 비어있다면 */
+        ul li:empty::after {
+            
+            /* content는 위에 empty::after가 있어야 들어감 */
+            content : "빈칸입니다";
+
+            width : 100px;
+            height : 50px;
+            background-color : wheat;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>더조은</li>
+        <li></li>
+    </ul>
+</body>
+</html>

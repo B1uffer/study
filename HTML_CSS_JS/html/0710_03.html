@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+
+        background : url(images/rio.png);
+        margin : 350px 0 0 10px;
+
+    }
+
+    ul {
+
+        list-style : square;
+
+    }
+
+    ul li {
+
+        /*display : inline-block; */
+        margin : 0 auto;
+
+    }
+
+    ul li a {
+
+        text-decoration : none;
+        color : lightseagreen;
+
+    }
+
+    a[href$="hwp"] {
+        /*background-color : lightskyblue;*/
+        background-image : url(images/hwp_icon.gif);
+        background-repeat : no-repeat;
+        background-position : right center;
+        padding-right : 30px;
+
+
+    }
+
+    a[href$="xls"] {
+
+        /*background-color : lightgoldenrodyellow;*/
+        background-image : url(images/excel_icon.gif);
+        background-repeat : no-repeat;
+        padding-right : 30px;
+        background-position : right center;
+
+    }
+</style>
+<body>
+    <h3>회사 소개 파일 다운받기</h3>
+    <ul>
+        <li><a href = "intro.hwp">hwp 파일</a></li>
+        <li><a href = "intro.xls">엑셀 파일</a></li>
+    </ul>
+</body>
+</html>
