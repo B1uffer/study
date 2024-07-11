@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-font1 {
+            /* 2개 이상의 폰트를 지정할경우 순서대로 있는걸 사용한다 */
+            font-family : "actionis", "verdana", "sans-serif";
+
+        }
+
+        /* 얘를 통해 폰트를 불러온다 */
+        @font-face {
+
+            font-family : "actionis";
+            src:url(fonts/actionis.ttf);
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "text-warp">
+
+        <!-- p>lorem -->
+        <p class = "text-font1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quae beatae optio placeat voluptatibus, explicabo similique quasi qui excepturi quia minima ipsa corporis! Deleniti dolore possimus excepturi quia? Hic, rem?</p>
+
+        <p class = "text-font2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, ex voluptatibus. Aliquid eligendi sequi corrupti incidunt ad sed eum voluptatibus accusantium quos explicabo dignissimos maiores totam, nulla, provident officia. Eos?</p>
+    </div>
+</body>
+</html>

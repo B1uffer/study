@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html {
+
+            font-size : 14px;
+
+        }
+
+        #wrap {
+
+            font-size : 20px;
+
+            /* list 앞에 오는 동그라미를 없애줌 */
+            list-style : none;
+
+        }
+        .fs-10px {
+
+            font-size : 10px;
+
+        }
+
+        .fs-22px {
+
+            font-size : 22px;
+
+        }
+
+        #wrap .fs-24px {
+
+            font-size : 24px;
+
+        }
+
+        #wrap .fs-1em {
+
+            /*  em은 부모의 값을 물려받는다 
+                즉 fs-1em의 부모 #wrap의 값인 font-size : 20px을 그대로 물려받음
+                1em : 20px이 된 것
+            */
+            font-size : 1em;
+
+        }
+
+        #wrap .fs-14px {
+
+            font-size : 14px;
+
+        }
+
+        #wrap .fs-1_2em {
+
+            font-size : 1.2em;
+
+        }
+
+        #wrap .fs-1_4em {
+
+            font-size : 1.4em;
+
+        }
+
+        #wrap .fs-120per {
+
+            /* 1.2em과 같은 값 */
+            font-size : 120%;
+
+        }
+
+        #wrap .fs-150per {
+
+            font-size : 150%;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>px단위</h3>
+    <div>
+        <p>기본 폰트는 16px</p>
+        <p class = "fs-10px">폰트 10px</p>
+        <p class = "fs-22px">폰트 22px</p>
+    </div>
+
+
+    <h3>em, %단위</h3>
+
+    <ul id = "wrap">
+        <li class = "fs-24px">폰트 24px</li>
+        <li class = "fs-1em">폰트 1em</li>
+        <li class = "fs-14px">폰트 14px</li>
+        <li class = "fs-1_2em">폰트 1.2em</li>
+        <li class = "fs-1_4em">폰트 1.4em</li>
+        <li class = "fs-120per">폰트 120%</li>
+        <li class = "fs-150per">폰트 150%</li>
+       
+    </ul>
+</body>
+</html>

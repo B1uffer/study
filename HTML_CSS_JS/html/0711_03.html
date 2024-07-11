@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+
+            font-size : 30px;
+
+        }
+
+        .wrap {
+
+            list-style : none;
+            font-size : 18px;
+
+        }
+
+        .wrap .fs-16px {
+
+            font-size : 16px;
+
+        }
+
+        .wrap .fs-1vw {
+
+            /*  일종의 반응형 폰트 
+                창의 크기에 따라 폰트의 크기가 달라진다
+                가령 창의 크기가 width : 1000px이라고 한다면, 
+                1000px x 1% = 10px 형태로 결정된다
+            */
+
+            font-size : 1vw;
+
+        }
+
+        .wrap .fs-1_5vw {
+
+            font-size : 1.5vw;
+
+        }
+
+        .wrap .fs-2_5vw {
+
+            font-size : 2.5vw;
+
+        }
+
+        .wrap .fs-1vh {
+            /* 얘는 hight에 따라 달라지는 반응형 폰트 크기 */
+            font-size : 1vh;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>Viewport 너비의 상대 크기 설정</h3>
+    <ul class = "wrap">
+        <li class = "fs-16px">폰트 16px</li>
+        <li class = "fs-1vw">폰트 1vw</li>
+        <li class = "fs-1_5vw">폰트 1.5vw</li>
+        <li class = "fs-2_5vw">폰트 2.5vw</li>
+        <li class = "fs-1vh">폰트 1vh</li>
+    </ul>
+</body>
+</html>
