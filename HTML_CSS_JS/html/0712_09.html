@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        body {
+
+            margin-top : 0px;
+
+        }
+
+        .header {
+
+            width : 800px;
+            height : 150px;
+            background-image : url(image/back_img.jpg);
+
+        }
+
+        .header .hDiv1 {
+
+            list-style : none;
+            width : 70%;
+            padding : 80px 0 0 35px;
+
+        }
+
+        .header .hDiv1 .hUl1 li {
+          
+            display : inline-block;
+            margin-right : 30px;
+
+        }
+
+        .header .hDiv1 .hUl1 a {
+
+            color : white;
+            font-weight : 700;
+            text-decoration : none;
+
+            /* a에게 image를 주면 각 a에 대해 이미지가 들어감 */
+            background-image : url(image/dot.png);
+            background-repeat : no-repeat;
+            background-position : left center;
+            padding-left : 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class = "header">
+        <div class = "hDiv1">
+            <ul class = "hUl1">
+                <li><a href = "#">애완견 종류</a></li>
+                <li><a href = "#">입양하기</a></li>
+                <li><a href = "#">건강돌보기</a></li>
+                <li><a href = "#">공지사항</a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
