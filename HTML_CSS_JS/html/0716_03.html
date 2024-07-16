@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+
+            width : 1920px;
+            height : 500px;
+            margin : 0 auto;
+            border : 1px solid #666;
+            border-radius : 0 60px;
+
+            /* 그림이 border를 초과하는 부분이 border에 숨겨져서 안보이게 된다 */
+            overflow : hidden;
+
+        }
+
+        .box img {
+
+            width : 100%;
+
+        }
+
+        /* overflow : hidden을 사용하지 않아도 되는 그림 삽입법 */
+        .box2 {
+            color : white;
+            width : 1920px;
+            height : 500px;
+            margin : 0 auto;
+            border : 1px solid #666;
+            border-radius : 0 60px;
+            background-image : url(../img/blog-post-img5.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <div class = "box">
+            <img src = "../img/blog-post-img5.jpg" alt = "끼에엑">
+        </div>
+        <div class = "box2">배경으로 이미지 넣기
+            
+        </div>
+    </div>
+</body>
+</html>

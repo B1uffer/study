@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .box {
+
+            width : 500px;
+            height : 50px;
+            margin : 10px auto;
+            text-align : center;
+
+            /* 줄 높이 */
+            line-height : 50px;
+
+            /* 공통 transition */
+            transition : opacity 0.6s, transform 0.6s;
+
+        }
+
+        /* 10개의 box에 transition을 적용시키기 위해 */
+        .box:hover {
+
+            background : #68f;
+            opacity : 1;
+
+            /* Transform 오 ㅅㅂ 존나 신기해 */
+            transform:scale(1.5);
+
+        }
+
+        .box-1 {
+
+            background : #68f;
+            opacity : 0.1;
+
+        }
+
+        .box-2 {
+
+            background : #68f;
+            opacity : 0.2;
+
+        }
+
+        .box-3 {
+
+            background : #68f;
+            opacity : 0.3;
+
+        }
+
+        .box-4 {
+
+            background : #68f;
+            opacity : 0.4;
+
+        }
+
+        .box-5 {
+
+            background : #68f;
+            opacity : 0.5;
+
+        }
+
+        .box-6 {
+
+            background : #68f;
+            opacity : 0.6;
+
+        }
+
+        .box-7 {
+
+            background : #68f;
+            opacity : 0.7;
+
+        }
+
+        .box-8 {
+
+            background : #68f;
+            opacity : 0.8;
+
+        }
+
+        .box-9 {
+
+            background : #68f;
+            opacity : 0.9;
+
+        }
+
+        .box-10 {
+
+            background : #68f;
+            opacity : 1.0;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+
+        <!-- 클래스가 2개 들어감 공통적으로 box, 각각 box-n -->
+        <div class = "box-1 box">box1</div>
+        <div class = "box-2 box">box2</div>
+        <div class = "box-3 box">box3</div>
+        <div class = "box-4 box">box4</div>
+        <div class = "box-5 box">box5</div>
+        <div class = "box-6 box">box6</div>
+        <div class = "box-7 box">box7</div>
+        <div class = "box-8 box">box8</div>
+        <div class = "box-9 box">box9</div>
+        <div class = "box-10 box">box10</div>
+    </div>
+</body>
+</html>

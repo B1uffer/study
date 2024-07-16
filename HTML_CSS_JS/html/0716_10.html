@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+
+            width : 500px;
+            height : 250px;
+            margin : 0 auto;
+
+            /* 텍스트 가로 가운데 */
+            text-align : center;
+
+            /* 텍스트 세로 가운데 */
+            line-height : 250px;
+
+            font-size : 50px;
+            color : white;
+            cursor : pointer;
+
+            /* Gradient */
+            background : linear-gradient(90deg, red, green, blue);
+
+
+            /* radius */
+            border-top-left-radius : 50px;
+            border-top-right-radius : 50px;
+            border-bottom-right-radius : 50px;
+            border-bottom-left-radius : 50px;
+            /* border-radius : 50px;*/
+
+            /* drop shadow */
+            box-shadow : 6px 6px 10px rgba(0, 0, 0, 0.4);
+
+            /* transition, 번거로우면 걍 all 때려버려도 된다고 함 */
+            transition : transform 0.5s;
+
+        }
+
+        .box:hover {
+
+            /* transform : scale() */
+            transform : scale(1.1);
+
+        }
+    </style>
+</head>
+<body>
+    <div class = "wrap">
+        <div class = "box">VIEW MORE</div>
+    </div>
+</body>
+</html>

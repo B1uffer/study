@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+
+            width : 300px;
+            height : 200px;
+            background-color : red;
+            text-align : center;
+            line-height : 150px;
+            color : white;
+            font-size : 50px;
+            margin-bottom : 10px;
+            cursor : pointer;
+
+        }
+
+        .box1 {
+
+            transition : all 1s ease-in-out;
+
+        }
+
+        .box1:hover {
+
+            transform : rotateX(180deg);
+            background-color : blue;
+        }
+
+        .box2 {
+
+            transition : all 1s ease-in-out;
+            
+        }
+
+        .box2:hover {
+
+            transform : rotate(45deg);
+            background-color : blue;
+        }
+    </style>
+</head>
+<body>
+    <div class = "box1 box">box1</div>
+    <div class = "box2 box">box2</div>
+</body>
+</html>
