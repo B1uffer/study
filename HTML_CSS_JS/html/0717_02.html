@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+
+            text-align : center;
+
+        }
+
+        label, input {
+
+            /* text를 블록으로 만들어줌 */
+            display : inline-block;
+
+            cursor : pointer;
+            transition : all 0.6s;
+
+        }
+
+        label:hover {
+
+            color : lightskyblue;
+            transform : scale(1.05);
+
+        }
+
+        .box {
+
+            width : 300px;
+            height : 300px;
+            border-radius : 50%;
+            background : #3ac;
+            color : white;
+            font-size : 30px;
+            text-align : center;
+            line-height : 300px;
+            margin : 100px auto;
+            transition : all 1s;
+
+        }
+
+        /* 형제요소중~ 박스 */
+        /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())*/
+        #matrixDefault:checked ~ .box {
+
+            transform : matrix(1, 0, 0, 1, 0, 0);
+
+        }
+
+        #matrixScale:checked ~ .box {
+
+            transform : matrix(1.5, 0, 0, 1.5, 0, 0);
+
+        }
+
+        #matrixSkew:checked ~ .box {
+
+            transform : matrix(1, 1.2, -0.5, 1, 0, 0);
+
+        }
+
+        #matrixTranslate:checked ~ .box {
+
+            transform : matrix(1, 0, 0, 1, 300, 0);
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+
+        <!-- 라디오 버튼을 name를 통해 하나로 묶어줘야 한가지만 선택할 수 있게 설정 가능 -->
+        <input type = "radio" name = "matrix" id = "matrixDefault" value = " " checked>
+        <label for = "matrixDefault">matrixDefault(초기화)</label>
+
+        <input type = "radio" name = "matrix" id = "matrixScale" value = " ">
+        <label for = "matrixScale">matrixScale(줌효과)</label>
+
+        <input type = "radio" name = "matrix" id = "matrixSkew" value = " ">
+        <label for = "matrixSkew">matrixSkew(기울기효과)</label>
+
+        <input type = "radio" name = "matrix" id = "matrixTranslate" value = " ">
+        <label for = "matrixTranslate">matrixTranslate(이동효과)</label>
+
+        <div class = "box">matrix</div>
+    </div>
+</body>
+</html>

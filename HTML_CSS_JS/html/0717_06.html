@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        #wrap {
+
+            width : 1000px;
+            margin : 0 auto;
+
+        }
+
+        #wrap #section1, #wrap #section2 {
+
+            width : 100%;
+            padding : 50px 0;
+
+        }
+
+        #wrap #section1 p, #wrap #section2 p {
+
+            width : auto;
+
+            /* height를 지정해줘야 이미지가 border를 빠져나오지 않음 */
+            height : 200px;
+            padding : 30px;
+
+            /* text-align : justify */
+            text-align : justify;
+
+            border : 1px solid #ccc;
+            line-height : 140%;
+            font-size : 16px;
+            color : #444;
+
+        }
+
+        #wrap #section1 p img {
+
+            
+            /* float을 통해 이미지 좌, 텍스트 우 형태 만들기 */
+            float : left;
+            width : 200px;
+
+            /* 위에서부터 시계방향 */
+            padding : 0 20px 5px 0;
+        }
+
+        #wrap #section2 p img {
+            
+            float : right;
+            width : 200px;
+            padding : 0 0 5px 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <section id = "section1">
+            <p>
+                <img src = "../img/ban1.gif" alt = "">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quibusdam assumenda, quod inventore corporis voluptates ducimus perferendis delectus! Quisquam laudantium ipsa earum quis exercitationem alias nemo illum veniam ducimus harum?
+            </p>
+        </section>
+
+        <section id = "section2">
+            <p>
+                <img src = "../img/ban2.gif" alt = "">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque quae autem nemo maiores quod tenetur perferendis, cum repellendus iure aliquid excepturi molestias voluptate hic natus eveniet veritatis similique saepe?
+            </p>
+        </section>
+    </div>
+</body>
+</html>

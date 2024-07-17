@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+
+            width : 200px;
+            height : 200px;
+            margin : 50px auto;
+            font-size : 30px;
+            color : #ffffff;
+            background : red;
+            border-radius : 50%;
+            line-height : 200px;
+            text-align : center;
+
+            /* animation : id time; 
+                animation-name : id;
+                animation-duration : 3s;
+
+                alternate infinite
+            */
+            animation : ani 8s infinite normal ease-in-out;
+
+        }
+
+        @keyframes ani { 
+
+                /* from {transform : translate(0,0);}
+                to {transform : translate(400px, 0);} */
+
+                0% {left : 0; top : 0;}
+                25% {left : 400px; top : 0;}
+                50% {left : 400px; top : 400px;}
+                75% {left : 0; top : 400px;}
+                100% {left : 0; top : 0;}
+
+            }
+    </style>
+</head>
+<body>
+    <div class = "box">animation</div>
+</body>
+</html>
