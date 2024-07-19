@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+        * {
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        ul {
+
+            list-style : none;
+
+        }
+
+        #wrap {
+
+            width : 960px;
+            margin : 0 auto;
+            border : 2px solid #ccc;
+            padding : 20px;
+            box-sizing : border-box;
+
+        }
+
+        #header {
+
+            border : 2px solid #ccc;
+            padding : 10px 0 10px 0;
+            margin-bottom : 20px;
+            width : 100%;
+            box-sizing : border-box;
+            
+        }
+
+        #header h1 {
+
+            color : lightcoral;
+
+        }
+
+        #header h1 .subTitle {
+
+            color : blue;
+
+        }
+
+        #header ul li {
+
+            display : inline-block;
+            margin-right : 30px;
+
+        }
+
+        #header ul li a {
+
+            text-decoration : none;
+            color : #333;
+
+        }
+
+        #body {
+
+            margin-bottom : 5px;
+
+        }
+
+        #wrap #body .navi {
+
+            width : 150px;
+            height : 300px;
+            border : 2px solid #ccc;
+            float : left;
+            margin-right : 10px;
+            box-sizing : border-box;
+            
+        }
+
+        #wrap #body .main {
+
+            width : 590px;
+            height: 300px;
+            border : 2px solid #ccc;
+            float : left;
+            margin-right : 10px;
+            box-sizing : border-box;
+
+        }
+
+        #wrap #body .sidebar {
+
+            width : 150px;
+            height : 300px;
+            border : 2px solid #ccc;
+            float : right;
+            box-sizing : border-box;
+
+        }
+
+        #wrap #body h2 {
+
+            text-align : center;
+            padding : 5px;
+            margin : 5px;
+
+        }
+
+        .clearfix::after {
+
+            content : "";
+            display : block;
+            clear : both;
+
+        }
+
+        #footer {
+
+            
+            border : 2px solid #ccc;
+        }
+
+        #wrap h2 {
+
+            font-size : 20px;
+            margin-bottom : 20px;
+        }
+
+        .main p {
+
+            font-size : 12px;
+            margin : 20px;
+
+        }
+
+        .navi ul {
+
+            list-style : disc;
+            padding-left : 40px;
+        }
+
+        .sidebar ul {
+
+            padding-left : 35px;
+
+        }
+
+        #footer h2 {
+
+            margin : 30px;
+            line-height : 180%;
+            float : left;
+
+        }
+
+        #footer address {
+
+            margin-top : 25px;
+            float : left;
+            font-style : normal;
+
+        }

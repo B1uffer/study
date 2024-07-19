@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+    * {
+
+        margin : 0 auto;
+        padding : 0;
+
+    }
+
+
+    .clearfix::after {
+
+        content : "";
+        display : block;
+        clear : both;
+
+    }
+
+
+    #wrap {
+
+        width : 1000px;
+        border : 1px solid lightgray;
+    }
+
+
+
+
+    /* header */
+
+    #header {
+
+        border : 1px solid lightgray;
+        margin : 20px;
+        padding : 20px;
+        box-sizing : border-box;
+        
+    }
+
+    #header h1 {
+
+        float : left;
+        background-image : url(../images/pic1.jpg);
+        background-repeat : no-repeat;
+        background-size : 50px;
+        background-position : left center;
+        padding-left : 50px;
+    }
+
+    #header #nav {
+        
+        float : right;
+        margin-top : 10px;
+        margin-right : 20px;
+        background : yellow;
+
+    }
+
+    /* ul이 아니라 li에게 display : inline-block을 주어야 가로로 나열된다 */
+    #header #nav ul li {
+
+        display : inline-block;
+        margin-right : 20px;
+        
+
+    }
+
+    #header #nav ul li a {
+
+        text-decoration : none;
+        background : red;
+
+    }
+
+
+
+
+    /* body */
+
+    #section1 {
+
+        border : 1px solid lightgray;
+        margin : 20px;
+        padding : 20px;
+        box-sizing : border-box;
+
+    }
+
+    #section1 h2 {
+
+        margin-bottom : 20px;
+        list-style : disc;
+
+    }
+
+    #section2 {
+
+        border : 1px solid lightgray;
+        margin : 20px;
+        padding : 20px;
+        box-sizing : border-box;
+
+    }
+
+    #section2 h2 {
+
+        margin-bottom : 20px;
+        list-style : disc;
+
+    }
+
+    #section3 {
+
+        border : 1px solid lightgray;
+        margin : 20px;
+        padding : 20px;
+        box-sizing : border-box;
+        background-image : url(../images/pic1.jpg);
+        background-repeat: no-repeat;
+        background-position : right bottom;
+        
+    }
+
+    #section3 h2 {
+
+        margin-bottom : 20px;
+        list-style : disc;
+
+    }
+
+    #section4 {
+
+        border : 1px solid lightgray;
+        margin : 20px;
+        padding : 20px;
+        box-sizing : border-box;
+
+    }
+
+    #section4 h2 {
+
+        margin-bottom : 20px;
+        list-style : disc;
+
+    }
+
+
+
+    /* footer */
+
+    #footer {
+
+        border : 1px solid lightgray;
+        margin : 20px;
+        padding : 20px;
+        box-sizing : border-box;
+
+    }
+
