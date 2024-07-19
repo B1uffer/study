@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #wrap {
+
+            /* 부모요소인 wrap에다가 position : relative를 지정해주는게 가장~ 중요한 포인트 */
+            position : absolute;
+            top : 20px;
+            left : 20px;
+            width : 300px;
+            height : 300px;
+            margin : 0 auto;
+            border : 1px solid red;
+
+        }
+
+        .box {
+
+            /* position : absolute */
+            position : relative;
+            width : 50px;
+            height: 50px;
+            border : 1px solid blue;
+
+        }
+
+        #box1 {
+
+            /* 부모요소를 무시하고 position에 따라 좌표값 이동함*/
+            top : 10px;
+            left : 10px;
+
+        }
+
+        /* 
+        
+            relative는 자기 자신을 기준으로 이동하며, 
+            absolute는 절댓값을 기준으로 이동한다
+
+        */
+
+        #box2 {
+
+            top : 10px;
+            right : 10px;
+
+        }
+
+        #box3 {
+
+            bottom : 10px;
+            left : 10px;
+
+
+        }
+
+        #box4 {
+
+            bottom : 0;
+            right : 0;
+
+        }
+
+        #box5 {
+
+            top : 100px;
+            left : 100px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id = "wrap">
+
+        <div id = "box1" class = "box">box1</div>
+        <div id = "box2" class = "box">box2</div>
+        <div id = "box3" class = "box">box3</div>
+        <div id = "box4" class = "box">box4</div>
+        <div id = "box5" class = "box">box5</div>
+
+    </div>
+</body>
+</html>
