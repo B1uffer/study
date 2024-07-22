@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        ul {
+
+            list-style : none;
+
+        }
+
+        #wrap {
+
+            width : 600px;
+            background : lightseagreen;
+
+        }
+
+        #header {
+
+            width : 200px;
+            background : lightsteelblue;
+
+            /* header를 고정함 */
+            position : fixed;
+
+        }
+
+        .rec {
+
+            width : 100px;
+            height : 100px;
+            background : darkblue;
+            color : #fff;
+            font-size : 15px;
+            text-align : center;
+            line-height : 100px;
+            border-radius : 50%;
+
+            margin : 0 auto;
+            margin-bottom : 10px;
+
+        }
+
+        #section {
+
+            width : 300px;
+            height : 1500px;
+            background : lightblue;
+
+            margin-left : 200px;
+
+        }
+
+        #footer {
+
+            height : 50px;
+            background : lightgreen;
+
+        }
+
+        #nav ul {
+
+            padding-left : 20px;
+
+        }
+
+        #nav ul li a {
+
+            width : 150px;
+            background : #123456;
+            padding : 5px;
+
+            /* a의 공간 전체를 채우기 */
+            display : block;
+
+            margin-bottom : 2px;
+
+            font-size : 15px;
+            font-family : Arial;
+            font-weight : 600;
+            text-decoration : none;
+            color : #fff;
+
+            transition : all 0.6s;
+
+        }
+
+        #nav ul li a:hover {
+
+            background : #456789;
+            width : 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <header id = "header">
+            <h1 class = "rec">웹표준</h1>
+            <nav id = "nav">
+                <ul>
+                    <li><a href = "#">COMPANY</a></li>
+                    <li><a href = "#">PRODUCT</a></li>
+                    <li><a href = "#">SERVICE</a></li>
+                    <li><a href = "#">COMMUNITY</a></li>
+                </ul>
+            </nav>
+        </header>
+        <body>
+            <div id = "section">본문내용임</div>
+        </body>
+        <footer>
+            <div id = "footer">뿌떠</div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+
+            margin : 0;
+            padding : 0;
+            
+        }
+
+        .clearfix::after {
+
+            content : "";
+            display : block;
+            clear : both;
+
+        }
+
+        ul {
+
+            list-style : none;
+            
+        }
+
+        #wrap ul li {
+            width : 300px;
+            height : 300px;
+            
+            float : left;
+            
+            position : relative;
+
+            overflow : hidden;
+        }
+
+        #wrap {
+
+            border : 1px solid blue;
+
+            width : 1200px;
+            margin : 0 auto;
+            
+        }
+
+        #wrap img {
+
+            width : 300px;
+            height : 300px;
+            border-radius : 10%;
+
+        }
+
+        #wrap ul li .span1 {
+
+            width : 55px;
+            height : 55px;
+            background : lightcoral;
+            color : #fff;
+            font-size : 18px;
+            text-align : center;
+            line-height : 55px;
+
+            position : absolute;
+            top : 0;
+            left : 0;
+
+            border-radius :20%;
+            display : block;
+        }
+
+        #wrap ul li .span2 {
+
+            width : 55px;
+            height : 55px;
+            background : lightcoral;
+            color : #fff;
+
+            position : absolute;
+            top : 10px;
+            right : 10px;
+
+            border-radius : 50%;
+
+            text-align : center;
+            line-height : 55px;
+
+            display : block;
+
+        }
+
+        #wrap ul li .span3 {
+
+            width : 100px;
+            height : 55px;
+            background : lightcoral;
+            color : #fff;
+
+            position : absolute;
+            bottom : 0;
+            left : 0;
+
+            text-align : center;
+            line-height : 55px;
+
+            border-radius : 30%;
+            display : block;
+        }
+
+        /* 두번째 li */
+        #wrap ul li:nth-child(2) {
+
+            margin : 0 60px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "wrap" class = "clearfix">
+        <ul>
+            <li>
+                <span class = "span1">29%</span>
+                <img src = "image/product01.jpg" alt = "제품1">
+            </li>
+            <li>
+                <span class = "span2">NEW</span>
+                <img src = "image/product02.jpg" alt = "제품2">
+            </li>
+            <li>
+                <span class = "span3">BEST</span>
+                <img src = "image/product03.jpg" alt = "제품3">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

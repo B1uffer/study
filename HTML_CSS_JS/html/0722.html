@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+
+        * {
+
+            margin : 0;
+            padding : 0;
+
+        }
+
+        img {
+
+            /* 세로로 가운데 */
+            vertical-align : middle;
+
+        }
+
+        #wrap {
+
+            width : 100%;
+            margin : 100px auto;
+
+        }
+
+        #wrap .img-wrap {
+
+            background : lightblue;
+            width : 300px;
+            height : 300px;
+            margin : 50px auto;
+
+            position : relative;
+
+        }
+
+        #wrap .img-wrap span {
+
+            /* 인라인 요소에는 너비를 줄 수 없다 */
+            display : block;
+            width : 100px;
+            height : 100px;
+            background : #c33;
+
+            /* 줄 간격 */
+            line-height : 100px;
+            text-align : center;
+            color : #fff;
+            border-radius : 50%;
+
+            position : absolute;
+
+            /* 음수 주기 가능*/
+            top : -25px;
+            right : -25px;
+
+            /* 숫자가 작을수록 우선순위가 낮다 */
+            z-index : 1;
+        }
+
+        #wrap .img-wrap img {
+
+            position : relative;
+
+            /* z-index는 position이 적용된 애한테만 쓸 수 있다 */
+            z-index : 2;
+            
+            width : 100%;
+            transition : all 1s;
+
+        }
+
+        #wrap .img-wrap img:hover {
+
+            transform : scale(1.5);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <div class = "img-wrap">
+
+            <!-- 가격 -->
+             <span class = "food-price">$15.00</span>
+             <img src = "../img/07-13/restaurant-img34.png" alt = "끼에아아악">
+        </div>
+    </div>
+</body>
+</html>

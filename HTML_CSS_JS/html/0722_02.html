@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+
+            width : 1200px;
+            margin : 0 auto;
+
+        }
+
+        #wrap .box {
+
+            position : relative;
+
+            width : 300px;
+            height : 300px;
+            border-radius : 20px;
+
+            /* 이게 머지 */
+            overflow : hidden;
+            float : left;
+
+            
+
+        }
+
+        #wrap .box img {
+
+            width : 300px;
+            height : 300px;
+
+        }
+
+        #wrap .box .span1 {
+
+            width : 55px;
+            height : 55px;
+            background : lightcoral;
+            font-size : 20px;
+            color : #fff;
+            text-align : center;
+            line-height : 55px;
+
+            /* position이 들어가면 block요소를 넣지 않아도 width, height를 지정할 수 있다*/
+            position : absolute;
+            top : 0;
+            left : 0;
+
+            border-bottom-right-radius: 20%;
+
+            display : block;
+
+        }
+
+        #wrap .box .span2 {
+
+            width : 55px;
+            height : 55px;
+            background : lightcoral;
+            font-size : 20px;
+            color : #fff;
+            text-align : center;
+            line-height : 55px;
+
+            position : absolute;
+            top : 10px;
+            right : 10px;
+
+            border-radius : 20%;
+            display : block;
+
+
+        }
+
+        #wrap .box .span3 { 
+
+            position : absolute;
+
+        }
+
+        #wrap .box:nth-child(2) {
+
+            margin : 0 60px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <div class = "box">
+            <span class = "span1">29%</span>
+            <img src = "image/product01.jpg" alt ="끄ㅔ에엑">
+        </div>
+        
+        <div class = "box">
+            <span clss = "span2">new</span>
+            <img src = "image/product02.jpg" alt = "fdgslsdf">
+        </div>
+
+        <div class = "box">
+            <span clss = "span3">BEST</span>
+            <img src = "image/product03.jpg" alt = "sfdzlkㅇㄴㅇㄹ">
+        </div>
+    </div>
+</body>
+</html>
