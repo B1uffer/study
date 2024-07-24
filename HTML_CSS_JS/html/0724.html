@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+
+        * { margin : 0; padding : 0; }
+
+        ul { list-style : none; }
+
+        a { text-decoration : none; color : #333; }
+
+        #header {
+
+            width : 100%;
+
+            /* 여기에 position */
+            position : fixed;
+            top : 0;
+            left : 0;
+
+            background : #ffffff;
+
+        }
+
+        #header h1 {
+
+            font-size : 24px;
+            text-align : center;
+            
+
+        }
+
+        #nav {
+
+            
+            padding : 20px;
+
+            /* 여기에 text-align : center를 해줘야 ul이 중간으로 온다 */
+            text-align : center;
+            background : lightcoral;
+
+        }
+
+        #nav ul li {
+
+            /* li를 한줄로 */
+            display : inline-block;
+            
+            width : 20%;
+            text-align : center;
+
+        }
+
+        #nav ul li a {
+
+            color : #ffffff;
+            font-weight : 600;
+
+        }
+
+        section {
+
+            width : 100%;
+            height : 800px;
+
+        }
+
+        #contents .page1 {
+
+            background : url(image/eu.jpg) no-repeat;
+            background-size : cover;
+
+        }
+
+        #contents .page2 {
+
+            background : url(image/us.jpg) no-repeat;
+            background-size : cover;
+
+        }
+
+        #contents .page3 {
+
+            background : url(image/ch.jpg) no-repeat;
+            background-size : cover;
+
+        }
+
+        #contents .page4 {
+
+            background : url(image/jp.jpg) no-repeat;
+            background-size : cover;
+
+        }
+
+        #contents h2 {
+
+            font-size : 64px;
+            color : #ffffff;
+
+            text-align : center;
+            line-height : 750px;
+
+            /* 텍스트 그림자 */
+            text-shadow : 1px 2px 1px #000000;
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <header id = "header">
+            <h1>어디까지 가봤니?</h1>
+
+            <!-- 메인 메뉴 -->
+            <nav id = "nav">
+                <ul>
+                    <li><a href = "#">유럽</a></li>
+                    <li><a href = "#">미국</a></li>
+                    <li><a href = "#">중국</a></li>
+                    <li><a href = "#">일본</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 배경, id가 있어야 원하는 position으로 이동 가능 -->
+        <!-- class가 style로 쓰이고 id를 통해 원하는 포지션으로 이동한다 -->
+        <div id = "contents">
+            <section id = "eu" class = "page1">
+                <h2>EUROPE</h2>
+            </section>
+            <section id = "us" class = "page2">
+                <h2>UNITED STATES</h2>
+            </section>
+            <section id = "ch" class = "page3">
+                <h2>CHINA</h2>
+            </section>
+            <section id = "jp" class = "page4">
+                <h2>JAPAN</h2>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
