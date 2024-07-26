@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contents</title>
+    <style>
+        * {
+
+            margin : 0;
+            padding : 0;
+            color : #333;
+
+        }
+
+        .clearfix::after {
+
+            content : "";
+            display : block;
+            clear : both;
+
+        }
+
+        ul {
+
+            list-style : none;
+
+        }
+
+        a {
+
+            text-decoration : none;
+            color : #333;
+
+        }
+
+        img {
+
+            display : block;
+
+        }
+
+        #wrap {
+
+            width : 1200px;
+            margin : 0 auto;
+
+        }
+
+        #contents {
+
+            width : 100%;
+            height : 200px;
+            padding : 10px 0;
+
+            /* 초과하더라도 넘어가지 않게 */
+            box-sizing : border-box;
+
+
+        }
+
+        #contents div {
+            float : left;
+            width : 32%;
+            
+
+        }
+
+        #contents h2 {
+
+            font-size : 18px;
+            background : #fabd43;
+            width : 120px;
+            height: 30px;
+            line-height : 30px;
+            text-align : center;
+
+        }
+
+        #contents .notice ul {
+
+            border-top : 2px solid #fabd43;
+            padding-top : 8px;
+
+        }
+
+        #contents .notice ul li {
+
+            font-size : 15px;
+            line-height : 35px;
+        }
+
+        #contents .notice ul a {
+
+            float : left;
+
+        }
+
+        #contents .notice ul span {
+
+            float : right;
+
+        }
+
+        /* 중복선택자 */
+        .notice, .gallery {
+
+            margin-right : 2%;
+
+        }
+
+        #contents .gallery ul {
+
+            border-top : 2px solid #fabd43;
+
+            padding-top : 10px;
+
+        }
+
+        #contents .gallery ul li {
+
+            /* float : left도 가능하다 */
+            display : inline-block;
+
+        }
+
+        #contents .gallery ul li a:hover {
+
+            opacity : 0.5;
+
+        }
+
+        #contents .gallery img {
+
+            width : 124px;
+            height : 135px;
+
+        }
+
+        #contents .shortcut {
+
+            position :relative;
+
+        }
+
+        #contents .shortcut img {
+
+            width : 384px;
+            height : 180px;
+
+        }
+
+        #contents .shortcut span {
+
+            width : 200px;
+            height : 40px;
+            background : #fabd43;
+            text-align : center;
+            line-height : 40px;
+            color : #fff;
+
+            /* position을 주면 inline 속성에게도 너비 높이가 적용된다 */
+            position : absolute;
+            top : 70px;
+            left : 92px;
+
+        }
+
+
+        /* modal, 팝업창 */
+        #modal {
+
+            /* 처음에는 우리 눈에 안보이게끔 */
+            display : none;
+
+            background : rgba(0, 0, 0, 0.5);
+            width : 100%;
+            height : 100%;
+
+            /* 무조건 위에 */
+            z-index : 999;
+
+            position : fixed;
+            top : 0;
+            left : 0;
+        }
+
+        #modal .modal_up {
+
+            width : 600px;
+            height : 350px;
+            padding : 20px;
+            background : #fff;
+            margin : 250px auto;
+
+            box-sizing : border-box;
+            
+        }
+
+        #modal .modal_up p {
+
+            /* 값을 3개 주면 위 / 좌우 / 아래 */
+            padding : 20px 0 165px;
+
+        }
+
+        #modal .modal_up button {
+
+            float : right;
+            padding : 5px 10px;
+
+        }
+
+    </style>
+    
+    <script src = "script/jquery-1.12.3.js"></script>
+    
+    <!-- defer을 적어줘야 작동한다 -->
+    <script src = "script/0724_script.js" defer></script>
+
+</head>
+<body>
+    <div id = "wrap">
+        <!-- modal, 팝업창 -->
+         <div id = "modal">
+            <div class = "modal_up">
+                <h3>상반기 신입/경력 사원 채용 공고</h3>
+                <p>국내 최고의 건설회사로 발돋움하고 있는 남율건설에서는<br>
+                    열정을 가지고 진취적으로 도전하는 신입/경력 사원을 모집합니다.<br>
+                    남율건설과 함께 하실 역량있는 인재들의 많은 지원을 기다립니다.
+                </p>
+                <button>닫기</button>
+
+            </div>
+
+         </div>
+
+        <div id = "contents" class = "clearfix">
+
+            <div class = "notice">
+                <h2>공지사항</h2>
+                <ul>
+                    <!-- 링크를 걸 수 있게끔 a태그를 활용, 날짜는 오른쪽 정렬하기 위해 span태그를 사용 -->
+                    <li><a href = "#">남율건설, 시공평가 순위 상위 5위 달성</a><span>2020.06.18</span></li>
+                    <li><a href = "#">건설의 날 기념 행사를 안내해드립니다</a><span>2020.06.18</span></li>
+                    <li><a href = "#">대학생 대상 건설현장 탐방기</a><span>2020.06.18</span></li>
+                    <li><a href = "#">상반기 신입/경력 사원 채용 공고</a><span>2020.06.18</span></li>
+                </ul>
+            </div>
+
+            <div class = "gallery">
+                <h2>갤러리</h2>
+                <ul>
+                    <li><a href = "#"><img src = "images/icon1.jpg" alt = "아이콘1"></a></li>
+                    <li><a href = "#"><img src = "images/icon2.jpg" alt = "아이콘2"></a></li>
+                    <li><a href = "#"><img src = "images/icon3.jpg" alt = "아이콘3"></a></li>
+                </ul>
+            </div>
+
+            <div class = "shortcut">
+                <a href = "#"><img src = "images/shortcut.jpg" alt = "바로가기"><span>바로가기</span></a>
+                
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

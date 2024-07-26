@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <style>
+        * {
+
+            margin : 0;
+            padding : 0;
+            color : #333;
+
+        }
+
+        .clearfix:after {
+
+            content : "";
+            display : block;
+            clear : both;
+
+        }
+
+        ul {
+
+            list-style : none;
+
+        }
+
+        a {
+
+            text-decoration : none;
+            color: #333;
+
+        }
+
+        #wrap {
+
+            width : 1200px;
+            margin : 0 auto;
+
+        }
+
+        #footer {
+
+            background : #48487d;
+            width : 100%;
+            height : 100px;
+
+        }
+
+        #footer .left {
+
+            width : 70%;
+            float : left;
+            text-align : center;
+
+        }
+
+        #footer .left ul {
+
+            /* 위 / 좌우 / 밑*/
+            padding : 20px 0 10px;
+
+        }
+
+        #footer .left ul li {
+
+            /* float : left, display : inline도 가능 */
+            display : inline-block;
+            padding : 0 40px;
+
+        }
+
+        #footer .left ul li a {
+
+            color : #fff;
+
+        }
+
+        #footer .left p {
+
+            color : #fff;
+
+        }
+
+        #footer .right {
+            
+            width : 30%;
+            /* float : left를 해도 상관없음. left 옆공간이 비어있으니까*/
+            float : left;
+
+            /* 밑에 내리기 위해 padding */
+            padding-top : 35px;
+
+        }
+
+        #footer .right select {
+
+            width : 250px;
+            height : 30px;
+
+        }
+
+        #footer .right select option {
+
+            text-align : center;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <footer id = "footer" class = "clearfix">
+            <div class = "left">
+                <ul>
+                    <li><a href = "#">하단메뉴1</a></li>
+                    <li><a href = "#">하단메뉴2</a></li>
+                    <li><a href = "#">하단메뉴3</a></li>
+                </ul>
+                <p>COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</p>
+            </div>
+            <div class = "right">
+
+                <!-- select -->
+                <select>
+                    <!-- 옵션 option, 클릭시 옵션 리스트를 볼 수 있음 -->
+                    <option>패밀리사이트1</option>
+                    <option>패밀리사이트2</option>
+                    <option>패밀리사이트3</option>
+                </select>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
