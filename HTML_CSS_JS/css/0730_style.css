@@ -1,0 +1,450 @@
+@charset "utf-8";
+
+* {
+
+    margin : 0;
+    padding : 0;
+    color : #333;
+
+}
+
+ul {
+
+    list-style : none;
+
+}
+
+a {
+
+    text-decoration : none;
+    color : #333;
+
+}
+
+img {
+
+    display : block;
+
+}
+
+.clearfix::after {
+
+    content : "";
+    display : block;
+    clear : both;
+
+}
+
+/* 위는 default */
+
+
+#wrap {
+
+    width : 1200px;
+    margin : 0 auto;
+
+}
+
+#header {
+
+    width : 100%;
+    height : 100px;
+    
+
+}
+
+#header h1 {
+
+    width : 30%;
+    float : left;
+    margin-top : 30px;
+
+}
+
+#header #nav {
+    /* 얘는 sub-bg의 부모요소임 */
+
+    float : right;
+    
+
+    position : relative;
+
+}
+/* nav의 ul의 바깥 li들에게만 적용되게끔 */
+/* 얘가 sub의 부모 */
+#header #nav > ul > li {
+
+    float : left;
+    width : 170px;
+    line-height : 40px;
+    margin-top : 60px;
+    text-align : center;
+
+    position : relative;
+    
+}
+
+/* 이해를 돕기 위해 색을 넣음 */
+/*
+#header #nav >ul > li:nth-child(1) {
+
+    background : rgba(255, 0, 0, 1);
+
+}
+
+#header #nav >ul > li:nth-child(2) {
+
+    background : rgba(255, 0, 0, 0.5);
+
+}
+
+#header #nav >ul > li:nth-child(3) {
+
+    background : rgba(0, 0, 255, 1);
+
+}
+
+#header #nav >ul > li:nth-child(4) {
+
+    background : rgba(0, 0, 255, 0.5);
+
+}
+    */
+
+#header #nav .sub {
+    
+
+    position : absolute;
+    top : 40px;
+    left : 0;
+
+    width : 170px;
+
+    /* 당장은 안보이게끔 */
+    display : none;
+
+    /* sub가 sub-bg보다 위에 올라오게끔 */
+    z-index : 2;
+}
+
+#header #nav .sub-bg {
+    
+
+    background : #fabd43;
+    width : 1200px;
+    height : 150px;
+
+    position : absolute;
+    top : 100px;
+    right : 0;
+
+    /* 당장은 안보이게끔 */
+    display : none;
+
+    /* sub-bg가 sub보다 밑에 있게끔 */
+    z-index : 1;
+
+}
+
+#header #nav ul li a {
+
+    display : block;
+
+}
+
+#header #nav ul li a:hover {
+
+    background : #fabd43;
+
+}
+
+#header #nav .sub li a:hover {
+
+    background : #48487d;
+    color : #fff;
+
+}
+
+    /* header */
+
+#slide {
+
+    width : 100%;
+    height : 300px;
+
+    /* #slide h2, li 의 부모요소임*/
+    position : relative;
+}
+
+#slide img {
+
+    width : 1200px;
+    height: 300px;
+
+}
+
+#slide h2 {
+
+    width : 500px;
+    height: 50px;
+    line-height : 50px;
+    text-align : center;
+    background : rgba(255, 255, 255, 0.5);
+
+    /* slide의 자식놈임 */
+    position : absolute;
+
+    /* 좌표값 잘 설정하기, 가령 left는 1200의 절반 후 500의 절반 */
+    top : 125px;
+    left : 350px;
+
+}
+
+#slide li {
+
+    /* 얘도 slide의 자식임 */
+    position : absolute;
+    top : 0;
+    left : 0;
+
+}
+
+/* 일단 첫번째 슬라이드만 보이고 나머지는 안보이게끔 */
+#slide li:nth-of-type(n+2) {
+
+    display : none;
+
+}
+
+/* slide 끝 */
+
+
+#contents {
+
+    width : 100%;
+    height : 200px;
+    padding : 10px 0;
+
+    /* 얘를 전체적으로 선언해서 사용하기도 함 */
+    box-sizing : border-box;
+
+   
+
+}
+
+#contents > div {
+
+    float : left;
+    /* 3개의 div니까 총 96%*/
+    width : 32%;
+
+    
+
+}
+
+#contents .notice, .gallery {
+
+    /* notice와 gallery에게 주니까 96%에서 총 100%가 됨 */
+    margin-right : 2%;
+
+}
+
+#contents h2 {
+
+    font-size : 16px;
+    width : 120px;
+    line-height : 30px;
+    text-align : center;
+
+    
+}
+
+#contents .notice ul {
+
+    border-top : 2px solid #fabd43;
+    padding-top : 8px;
+
+}
+
+#contents .notice a {
+
+    float : left;
+
+}
+
+#contents .notice span {
+
+
+    float : right;
+
+}
+
+#contents .notice ul li {
+
+    line-height : 35px;
+    font-size : 15px;
+
+}
+
+#contents .gallery ul {
+
+    border-top : 2px solid #fabd43;
+    text-align : center;
+    padding-top : 10px;
+
+}
+
+#contents .gallery ul li {
+
+    /* display : inline-block, float : left 다 사용가능 */
+    display : inline-block;
+
+}
+
+#contents .gallery ul li img {
+
+    /* 이미지 크기 조절 */
+    width : 124px;
+    height : 135px;
+
+}
+
+#contents .gallery ul li a:hover {
+
+    opacity : 0.5;
+
+}
+
+#contents .shortcut {
+
+    /* span의 부모임 */
+    position : relative;
+
+}
+
+#contents .shortcut img {
+
+    width : 384px;
+    height: 180px;
+
+}
+
+#contents .shortcut span {
+
+    width : 200px;
+    height : 40px;
+    background : rgba(255, 255, 255, 0.5);
+
+    /* shortcut의 자식임*/
+    position : absolute;
+    top : 70px;
+    left : 124px;
+    
+    text-align : center;
+    line-height : 40px;
+
+}
+
+/* contents 끝 */
+
+#modal {
+
+    display : none;
+
+    /* 문서를 기준으로 고정 */
+    position : fixed;
+    left : 0;
+    top : 0;
+
+    z-index : 100;
+    width : 100%;
+    height : 100%;
+    background : rgba(0, 0, 0, 0.5);
+    
+}
+
+#modal .modal_up {
+
+    width : 600px;
+    height : 350px;
+    background : #fff;
+    padding : 20px;
+    margin : 250px auto;
+    box-sizing : border-box;
+
+}
+
+#modal .modal_up p {
+
+    padding : 20px 0 165px;
+
+}
+
+#modal .modal_up button {
+
+    float : right;
+    padding : 5px 10px;
+
+}
+
+
+#footer {
+
+    width : 100%;
+    height : 100px;
+    background : #48487d;
+
+}
+
+#footer .left {
+
+    width : 70%;
+    float : left;
+    text-align : center;
+
+}
+
+#footer .left ul {
+
+    padding : 20px 0 10px 0;
+
+}
+
+#footer .left ul li {
+
+    /* 가로로 나열하기 */
+    display : inline-block;
+    padding : 0 40px;
+
+}
+
+#footer .left ul li a {
+
+    color : #fff;
+
+}
+
+#footer .left p {
+
+    color : #fff;
+
+}
+
+#footer .right {
+
+    width : 30%;
+    padding-top : 35px;
+    text-align : center;
+
+    /* left도 되고, right도 됨. 꽉 찼으니까 */
+    float : left;
+
+}
+
+#footer .right select {
+
+    width : 250px;
+    height : 30px;
+    
+
+}
