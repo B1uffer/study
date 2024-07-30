@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+* {
+
+    margin : 0;
+    padding : 0;
+    color : #333;
+
+}
+
+.clearfix::after {
+
+    content : "";
+    display : block;
+    clear : both;
+
+}
+
+ul {
+
+    list-style : none;
+
+}
+
+a {
+
+    text-decoration : none;
+    color : #333;
+
+}
+
+#wrap {
+
+    width : 1200px;
+    margin : 0 auto;
+
+}
+
+#header {
+
+    width : 100%;
+    height : 100px;
+
+}
+
+#header h1 {
+
+    width : 30%;
+    margin-top : 30px;
+    float : left;
+    
+}
+
+#header #nav {
+
+    float : right;
+
+    position : relative;
+
+}
+
+
+#header #nav > ul > li {
+
+    width : 170px;
+    line-height : 40px;
+
+    /* 허허 ㅅㅂ margin-top을 넣어야 제대로 정렬된다 뭐지 */
+    margin-top : 60px;
+    float : left;
+    text-align : center;
+
+    position : relative;
+
+}
+
+#header #nav .sub {
+
+    width : 170px;
+
+    position : absolute;
+    top : 40px;
+    left : 0;
+    
+    display : none;
+    z-index : 2;
+
+}
+
+#wrap #header #nav .sub-bg {
+
+    background : #fabd43;
+    width : 1200px;
+    height : 160px;
+
+    position : absolute;
+    top : 100px;
+    right : 0;
+
+    
+    display : none;
+    z-index : 1;
+
+}
+
+#wrap #header #nav ul li a {
+    
+    display : block;
+
+}
+
+#wrap #header #nav ul li a:hover {
+
+    background : rgba(0, 0, 0, 0.5);
+
+}
+
+/* header 끝 */
+
+
+#slide {
+
+    width : 100%;
+    height : 300px;
+    
+    position : relative;
+
+}
+
+#slide img {
+
+    width : 1200px;
+    height: 300px;
+
+}
+
+#slide ul li {
+
+    position : absolute;
+    top : 0;
+    left : 0;
+}
+
+#slide ul h2 {
+
+    width : 500px;
+    height: 50px;
+    line-height : 50px;
+    text-align : center;
+    background : #fabd43;
+    font-size : 20px;
+
+    position : absolute;
+
+    top : 125px;
+    left : 350px;
+
+}
+
+#slide ul li:nth-of-type(n+2) {
+
+    display : none;
+
+}
+
+
+/* slide 끝 */
+
+
+#contents {
+
+    width : 100%;
+    height : 200px;
+
+    /* 이놈 중요함 */
+    box-sizing: border-box;
+
+}
+
+#contents > div {
+
+    float : left;
+    width : 32%;
+    height : 200px;
+
+}
+
+#contents h3 {
+
+    width : 160px;
+    line-height : 30px;
+    background : lightblue;
+
+}
+
+#contents .notice ul {
+
+    border-top : 2px solid #fabd43;
+    padding-top : 8px;
+}
+
+#contents .notice a {
+
+    float : left;
+
+}
+
+#contnets .notice span {
+
+    float : right;
+
+}
+
+
