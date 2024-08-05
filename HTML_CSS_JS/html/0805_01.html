@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test01</title>
+	<style>
+		* {margin : 0; padding : 0;}
+		
+		a {text-decoration : none;}
+		
+		ul {list-style : none;}
+		
+		.clearfix::after {content : ""; display :block; clear : both;}
+		
+		header {width : 1600px; height : 100px; margin : 0 auto; background : yellow;}
+		header h1 {float : left;}
+		header h1 a img {}
+		
+		header .right {float: right;}
+		header .right .top {}
+		header .right .top ul {float: right;}
+		header .right .top ul li {float: left;}
+		header .right .top ul li a {}
+		header .right nav {}
+		header .right nav ul {}
+		header .right nav ul li {float : left;}
+		header .right nav ul li a {}
+		
+		footer {color : white;}
+		footer .fnb {margin : 0 auto; width : 1600px; height : 200px; background : black;}
+		footer .fnb .top {padding : 50px 0 10px 0; background : purple;}
+		
+		footer .fnb .f_left {float : left; margin-left : 200px; text-align : center; background : blue;}
+		footer .fnb .f_left ul {}
+		footer .fnb .f_left ul li {display : inline-block;}
+		
+		footer .fnb .f_right {float : right; margin-right : 200px; text-align : center; background : blue;}
+		footer .fnb .f_right ul li {padding : 0 5px 0 5px; display : inline-block;}
+		footer .fnb .f_right ul li a img {width : 50px; height : 50px; background : white;}
+		
+		footer .address {margin-left : 200px; padding : 5px 0 5px 0; font-style : normal; background : red;}
+		footer .copyright {margin-left : 200px; padding : 5px 0 5px 0; background : green;}
+	</style>
+</head>
+	
+<body>
+	<header class = "clearfix">
+		<h1><a href = "index.html"><img src = "" alt = "로고"></a></h1>
+		
+		<div class = "right">
+			<div class = "top clearfix">
+				<ul>
+					<li><a href = "#">페이스북</a></li>
+					<li><a href = "#">인스타</a></li>
+				</ul>
+			</div>
+		
+		
+			<nav>
+				<ul>
+					<li><a href = "#">브랜드</a></li>
+					<li><a href = "#">메뉴&매장</a></li>
+					<li><a href = "#">창업</a></li>
+					<li><a href = "#">멤버십</a></li>
+					<li><a href = "#">커뮤니티</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+	</main>
+	
+	<footer>
+		<div class = "fnb">
+			<div class = "top clearfix">
+				<div class = "f_left">
+					<ul>
+						<li>개인정보처리방침</li>
+						<li>저작권보호정책</li>
+					</ul>
+				</div>
+				<div class = "f_right">
+					<ul>
+						<li><a href = "#"><img src = "../images/001.png" alt = "유튜브"></a></li>
+						<li><a href = "#"><img src = "../images/002.png" alt = "페이스북"></a></li>
+						<li><a href = "#"><img src = "../images/003.png" alt = "인스타그램"></a></li>
+						<li><a href = "#"><img src = "../images/004.png" alt = "네이버"></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<address>
+			<div class = "address">
+				제주특별자치도 제주시 조천읍 남조로 1717-35 대표전화 : (064)780-3300, (국번없이)1636 (제주개발공사 또는 삼다수를 말하세요) 팩스 : (064)784-5020
+			</div>
+		</address>
+		<div class = "copyright">
+			<p>Copyright© 2018 제주특별자치도개발공사. All Rights Reserved.</p>
+		</div>
+		</div>
+		
+	</footer>
+</body>
+</html>

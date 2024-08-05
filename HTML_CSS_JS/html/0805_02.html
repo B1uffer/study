@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+		.clearfix::after {
+			content : "";
+			display : block;
+			clear : both;
+		}
+		
+		#abc {width : 500px; background : red;}
+		#abc .top {border-bottom : 5px solid blue;}
+		#abc .top i {float : left; width : 70px; height : 70px; background : url("images/001.png") no-repeat; background-size: cover;}
+		#abc .top h2 {float : left; line-height : 70px;}
+		#abc span {}
+	</style>
+</head>
+
+<body>
+	<div id = "abc">
+		<div class = "top clearfix">
+			<i></i>
+			<h2>내 덱</h2>
+		</div>
+		<span>
+			덱 레시피를 등록하거나 등록한 덱을<br>
+			다른 사용자에게 공개할 수 있습니다.<br>
+			(하프 덱이나 Duel Links 덱도 등록할 수 있습니다.)<br>
+			본인의 덱이나 카드를 관리하는 데<br>
+			사용하면 좋은 기능입니다.
+		</span>
+		
+	</div>
+	
+</body>
+</html>
