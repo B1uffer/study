@@ -1,0 +1,68 @@
+포지션 relative
+1. 자식 요소중에 absolute가 적용된 요소의 위치 기준 역할
+1. 태그의 블록, 인라인 성질 유지
+1. top. right, bottom, left 사용 가능
+1. z-index 사용 가능
+
+포지션 absolute
+1. relative가 적용된 부모 요소를 기준으로 위치 맞춤(부모에 relative가 없다면 브라우저 기준으로 위치 맞춤)
+1. 공중에 뜸
+1. 태그의 블록, 인라인 성질이 없어짐
+1. 면적 있음
+1. top, right, bottom, left 사용 가능
+1. z-index 사용 가능
+1. 서로 겹치면 밑에 있는 태그가 옆으로 배치
+
+포지션 fixed
+1. 위치가 화면에 고정
+1. 브라우저를 기준으로 위치 맞춤
+1. 포지션 absolute랑 동일
+
+포지션 absolute의 경우 겹치기, 다른 레이아웃 명령어로 위치 맞추기 어려울 때 후순위 사용 권장
+
+hr : 블록 / 구분선 / border 기본값
+
+
+
+큐넷 공개문제
+https://www.q-net.or.kr/cst006.do?id=cst00602&gSite=Q&gId=
+
+춘천 실기 문제
+http://chldydtn77.dothome.co.kr/data_view.php?page=1&number=24&num=1041&search=%EC%9B%B9%EB%94%94%EC%9E%90%EC%9D%B8
+
+웹디자인기능사 실기 pdf
+http://chldydtn77.dothome.co.kr/data_view.php?page=1&number=21&num=932&search=%EC%9B%B9%EB%94%94%EC%9E%90%EC%9D%B8
+
+영진닷컴 이기적 - > 자료실 - > 웹디자인 - > 6454
+https://license.youngjin.com/artyboard/mboard.asp?Action=view&strBoardID=Pds_g&intPage=1&intCategory=0&strSearchCategory=|s_name|s_subject||&strSearchWord=6454&intSeq=109593
+
+
+웹디자인기능사 실기 공통 지시사항
+1. 웹표준 : 웹표준, 웹접근성, 시멘틱, 반응형, 크로스브라우징
+2. 외부 css(파일 별도 제작)
+3. 외부 자바스크립트(파일 별도 제작)
+4. a태그에 임시링크 href = "#" 넣기
+5. 반응형 (서로 다른 해상도에서 동일한 레이아웃 제공)
+6. table태그 사용 x
+7. 상위 부모를 블록 태그로 사용
+8. 제목은 h태그하고 굵게, 크게해서 차별성 두기
+9. 이미지는 image태그를 사용하며 alt속성 넣기
+용량 5mb 이내
+
+
+<link rel = "stylesheet" href = "css/style.css">
+<script src = "script/javascript.js" defer></script>
+<script src = "script/jquery-3.7.1.min.js"></script>
+
+연동확인
+css - body {background : red};
+js - $('body').css('background','red');
+
+
+자바스크립트(입력 제한, 체크박스)
+애니메이션은 과거에 어도비 플래시로 제작 - > 자바스크립트(너무 어렵다)
+제이쿼리 : 자바스크립트 라이브러리(자바스크립트 사용을 도와주는 도구)
+리액트
+
+
+효율성 : css >>> javascript > jQuery
