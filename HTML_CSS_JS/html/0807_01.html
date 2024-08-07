@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>무제 문서</title>
+<title>연습장</title>
 	<style>
 		
 		* {margin : 0; padding : 0;}
@@ -12,6 +12,8 @@
 		em, i, address {font-style: normal;}
 		.clearfix::after {display : block; clear : both; content : "";}
 		
+		
+		
 		#abc {position : fixed; top : 100px; right : 40px; z-index : 100;}
 		#abc ul {}
 		#abc ul li {padding-bottom : 20px;}
@@ -19,14 +21,13 @@
 		/* object-fit : cover의 경우 호환성이 매우 떨어진다 */
 		#abc ul li a img {width : 140px; height : 100px; object-fit : cover;}
 		
-		#abc > a {display : block; width : 70px; height : 70px; text-align : center; line-height: 30px;
-		background : yellow;}
-		
-		#abc > a .def {width : 0px; height : 0px; margin : 0 auto; padding-top : 10px; border-top : 10px solid transparent; border-left:10px solid transparent; border-right : 10px solid transparent; border-bottom : 10px solid red;}
+		.ghi {position : fixed; bottom : 20px; right : 70px;}
+		.ghi a {display : block; width : 70px; height : 70px; text-align : center; line-height: 30px; background : yellow;}
+		.ghi a .def {width : 0px; height : 0px; margin : 0 auto; padding-top : 10px; border-top : 10px solid transparent; border-left:10px solid transparent; border-right : 10px solid transparent; border-bottom : 10px solid red;}
 		
 	</style>
 </head>
-
+	
 <body>
 	
 	<div id = "abc">
@@ -34,8 +35,10 @@
 			<li><a href = "#"><img src = "images/001.png" alt = "이미지"></a></li>
 			<li><a href = "#"><img src = "images/002.png" alt = "이미지"></a></li>
 		</ul>
-		
-		<a href = "#"><div class = "def"></div>TOP</a>
 	</div>
+	<div class = "ghi">
+			<a href = "#"><div class = "def"></div>TOP</a>
+		</div>
+	
 </body>
 </html>
