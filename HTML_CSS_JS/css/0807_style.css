@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+* {margin : 0; padding : 0; color : #333;}
+a {text-decoration : none; color : inherit;}
+ul {list-style : none;}
+.clearfix:after {content: ""; clear : both; display : block;}
+
+#wrap {width : 1000px; height : 650px; background : black;}
+
+#header {float : left; width : 200px; height : 650px; background : red;}
+
+#header h1 {}
+#header h1 a {}
+#header h1 a img {display : block;} /* img 기본 여백 제거 */
+
+
+#header nav {position : relative; width : 180px; margin : 0 auto; text-align : center; background : yellow;} /* 여기에 relative를 해야 서브메뉴가 고정된 자리가 됨*/
+#header nav>ul {}
+#header nav>ul>li {}
+#header nav>ul>li>a {height : 40px; line-height : 40px; display : block;}
+
+
+#header nav>ul>li>ul {display : none; position : absolute; left : 180px; top : -5px; width : 180px; height : 200px; background : orange;}
+#header nav>ul>li>ul>li {}
+#header nav>ul>li>ul>li>a {display : block; height : 40px; line-height : 40px;}
+
+
+#header nav>ul>li:hover {background : gray;}
+#header nav>ul>li>ul>li:hover {background : gray;}
+
+
+
+#slide {float : right; width : 800px; height : 350px; background : blue;}
+
+#contents {float : right; width : 800px; height : 200px; background : green;}
+
+#footer {float : right; width : 800px; height : 100px; background : yellow;}
+
+#footer h1 {float : left; padding : 30px 10px 0 10px;}
+#footer h1 a {}
+#footer h1 a img {}
+
+#footer p {float : left; line-height : 100px;}
+
+#footer select {float : right; width : 150px; height : 30px; margin  : 35px 10px 0 0;}
+#footer select option {}
