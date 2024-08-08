@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+* {margin : 0; padding : 0; color : #333;}
+a {text-decoration : none; color : inherit;}
+ul {list-style : none;}
+.clearfix:after {content: ""; clear : both; display : block;}
+
+#wrap {width : 1000px; height : 650px; background : black;}
+
+/* header */
+#header {float : left; width : 200px; height : 650px; background : red;}
+
+#header h1 {}
+#header h1 a {}
+#header h1 a img {display : block;} /* img 기본 여백 제거 */
+
+#header nav {position : relative; width : 180px; margin : 0 auto; text-align : center; background : yellow;} /* 여기에 relative를 해야 서브메뉴가 고정된 자리가 됨*/
+#header nav>ul {}
+#header nav>ul>li {}
+#header nav>ul>li>a {height : 40px; line-height : 40px; display : block;}
+
+#header nav>ul>li>ul {display : none; position : absolute; left : 180px; top : -5px; width : 180px; height : 200px; z-index : 100; background : orange;}
+#header nav>ul>li>ul>li {}
+#header nav>ul>li>ul>li>a {display : block; height : 40px; line-height : 40px;}
+
+#header nav>ul>li:hover {background : gray;}
+#header nav>ul>li>ul>li:hover {background : gray;}
+
+
+/* slide */
+#slide {position : relative; float : right; width : 800px; height : 350px;}
+#slide ul {overflow : hidden;}
+#slide ul li {position : absolute; left : 0; top : 0;}
+#slide ul li:nth-of-type(n+2) {display : none;}
+#slide ul li a {}
+#slide ul li a img {}
+#slide ul li a h2 {position : absolute; left : 250px; top : 150px; width : 300px; height : 50px; line-height : 50px; text-align : center; background : yellow;}
+
+
+/* modal */
+#modal {position : fixed; left : 0; top : 0; z-index : 100; width : 100%; height : 100%; background : rgba(0, 0, 0, 0.5); display : none;}
+#modal .box {width : 500px; margin : 50px 0 0 300px; padding : 20px; text-align : right; background : #fff;}
+#modal .box h2 {text-align : left;}
+#modal .box p {padding : 20px 0; text-align : left;}
+#modal .box button {margin-top : 200px; padding : 5px 10px; border : transparent; cursor : pointer;}
+
+
+/* contents */
+#contents {float : right; width : 800px; height : 200px; background : green;}
+#contents .notice {float : left; width : 300px; background : lightblue;}
+#contents .notice h2 {padding : 10px 0;}
+#contents .notice ul {}
+#contents .notice ul li {padding : 5px 0;}
+#contents .notice ul li a {}
+#contents .notice ul li span {float : right;}
+
+#contents .gallery {float : left; width : 300px; background : lightcoral;}
+#contents .gallery h2 {padding : 10px 0;}
+#contents .gallery ul {}
+#contents .gallery ul li {float : left; padding :20px 10px 0;}
+#contents .gallery ul li a {}
+#contents .gallery ul li a img {width : 80px;}
+#contents .gallery ul li a img:hover {opacity: 0.5;}
+
+#contents .shortcut {position : relative; float : left; text-align : center; width : 200px; background : lightcyan;}
+#contents .shortcut a {}
+#contents .shortcut a img {width : 180px; padding : 10px;}
+#contents .shortcut a span {position : absolute; left : 50px; top : 80px; width : 100px; height : 40px; line-height : 40px; background : lightgoldenrodyellow;}
+
+
+/* footer*/
+#footer {float : right; width : 800px; height : 100px; background : yellow;}
+
+#footer h1 {float : left; padding : 30px 10px 0 10px;}
+#footer h1 a {}
+#footer h1 a img {}
+
+#footer p {float : left; line-height : 100px;}
+
+#footer select {float : right; width : 150px; height : 30px; margin  : 35px 10px 0 0;}
+#footer select option {}
