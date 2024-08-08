@@ -1,0 +1,100 @@
+클릭 : a태그, button
+a태그 - 밑줄, 글자 파랑, 링크 제거
+button - cursor : pointer, border, background
+
+
+자바스크립트
+var : 변수선언
+document.write() : 화면에 출력함
+setInterval(function() {
+
+}, 1000) : 1초 뒤에 1초마다 1번씩 실행문 무한 반복
+
+
+var now = 1;
+var imgs = 2;
+
+setInterval(() => {		// =>은 visualCode 자동완성임
+
+    
+    $('#slide ul li').eq(now - 1).fadeOut();	// eq는 css의 nth-of-type과 같음 즉 선택하는 메서드
+    $('#slide ul li').eq(now).fadeIn();		// eq는 0부터 찾는 배열형 트리
+    now = now == imgs ? 0 : now += 1;	// 삼항연산자
+
+}, 3000);		// 3000은 3초, 1000은 1초
+
+eq(now - 1)에서 now = now - 1이 아니기 때문에 now는 초기화되지 않으며,
+밑의 메서드 now에 그대로 기존의 now가 들어간다
+
+
+
+slide 자바스크립트 유형
+1. 이미지 개수 3개 또는 5개
+image = 2 또는 image = 4
+
+2. fadeOut, fadeIn
+#slide ul li:nth-of-type(n+2)('display', 'none')
+2번째 이후 선택해서 숨기기
+트랜지션 x
+
+ * fadeOut fadeIn css
+	#slide {position : relative; float : right; width : 800px; height : 350px;}
+	#slide ul {overflow : hidden;}
+	#slide ul li {position : absolute;left : 0; top : 0;}
+	#slide ul li:nth-of-type(n+2) {display : none;}
+	#slide ul li a {}
+	#slide ul li a img {}
+	#slide ul li a h2 {position : absolute; left : 250px; top : 150px; width : 300px; height : 50px; line-height : 50px; text-align : center;}
+
+
+3. 좌에서 우 애니메이션
+li 태그에 left : -200%; li 본체를 왼쪽으로 -200%만큼 이동시킴
+li태그에 트랜지션 o
+부모 태그에 overflow : hidden; 나가면 안보인다
+$('#slide ul li').eq(now-1).css('left','-200%')
+$('#slide ul li').eq(now).css('left',0);
+
+ * 좌에서 우 애니메이션 css
+	#slide {overflow : hidden} 추가
+	#slide ul {overflow : hidden} 삭제
+	#slide ul li {transition : 2s, left : -200%} 추가 및 변경
+	#slide ul li:nth-of-type(n+2) {display : none;} 삭제
+
+	#slide {position : relative; float : right; width : 800px; height : 350px; overflow : hidden;}
+	#slide ul {}
+	#slide ul li {transition : 2s; position : absolute; left : -200%; top : 0;}
+	#slide ul li:nth-of-type(n+2) {}
+	#slide ul li a {}
+	#slide ul li a img {}
+	#slide ul li a h2 {position : absolute; left : 250px; top : 150px; width : 300px; height : 50px; line-height : 50px; text-align : center;
+	
+
+4. 위에서 아래 애니메이션
+li태그에 top : -200%;
+li태그에 트랜지션 o
+부모 태그에 overflow : hidden;
+now 변수값 0
+
+ * 좌에서 우 애니메이션 css
+	#slide { overflow : hidden } 추가
+	#slide ul li { transition : 2s, top : -200%} 추가 및 변경
+	#slide ul li:nth-of-type(n+2) {display : none;} 삭제
+
+	#slide {position : relative; float : right; width : 800px; height : 350px; overflow : hidden;}
+	#slide ul {}
+	#slide ul li {transition : 2s; position : absolute; left : 0; top : -200%;}
+	#slide ul li:nth-of-type(n+2) {}
+	#slide ul li a {}
+	#slide ul li a img {}
+	#slide ul li a h2 {position : absolute; left : 250px; top : 150px; width : 300px; height : 50px; line-height : 50px; text-align : center;
+
+
+
+header가 왼쪽에 있는 유형
+1. 서브가 좌측으로 펼쳐짐
+
+2. 서브가 아래로 펼쳐짐
+
+
+modal 배경 반투명 지우기 : 색깔만 지우면 안되고 박스도 없애야함
+#modal. box {} 안에 있는걸 모두 #modal {}로 넣는데, 크기 관련된걸 box에 맞춰줘야됨
