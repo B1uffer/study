@@ -1,0 +1,74 @@
+@charset "utp-8";
+
+* {margin : 0; padding : 0; color : #333;}
+a {text-decoration : none; color : inherit;}
+ul {list-style : none; color : inherit;}
+.clearfix::after {content: ""; clear : both; display : block;}
+
+#wrap {width : 1000px; height : 650px; background : #fff; border : 1px solid #333;}
+
+#header {float : left; width : 200px; height : 100%;}
+
+#header>a {}
+#header>a>h1 {}
+#header>a>h1>img {padding : 20px 0 10px 0;}
+
+#header>nav {position : relative; width : 100%; height : 200px; line-height : 50px; background : red;}
+#header>nav>ul {text-align : center;}
+#header>nav>ul>li {}
+#header>nav>ul>li>a {}
+#header>nav>ul>li>a>h2 {color : #fff;}
+
+
+#header>nav>ul>li>ul {position : absolute; top : 0; left : 200px; width : 170px; height : 200px; z-index : 100; display : none; background : blue;}
+#header>nav>ul>li>ul>li {}
+#header>nav>ul>li>ul>li:nth-of-type(n+1) {}
+#header>nav>ul>li>ul>li>a {}
+#header>nav>ul>li>ul>li>a>h3 {color : #d4d4d4;}
+
+
+
+#slide {position : relative; float : right; width : 800px; height : 350px;}
+#slide ul {}
+#slide ul li {position : absolute; top : 0; left : 0;}
+#slide ul li a {}
+#slide ul li a img {}
+#slide ul li a h2 {position :absolute; top : 150px; left : 250px; width : 300px; height : 50px; text-align : center; line-height: 50px; background : rgba(0, 0, 0, 0.5); color : #fff;}
+
+
+#contents {float : right; width : 800px; height : 200px;}
+#contents #notice {float : left; margin : 10px;}
+#contents #notice>a {}
+#contents #notice>a>h2 {padding-bottom : 3px; border-bottom : 1px solid rgba(0, 0, 0, 0.5);}
+#contents #notice>ul {margin-top : 20px;}
+#contents #notice>ul>li {width : 270px; margin : 5px 0 5px 0;}
+#contents #notice>ul>li>a {}
+#contents #notice>ul>li>span {float : right;}
+
+
+#contents #gallery {float : left; margin : 10px;}
+#contents #gallery>a {}
+#contents #gallery>a>h2 {padding-bottom : 3px; border-bottom : 1px solid rgba(0, 0, 0, 0.5);}
+#contents #gallery>ul {padding-top : 20px;}
+#contents #gallery>ul>li {display : inline;}
+#contents #gallery>ul>li>a {}
+#contents #gallery>ul>li>a>img {width : 90px;}
+
+
+#contents #shortcut {position : relative; float : right;}
+#contents #shortcut a {}
+#contents #shortcut a img {}
+#contents #shortcut a span {position : absolute; top : 100px; left : 65px; background : rgba(0, 0, 0, 0.5); color : #fff;}
+
+
+
+#footer {float : right; width : 800px; height : 100px; background : lightcyan;}
+#footer .fwrap1 {float : left; height : 100px;}
+#footer .fwrap1 img {padding-top : 25px;}
+
+#footer .fwrap2 {float : left;}
+#footer .fwrap2 .text {width : 600px; height : 50px; line-height : 50px;}
+#footer .fwrap2 .text ul {text-align : center;}
+#footer .fwrap2 .text ul li {display : inline; margin-right : 10px;}
+#footer .fwrap2 .copyright {width : 600px; height : 50px; text-align : center; line-height : 40px;}
+#footer .wrap2 .copyright p {}
