@@ -26,4 +26,18 @@ setInterval(() => {
     
 }, 1000);
 
+$('#contents #notice>ul>li').click(function() {
+
+    $('#modal').css('display', 'block');
+
+    return false;
+
+})
+
+$('#modal #box button').click(function() {
+
+    $('#modal').css('display', 'none');
+
+})
+
 
