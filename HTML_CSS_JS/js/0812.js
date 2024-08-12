@@ -12,6 +12,14 @@ $('#header>nav>ul>li>a').mouseout(function() {
 
 })
 
+var start = 1;
+var end = 2;
+
 setInterval(() => {
-    
-}, 3000);
+
+    $('#slide ul li').eq(start-1).fadeOut();
+    $('#slide ul li').eq(start).fadeIn();
+
+    start = start == end ? 0 : start += 1;
+
+}, 1000);
