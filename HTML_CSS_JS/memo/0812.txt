@@ -1,0 +1,28 @@
+헤더 푸터 너비 100%인 문제는
+전체 영역인 wrap 작성 x
+
+javascript
+헤더부분 메뉴 한번에 나오게 할땐 this가 필요없음
+메뉴가 하나 하나 나오게 할땐 this가 필요함
+
+3등분하기
+width : calc(100%/3), width : 33.3333%
+calc의 경우 css3(신형), 33.3333%의 경우 구형명령어
+
+퍼센트, 픽셀 같이 사용 : calc(100% - 40px);
+
+css3 명령어 (구형브라우저 x)
+box-shadow : 2px 2px 2px #000;
+
+
+width : 100%;
+부모 면적을 100% 상속받음
+
+width : 100vw;
+브라우저 가로 크기 100% 적용(자주 안씀)
+
+
+높이 100% 적용방법
+position : absolute;
+position : fixed;
+height : 100vh; (실무에서 자주 씀)
