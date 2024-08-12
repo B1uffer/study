@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+* {margin : 0; padding : 0; color : #333333;}
+ul {list-style : none;}
+a {text-decoration : none; color : inherit;}
+.clearfix::after {clear : both; content : ""; display : block;}
+
+body {margin : 0 auto; width : 1200px; height : 700px;}
+
+#header {position : relative; width : 100%; height : 100px; background : red;}
+#header>h1 {float : left; width : 200px; height : 100px;}
+#header>h1>a {line-height :100px;}
+#header>h1>a>img {}
+
+#header #background {position : absolute; top : 100px; left : 0; display : none; width : 1200px; height : 120px; z-index : 1;background : blue;}
+
+#header>nav {position : relative;}
+#header>nav>ul {position : absolute; top : 60px; right : 100px; z-index : 100;}
+#header>nav>ul>li {float : left;}
+#header>nav>ul>li>a {}
+#header>nav>ul>li>a>h2 {padding : 7px 20px 0 20px; background : yellow; border : 1px solid #000;}
+
+#header>nav>ul>li>ul {display : none;}
+#header>nav>ul>li>ul>li {text-align : center; padding : 3px;}
+#header>nav>ul>li>ul>li>a {color : #ffffff;}
+
+
+#slide {position : relative; width : 100%; height : 300px; overflow : hidden;}
+#slide ul {}
+#slide ul li {position : absolute; top : 0; left : 0;}
+#slide ul li a {}
+#slide ul li a img {}
+#slide ul li h2 {position : absolute; top : 120px; left : 450px; padding : 20px; background : rgba(255, 255, 255, 0.5);}
+
+
+
+#contents {width : 100%; height : 200px;}
+#contents #notice {float : left; width : 400px; height : 200px;}
+#contents #notice h3 {padding : 5px 0 5px 0; border-bottom : 1px solid lightblue;}
+#contents #notice h3 a {}
+
+#contents #notice ul {padding : 10px 0;}
+#contents #notice ul li {padding : 5px 0 5px 0;}
+#contents #notice ul li a {padding-right : 70px;}
+#contents #notice ul li span {float : right;}
+
+#contents #gallery {float : left; width : 400px; height : 200px;}
+#contents #gallery h3 {padding : 5px 0 5px 0; border-bottom : 1px solid lightblue;}
+#contents #gallery h3 a {}
+
+#contents #gallery ul {padding : 25px 0 0 20px;}
+#contents #gallery ul li {float : left;}
+#contents #gallery ul li a {}
+#contents #gallery ul li a img {margin-right : 25px;}
+
+#contents #shortcut {position : relative; float : right;}
+#contents #shortcut a {}
+#contents #shortcut a img {}
+#contents #shortcut a span {position : absolute; top : 75px; left : 165px; padding : 10px; background : rgba(255, 255, 255, 0.5);}
+
+
+
+#footer {width : 100%; height : 100px; background : lightcoral;}
+#footer #copyright {float : left; width : 1000px; height : 100px;}
+#footer #copyright p {text-align : center; line-height : 100px;}
+
+#footer #sns {height : 50px;}
+#footer #sns img {}
+
+#footer #fmsight {height: 50px;}
+#footer #fmsight select {margin : 15px 0 0 35px; padding : 5px;}
+#footer #fmsight select option {}
