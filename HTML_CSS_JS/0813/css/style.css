@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+* {margin : 0; padding : 0;}
+a {text-decoration : none; color : #333;}
+ul {list-style : none;}
+.clearfix::after {content : ""; display : block; clear : both;}
+
+body {background : #fff;}
+
+#wrap {height : 750px; min-width : 1000px;}
+
+#header {float : left; width : 200px; height : 650px; background : red;}
+#header .logo {margin : 0 auto; padding : 15px 0 10px 0;}
+#header .logo h1 {}
+#header .logo h1 a {}
+#header .logo h1 a img {display : block;}
+
+#header>nav {}
+#header>nav>ul {margin : 0 auto; width : 180px; background : yellow;}
+#header>nav>ul>li {}
+#header>nav>ul>li>a {}
+#header>nav>ul>li>a:hover {color : #fff;}
+#header>nav>ul>li>h2 {}
+#hedaer>nav>ul>li>h2>a {}
+
+#header>nav>ul>li>ul {}
+#header>nav>ul>li>ul>li {display : none; padding : 5px;background : #fff;}
+#header>nav>ul>li>ul>li:hover {background : #333;}
+#header>nav>ul>li>ul>li>a {}
+#header>nav>ul>li>ul>li>a:hover {color : #fff;}
+#header>nav>ul>li>ul>li>a>h3 {}
+
+
+
+#slide {position : relative; float : left; width : calc(100% - 200px); height : 400px; background : orange;}
+#slide ul {}
+#slide ul li {position : absolute; top : -200%; left : 0; width : 100%; height : 100%; transition : 0.4s;}
+#slide ul li img {width : 100%; height : 100%; object-fit: cover;}
+#slide ul li span {position : absolute; top : 40%; left : 40%; width : 200px; height : 50px; text-align : center; line-height : 50px; background : rgba(255, 255, 255, 0.5);}
+
+
+#modal {position : fixed; top : 0; left : 0; z-index : 100; width : 100%; height : 100%; background : rgba(0, 0, 0, 0.5);}
+#modal .m_box {padding : 20px; width : 600px; height : 300px; background : #fff;}
+#modal .m_box h2 {margin : 20px;}
+#modal .m_box p {margin : 20px;}
+#modal .m_box button {float : right; margin : 90px 10px 0; padding : 5px; cursor : pointer;}
+
+
+#contents {position : relative; float : left; width : calc(100% - 200px); height : 250px; background : yellow;}
+#contents #notice {float : left; width : 50%;}
+#contents #notice ul {margin : 0 0 9px 10px; width : 93%;}
+#contents #notice ul .box1 {margin-top : 5px; height : 30px; border-bottom: 2px solid #333;}
+#contents #notice ul .box1 h3 {}
+#contents #notice ul li {padding :15px 5px 15px 5px;}
+#contents #notice ul li a {}
+#contents #notice ul li:hover {background : rgba(0, 0, 0, 0.5);}
+#contents #notice ul li span {float : right;}
+.color2 {background : lightgreen;}
+
+#contents #gallery {float : right; width : 50%;}
+#contents #gallery ul {margin : 0 auto; width : 93%;}
+#contents #gallery ul .box1 {margin-top : 5px; height : 30px; border-bottom: 2px solid #333;}
+#contents #gallery ul .box1 h3 {}
+#contents #gallery ul li {display : inline-block; margin : 20px 0; padding : 20px 10px;}
+#contents #gallery ul li a {}
+#contents #gallery ul li a img {}
+
+#contents #shortcut {position : absolute; top : -400px; right : 0; height : 400px; background : rgba(255, 255, 255, 0.9);}
+#contents #shortcut a {}
+#contents #shortcut a dl {padding : 20px;}
+#contents #shortcut a dl dt {}
+#contents #shortcut a dl dt img {}
+#contents #shortcut a dl dt dd {}
+#contents #shortcut a dl dt dd h2 {}
+#contents #shortcut a dl dt dd h2 p {}
+
+#footer {clear : both; height : 100px; background : green;}
+#footer #logo {float : left; width : 200px; line-height : 115px;}
+#footer #logo a {}
+#footer #logo a img {}
+
+#footer #copyright {float : left; width : calc(100% - 200px - 230px);}
+#footer #copyright p {text-align : center; line-height : 100px;}
+
+#footer #family {float : right; width : 230px;}
+#footer #family select {margin : 30px 0; padding : 5px;}
+#footer #family option {}
