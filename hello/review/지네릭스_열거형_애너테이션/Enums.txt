@@ -1,0 +1,107 @@
+열거형(Enums)
+
+  2.1 열거형?
+    서로 관련된 "상수"를 편리하게 선언하기 위한 것, 여러 상수를 정의할 때 사용함
+    자바는 C와 달리 열거형이 존재하지 않았으나 JDK 1.5부터 추가되었음
+    자바의 열거형은 C의 열거형보다 향산된 것으로, 열거형이 갖는 값뿐만 아니라 타입도 관리하기 때문에 논리적 오류를 줄일 수 있음
+
+        class Card {        // 열거형 전
+
+            static final int CLOVER = 0;
+            static final int HEART = 1;
+            static final int DIAMOND = 2;
+            static final int SPADE = 3;
+
+            static final int TWO = 0;
+            static final int THREE = 1;
+            static final int FOUR = 2;
+
+            final int kind;
+            final int num;
+
+        }
+
+        class Card {        // 열거형
+
+            enum Kind {CLOVER, HEART, DIAMOND, SPADE}   // 열거형 Kind 정의
+            enum Value {TWO, THREE, FOUR}       // 열거형 Value 정의
+
+            final Kind kind;        // final Kind와 같이 타입이 int가 아닌 Kind임
+            final Value value;      // 마찬가지로 타입이 Value임
+
+        }
+
+    C언어에서는 타입이 달라도 값이 같으면 조건식의 결과가 true였으나, 자바의 열거형은 '타입에 안전한 열거형(typesafe enum)'이라는 거랜다
+    그래서 실제 값이 같아도 타입이 다르면 컴파일 에러가 발생함. 값뿐만 아니라 타입도 검사한대!
+
+    if(Card.CLOVER == Card.TWO)     // true이지만 false여야한다 Card.CLOVER = 0;이고 Card.TWO = 0;라서 true가 나와버리는 것
+    if(Card.Kind.CLOVER == Card.Value.TWO)      // 컴파일 시 에러 발생함. 값은 0으로 같지만 타입이 다름
+
+    상수의 값이 바뀌면 해당 상수를 참조하는 모든 소스를 다시 컴파일하지만, 열거형 상수를 사용하면 기존 소스를 컴파일 하지 않아도 됨!
+    좋네!
+
+  
+
+  2.2 열거형의 정의, 사용
+    정의는 ㅈㄴ 간단한 enum 이름 {상수명1, 상수명2, 상수명3, ...}
+    동서남북 4방향을 상수로 정의하는 열거형 Direction은 enum Direction {EAST, WEST, SOUTH, NORTH}
+
+    열거형에 정의된 상수를 사용하는 방법은 이름.상수명임, 클래스의 static변수를 참조하는 것과 같음
+
+    class Unit {
+
+        int x, y;       // 유닛의 위치
+        Direction dir;      // 열거형을 인스턴스 변수로 선언함
+
+        void init() {
+
+            dir = Direction.EAST;       // 유닛의 방향을 EAST로 초기화함
+
+        }
+
+    }
+
+    열거형 상수간 비교는 '=='을 사용할 수 있음
+    eqauls()가 아니라 ==을 사용해서 비교하기 때문에 빠른 성능을 기대할 수 있다
+    그러나 <, >와 같은 비교연산자는 사용할 수 없고 compareTo()를 사용한다. 
+        compareTo()는 두 비교대상이 같으면 0, 왼쪽이 크면 양수, 오른쪽이 크면 음수를 반환함
+    
+    if(dir == Direction.EAST) {
+
+        x++;
+
+    } else if (dir > Direction.WEST) {
+
+        // 열거형 상수에 비교연산자를 사용할 수 없으므로 에러뜸
+
+    } else if (dir.compareTo(Direction.WEST) > 0) {
+
+        // 가능
+
+    }
+
+    switch문의 조건식에도 열거형 사용 가능
+
+    void move() {
+
+        switch(dir) {
+
+            case EAST : x++;        // Direction.EAST는 쓰면 안됨 위에서 선언해서 그런가봄
+            break;
+
+            case WEST : x--;
+            break;
+
+            case SOUTH : y++;
+            break;
+
+            case NORTH : y--;
+            break;
+
+        }
+
+    }
+
+    * case문에 열거형의 이름은 적지 않고 상수의 이름만 적어야한다.(EAST, WEST, SOUTH, NORT)
+        오타도 줄이고 간결해서 그런가봄
+
