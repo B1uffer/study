@@ -1,0 +1,283 @@
+와일드 카드
+  매개변수에 과일박스를 대입하면 주스를 만들어서 반환하는 Juicer라는 클래스와 Juicer 클래스에는 과일을 주스로 만들어서 반환하는 makeJuicer() static 메서드가 있다고 하자
+
+  clss Juicer {
+    static Juice makeJuice(FruitBox<Fruit> box) {
+
+      String tmp = "";
+      for(Fruit f : box.getList()) tmp += f + " ";
+      
+      return ne Juice(tmp);
+    }
+    
+  }
+
+  Juicer는 지네릭이 아니며 static메서드에선 타입 매개변수 T를 매개변수에 사용할 수 없다.
+  따라서 지네릭스를 적용하지 않던지, 타입 매개변수 대신 특정 타입을 지정해줘야함.
+    위의 경우 타입 매개변수 대신 특정 타입 Fruit을 지정했음
+
+  FruitBox<Fruit> fruitBox = new FruitBox();
+  FruitBox<Apple> appleBox = new FruitBox();
+
+  System.out.println(Juicer.makeJuice(fruitBox)); // 이건 됨 FruitBox<Fruit> 타입이므로
+  System.out.println(Juicer.makeJuice(appleBox)); // 이건 안됨. FruitBox<Apple> 타입이므로
+
+  번거롭지 않은가? FruitBox<Fruit>으로 지정해두면 저 클래스는 FruitBox<Fruit>만 사용할 수 있으므로 개ㅈ같다. 따라서 여러 타입의 매개변수를 갖는 makeJuice()를 만들어야함. FruitBox<Apple>, FruitBox<Grape> 등등..
+  
+  하지만 이 경우 컴파일 에러가 발생함. 지네릭 타입이 다른 것만으로는 오버로딩이 성립하지 않기 때문.
+  따라서 메서드 중복 정의가 발생해버린다. static Juice makeJuice()를 여러개 적어버린것임
+
+
+  이 때 사용하는게 와일드카드래!
+  기호 ? 로 표시하며, 와일드 카드는 어떠한 타입도 될 수 있음
+  '?' 만으로는 Object와 다를게 없기 때문에 'extends'와 'super'로 상한(upper bound)과 하한(lower bound)으로 제한할 수 있음
+
+    <? extends T> : 와일드 카드의 상한 제한(upper bound), T와 그 '자손'들만 가능함
+    <? super T> : 와일드 카드의 하한 제한(lower bound), T와 그 '조상'들만 가능함
+    <?> : 제한 없음, <? extends Object>와 동일
+  
+  와일드 카드를 활용해서 makeJuice()의 매개변수 타입을 FruitBox<Fruit>에서 FruitBox<? extends Fruit>으로 바꾸면,
+
+    static Juice makeJuice(FruitBox<? extends Fruit> box) {
+
+        String tmp = "";
+        for(Fruit f : box.getList()) tmp += f + " ";
+        return new Juice(tmp);
+
+    }
+
+  FruitBox<? extends Fruit>으로 매개변수 타입을 바꿔주었기 때문에 Fruit 및 그 자손들 또한 메서드를 사용할 수 있다.
+  매개변수 타입을 FruitBox<? extends Object>로 하면 모든 종류의 FruitBox가 이 메서드의 매개변수로 사용 가능하지만, Fruit의 자손이라는 보장이 없기 때문에 for문에서 Fruit타입인 f의 참조변수를 받을 수 없다.
+  
+
+
+지네릭 메서드
+  
+  메서드의 선언부에 지네릭 타입이 선언된 메서드
+  지네릭 타입의 선언 위치는 반환타입 바로 앞임
+
+    static <T> void sort(List<T> list, Comparator<? super T> c) 에서 static <T> void <<-- <T>가 지네릭 메서드
+
+  지네릭 클래스에 정의된 타입 매개변수와 지네릭 메서드에 정의된 타입 매개변수는 별개의 것임
+  같은 타입문자 T를 사용해도 같은것이 아니다!
+
+  class FruitBox<T> {
+
+    static <T> void sort(List<T> list, Comparator<? super T> c) {
+
+        // 지네릭 클래스 FruitBox의 <T>와 지네릭 메서드 sort()에 선언된 타입 매개변수 <T>는 문자만 같고 서로 다름
+        // 또한 sort는 static 메서드인데, static멤버는 타입 매개변수를 사용할 수 없지만
+        // 메서드 sort에 지네릭 타입을 선언하고 사용하는 것은 가능함(List<T> list, Comparator <? super T> c)
+    
+    }
+
+  }
+
+  지역변수를 선언한 것과 같은 느낌이라고 한다
+  타입 매개변수는 메서드 내에서만 사용될 것이므로 지역적인 느낌이고, 메서드가 static이건 뭐건 관계 없다는듯.
+
+  jucier 클래스의 makeJuice()
+
+  static Juice makeJuice(FruitBox<? extends Fruit> box) {
+		
+		String tmp = "";
+		
+		for(Fruit f : box.getList()) {
+			
+			tmp += f + " ";
+			
+		}
+		
+		return new Juice(tmp);
+		
+	}
+
+    이걸 지네릭 메서드로 바꿔보면, 
+
+    static <T extends Fruit> Juice makeJuice(FruitBox<T> box) {
+
+        String tmp = "";
+        
+        for(Fruit f : box.getList()) {
+
+            tmp += f + " ";
+
+        }
+        return new Juice(tmp);
+
+    }
+
+    이제 makeJuice() 메서드를 호출할 떈 타입변수에 타입을 대입해야함
+
+    FruitBox<Fruit> fruitBox = new FruitBox<Fruit>();
+    FruitBox<Apple> appleBox = new FruitBox<Apple>();
+
+    System.out.println(Juicer.<Fruit>makeJuice(fruitBox));
+    System.out.println(Juicer.<Apple>makejuice(appleBox));
+
+
+    출력할 때 생략할 수 있음
+
+    System.out.printn(Juicer.makeJuice(fruitBox));
+    System.out.println(juicer.makeJuice(appleBox));
+
+
+    * 지네릭 메서드를 호출할 때, 대입된 타입을 생략할 수 없는 경우엔 참조변수나 클래스 이름도 생략 불가능
+
+    System.out.println(<Fruit>makeJuice(fruitBox));     // 클래스 이름 생략 불가능, 에러
+    System.out.println(this.<Fruit>makeJuice(fruitBox));
+    System.out.println(Juicer.<Fruit>makeJuice(fruitBox));  // 위 두개는 컴파일됨
+
+
+
+    지네릭 메서드의 경우 매개변수의 타입이 복잡할 때 사용하면 좋음
+
+    public static void printAll(ArrayList<? extends Product>) list, ArrayList<? extends Product> list2 {
+
+        for(Unit u : list) {
+
+            System.out.print(u);
+
+        }
+
+    }
+
+    한눈에 봐도 매개변수 타입이 길어서 ㅈ같지 않은가?
+
+    public statc <T extends product> void printAll(ArrayList<T> list, ArrayList<T> list2) {
+
+        for(Unit u : list) {
+
+            System.out.print(u);
+
+        }
+
+    }
+
+    밖으로 끄집어내서 지네릭 메서드로 선언하면 중복이 없어져서 깔끔해진다.
+
+
+
+
+지네릭 타입의 형변환
+  
+Q. 지네릭 타입과 원신 타입(raw type)간의 형변환
+
+  Box box = null;
+  Box<Object> objBox = null;
+
+  box = (Box)objBox;    // 지네릭타입(objBox) - > 원시타입(Box), 경고생김, 되긴함
+  objBox = (Box<Object>)box;    // 원시타입(box) - > 지네릭타입(Box<Object>), 경고생김, 되긴함
+
+
+Q. 대입된 타입이 다른 지네릭 타입간에는 형변환 가능한가?
+
+  Box<Object> objBox = null;
+  Box<String> strBox = null;
+
+  objBox = (Box<Object>)strBox;     // Box<String>인 strBox - > Box<Object>인 objBox, 에러
+  strBox = (Box<String>)objBox;     // Box<Object>인 objBox - > Box<String>인 strBox, 에러
+
+  대입된 타입이 Object일지라도 불가능하다고 함
+  Box<Object> objBox = new Box<String>(); 이 안되는 시점에서 형변환 할 수 없다는걸 말해준다.
+
+
+Q. Box<String>과 Box<? extends Object>는 형변환이 되는가?
+
+    Box<? extends Object> wBox = new Box<String>();     // 됨
+
+    FruitBox<? extends Fruit> box = new FruitBox<Fruit>();
+    FruitBox<? extends Fruit> box = new FruitBox<Apple>();
+    FruitBox<? extends Fruit> box = new FruitBox<Grape>();  // 셋 다 됨
+
+  그 반대도 성립하지만, 확인되지 않은 형변환이라는 경고가 나옴.
+    FruitBox<? extends Fruit>의 타입은 여러개일 수 있지만 FruitBox<Fruit> 얘네들은 타입이 하나라서 Apple을 제외한 다른 타입은 FruitBox<Apple>이 될 수 없기 때문임
+
+
+
+지네릭 타입의 제거
+
+  컴파일러는 지네릭 타입을 이용해서 소스파일을 체크하고, 필요하면 형변환을 넣고, 지네릭 타입을 제거함.
+  컴파일 된 파일에는 지네릭 타입이 제거되어 지네릭 타입에 대한 정보가 없다.
+
+  Q. 왜 이렇게 하는가??
+    지네릭 도입 이전 소스코드와의 호환성 유지를 위해서
+  JDK 1.5부터 지네릭스가 도입되었지만 아직 원시타입을 사용해서 코드를 작성하는 것을 허용한다.
+  
+  존나 어렵지만 간단하게 살펴보기
+
+  1. 지네릭 타입의 경계(bound) 제거
+    지네릭 타입이 <T extends Fruit>라면 T는 Fruit로 치환된다. <T>인 경우엔 T는 Object로 치환된다. 이후 클래스 옆 선언은 제거됨
+
+    컴파일 전
+    class Box<T extends Fruit> {
+
+        void add(T t) {
+
+
+
+        }
+
+    컴파일 후
+    class Box {     // 클래스 옆 선언이 제거된다
+
+        void add(Fruit t)       // 그리고 T가 Fruit로 치환되었다
+
+    }
+
+    }
+
+  
+  2. 지네릭 타입을 제거한 후 타입이 일치하지 않으면, 형변환을 추가함
+    List의 get()은 Object타입을 반환하므로 형변환이 필요함
+
+    컴파일 전
+    T get(int i) {
+
+        return list.get(i);
+
+    }
+
+    컴파일 후
+
+    Fruit get(int i) {      // T가 Fruit으로 치환되었으며
+
+        return (Fruit)list.get(i);      // List.get()은 Object타입을 반환하므로 (Fruit)으로 형변환을 시켜주었다
+
+    }
+
+  
+  와일드 카드가 포함된 경우엔 적절한 타입으로의 형변환이 추가됨
+  
+  컴파일 전
+  static Juice makeJuice(FruitBox<? extends Fruit> box) {
+
+    String tmp = "";
+    For(Fruit f : box.getList()) {
+
+        tmp += f + " ";
+        return new Juice(tmp);
+
+    }
+
+  }
+
+  컴파일 후
+  static Juice makeJuice(FruitBox box) {        // 와일드 카드가 제거되고 적절한 타입인 FruitBox로 치환됨
+
+    String tmp = "";
+
+    Iterator it = box.getList().iterator();     // iterator - next로 형변환을 하나봄
+
+    while(it.hasNext()) {       // while문
+
+        tmp += (Fruit)it.next() + " ";      // it을 Fruit으로 형변환 시켜버림
+        
+    }
+
+    return new Juice(tmp);
+
+  }
+
+
+아 존나 어렵다
