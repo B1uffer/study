@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+		
+		@font-face {font-family : 'g300'; src : url("font/YoonChildfundkoreaDaeHan.ttf");}
+		@font-face {font-family : 'g500'; src : url("font/YoonChildfundkoreaManSeh.ttf");}
+		@font-face {font-family : 'g700'; src : url("font/YoonChildfundkoreaMinGuk.ttf");}
+		
+		* {margin : 0; padding : 0;}
+		a {text-decoration: none;}
+		ul {list-style: none;}
+		table {border-collapse: collapse;}
+		em, i, address {font-style: normal;}
+		.clearfix::after {display : block; clear : both; content : "";}
+		
+		
+		h1 {font-family : 'g300'; letter-spacing : 20px;}
+		h2 {font-family : 'g500'; letter-spacing: -2px;}
+		h3 {font-family : 'g700';}
+		
+		#wrap {width : 900px; height : 500px; margin : 0 auto; background : yellow; line-height: 500px; text-align : center;}
+		
+		#wrap2 {width : 300px; height : 300px; background : yellow; text-align : center;}
+		#wrap2 p {height : 50px; line-height : 25px; padding-top : 125px; text-align : center; background : blue; color : white;}
+		
+		#wrap3 {}
+		#wrap3 ul {}
+		#wrap3 ul li {float : left;}
+		#wrap3 ul li a {}
+		#wrap3 ul li a::after {content : ""; display : block; width : 0; height : 2px; margin-top : 10px; background : green; transition : 0.3s;}
+		#wrap3 ul li:hover a::after {width : 100%;}
+		/* li태그에 마우스를 올리면 자식요소인 a태그의 after요소를 선택 */
+		
+		#wrap4 {}
+		#wrap4 span {color : #fff; font-size : 50px; text-shadow : 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;}
+	</style>
+</head>
+<body>
+	<div id = "wrap">
+		<h1>가나다라마바사</h1>
+		<h2>이것은 글씨입니다 this is font</h2>
+		<h3>나는 무적 숲 밖에서 증명해주지</h3>
+	</div>
+	
+	<div id = "wrap2">
+		<p>
+			낄깔끌껠<br>
+			꼴꿀꺼
+		</p>
+		
+	</div>
+	
+	<div id = "wrap3">
+		
+			<ul>
+				<li><a href = "#">가나다라마</a></li>
+				<li><a href = "#">try i download</a></li>
+			</ul>
+			
+	</div>
+	
+	<div id = "wrap4">
+		
+		<span>슈퍼 파워</span>
+		
+	</div>
+</body>
+</html>
