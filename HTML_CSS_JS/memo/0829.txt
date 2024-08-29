@@ -1,0 +1,37 @@
+display : flex
+css3
+구형브라우저 지원x
+규모 큰 회사는 사용을 안할 수 있음
+* 옆으로 나열하고자 하는 윗부모에 작성
+
+justify-content : 옆으로 나열하고자 하는 윗부모에 작성
+margin : 옆으로 나열하고자 하는 태그요소에 작성
+
+css 접두어
+display : -webkit-flex;
+display : -ms-flexbox;
+display : -moz-flexbox;
+display : -o-flexbox;
+
+flex-wrap : nowrap(기본값)
+자식요소가 많거나 크기가 커서 부모공간이 부족하면 자식을 줄여서 맞춤, 줄바꿈을 안함
+
+블록 태그 기본값 너비 100%가 플렉스의 자식 요소가 되면 해제됨
+
+align-items : 세로정렬(1행일 때)
+align-content : 세로 정렬(2행 이상일 때, 높이값 o)
+
+flex-grow : 1 (옆으로 나열하고 자하는 요소한테 씀)
+자식 요소가 적거나 크기가 작아 부모공간이 남을 때 늘려서 채움
+
+flex-shrink : 1 (기본값이 1)
+자식 요소가 많거나 크기가 커서 부모 공간이 부족하면 줄여서 맞춤
+
+flex-basis (옆으로 나열하고자 하는 요소에 작성)
+플렉스가 적용된 자식 요소의 너비 지정(width보다 우선 적용)
+
+
+flex : 1 -> flex : 1 1 0 -> flex-grow : 1; flex-shrink : 1; flex-basis : 0;
+자식 요소가 2줄 이상일 경우 사용 x
+정렬을 필요로 하는 경우 사용 x (space-between 등)
+1줄이면서 사이즈 넣기 귀찮을 때 사용함
