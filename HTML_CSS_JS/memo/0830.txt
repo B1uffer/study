@@ -1,0 +1,19 @@
+white-space : nowrap;
+- > 텍스트가 길어도 줄 바꿈 x
+overflow : hidden;
+- > 부모 면적 밖으로 나가면 숨김
+text-overflow : ellipsis;
+- > 말줄임
+
+3개중에 하나라도 안쓰면 말줄임이 안됨
+부모 면적이 있어야됨
+
+
+max-width : 1000px;
+브라우저 가로 크기가 1000이하로 줄어들면 같이 줄어듬
+브라우저 가로 크기가 1000이하라면 너비 100%로 적용
+
+
+display : flex의 자식 요소는 면적 o(블록, 인라인 성질이 제거됨)
+
+http://chldydtn77.dothome.co.kr/data.php
