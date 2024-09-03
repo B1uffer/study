@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ㅇㅇ</title>
+	
+	<link href="css/swiper.min.css" rel="stylesheet">
+	<script src="script/jquery-3.3.1.min.js"></script>
+	<script src="script/swiper.min.js"></script>
+	
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		#main {}
+		#main .swiper-container {width : 1000px; height: 700px; margin : 0 auto;}
+		#main ul.swiper-wrapper {}
+		#main li.swiper-slide {display : flex; align-items : flex-end;}
+		#main .swiper-container .slide1 {background : url("images/spc-samlip-good-food-happy-life.jpg") center center no-repeat; background-size : cover;}
+		#main .swiper-container .slide2 {background : url("images/spc-samlip-main-banner-02.jpg") center center no-repeat; background-size : cover;}
+		#main .swiper-container .slide3 {background : url("images/main-savings.png") center center no-repeat; background-size : cover;}
+		#main .text {height : 200px; text-align : right; margin-left : auto; padding-right : 50px;}
+		#main .text h2 {margin-bottom : 10px; color : aqua;}
+		#main .text p {color : lightcoral;}
+		
+		#main .swiper-container .btn {position: absolute; right: 0; bottom: 10px; z-index: 111; text-align : center; padding-right : 50px; line-height : 30px; }
+		#main .swiper-container .btn a {display : inline-block; width : 30px; height : 30px; border : 1px solid #000; border-radius : 50%; transition : 0.3s; background : red;}
+		#main .swiper-container .btn a i {}
+		#main .swiper-container .btn a.left {}
+		#main .swiper-container .btn a.right {}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "main">
+		<div class = "swiper-container">
+			<ul class = "swiper-wrapper">
+				<li class = "swiper-slide slide1">
+					<div class = "text">
+						<h2>#main .swiper-slide .text01</h2>
+						<p>swiper is javascript & css</p>
+					</div>
+				</li>
+				<li class = "swiper-slide slide2">
+					<div class = "text">
+						<h2>#main .swiper-slide .text02</h2>
+						<p>swiper swiper swiper</p>
+					</div>
+				</li>
+				<li class = "swiper-slide slide3">
+					<div class = "text">
+						<h2>#main .swiper-slide .text03</h2>
+						<p>asdasdasasdasd</p>
+					</div>
+				</li>
+			</ul>
+			
+			<div class = "btn">
+				<a class = "left" href = "javascript:;"><i>◀</i></a>
+				<a class = "right" href = "javascript:;"><i>▶</i></a>
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	
+	
+	<script>
+		
+		var swiper = new Swiper('#main .swiper-container', {
+            autoplay: {
+                delay: 5000,	// 자동으로 화면 전환 5초
+                disableOnInteraction: false	// 손님이 넘길 때는 오토플레이 정지
+            },
+            slidesPerView: 1,	// 화면에 보여주는 이미지 개수
+            loop: true,	// 무한 루프 적용
+			allowTouchMove: true,	// 터치유무 (기본값 true)
+            navigation: {	// 좌우 화살표 적용
+                nextEl: '#main .btn .left',
+                prevEl: '#main .btn .right',
+            },
+			effect: 'slide', // slide, fade, cube, coverflow, flip
+			speed: 1000
+        });
+		
+	</script>
+	
+</body>
+</html>
