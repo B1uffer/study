@@ -1,0 +1,44 @@
+transform : scale
+크기가 중심에서 조절
+주변 요소 레이아웃에 영향 x
+css3
+
+
+버튼 높이 30
+스판 1개당 높이 3x3 = 9
+
+jQuery 연동법 : 웹연동, 파일연동
+
+파일연동
+티는 안나지만 좀 더 안전하고 빠름
+용량o, 트래픽o
+
+웹연동
+제이쿼리 홈페이지에 문제가 있으면 작동 x
+용량x, 트래픽x
+
+
+자바스크립트
+클릭 이벤트(간단한건 css클릭 이벤트 가능)
+시간 이벤트(간단한 것은 css키프레임으로 가능)
+스크롤 이벤트
+마우스 이벤트
+키보드 이벤트
+
+
+css>>>자바스크립트
+
+키프레임 애니메이션
+animation-name : 애니메이션 이름 (필수)
+animation-duration : 애니메이션 시간(필수)
+한줄기입 가능 -> animation : name duration;
+
+0%{transform: translateX(0px);} 		/* from {transform : translateX(0px)}; */
+80%{transform : translateX(50px);}
+100%{transform: translateX(200px);} 		/* to {transform : translateX(200px); }*/
+
+
+키프레임은 숫자값이 있는 css 명령어에만 사용 가능함
+숫자값이 없는 css명령어는 사용 불가능
+
+display : inline-block - > 줄바꿈은 안하겠다
