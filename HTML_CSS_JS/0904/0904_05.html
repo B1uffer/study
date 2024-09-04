@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		button {position : fixed; bottom : 3%; right : 20%; animation : scroll 1.5s linear infinite; width : 50px; height : 50px; border-radius : 50%; border : none; background : red; cursor : pointer;}
+		/* animation-name : scroll; animation-duration : 1.5s; animation-timing-function : linear; animation-iteration-count : infinite; */
+		
+		button.scroll {}
+		
+		button>img {width : 50px; height : 50px;}
+		
+		@keyframes scroll {
+			
+			0% {transform : translateY(0px);}
+			50% {transform : translateY(-5px);}
+			100% {transform : translateY(0px);}
+			/* animation-direction : alternate; */
+			
+			
+			/*
+			0% {transform : translateY(0px);}
+			25% {transform : translateY(10px);}
+			50% {transform : translateY(0px);}
+			75% {transform : translateY(-10px);}
+			100% {transform : translateY(0px);}
+			*/
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<button class = "scroll">
+		<img src = "images/001.png" alt = "이미지">
+	</button>
+</body>
+</html>

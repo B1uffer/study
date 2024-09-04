@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link href = "css/swiper.min.css">
+	<script src = "script/swiper.min.js"></script>
+	
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		button {position : relative; width : 100px; height : 100px; background : lightblue; border : none; border-radius : 50%; cursor : pointer;}
+		button img {position : absolute; top : 0; left : 0; width : 100px; height : 100px; opacity : 0; transform : rotate(0deg); transition : 0.5s;}
+		button span {position : absolute; top : 15px; width : 2px; height : 70px; background : #000;  transition : 0.5s;}
+		button span.line1 {}
+		button span.line2 {transform : rotate(90deg);}
+		
+		button:hover img {opacity : 1; transform : rotate(360deg);}
+		button:hover span.line1 {opacity : 0; transform : rotate(180deg);}
+		button:hover span.line2 {opacity : 0; transform : rotate(270deg);}
+	</style>
+</head>
+
+<body>
+	
+	<button>
+		
+		<img src = "images/007.png" alt = "이미지">
+		<span class = "line1"></span>
+		<span class = "line2"></span>
+		
+	</button>
+	
+	<script>
+			/*
+			var count = 0;
+			
+			$('button').click(function() {
+				
+				if(count == 0) {
+					
+					$('button span.line1').css({'opacity':'0','rotate':'180deg'});
+					$('button span.line2').css('opacity','0').css('rotate','270deg');
+					$('button img').css('opacity','1').css('rotate','360deg');
+					
+					count = 1;
+					
+				} else {
+					
+					$('button span.line1').css({'opacity':'1','rotate':'-90deg'});
+					$('button span.line2').css('opacity','1').css('rotate','90deg');
+					$('button img').css('opacity','0').css('rotate','0deg');
+					
+					count = 0;
+					
+				}
+				
+			})
+			
+			*/
+		</script>
+	
+</body>
+</html>

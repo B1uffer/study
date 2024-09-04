@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		div {}
+		div span {display : inline-block; transform : translateY(100px); opacity : 0; animation : move 1s forwards;}
+		div span.c1 {animation-delay : 0.5s;}
+		div span.c2 {animation-delay : 1s;}
+		div span.c3 {animation-delay : 1.5s;}
+		
+		@keyframes move {
+			
+			0% {transform : translateY(100px); opacity : 0;}
+			100% {transform : translateY(0px); opacity : 1;}
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	
+	<div>
+		
+		<span class = "c1">A</span>
+		<span class = "c2">B</span>
+		<span class = "c3">C</span>
+	</div>
+	
+</body>
+</html>
