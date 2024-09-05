@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		#wrap {width : 1000px; height : 1000px; background : yellow; margin : 20px auto; padding : 20px; text-align : center; }
+		.s_wrap {position : relative; display : inline-block; background : #fff; border : 1px solid #000; border-radius : 10px;}
+		.s_wrap::after {content : ""; position : absolute; top : 17px; right : 20px; width : 50px; height : 50px; background : url("images/asdf.png") no-repeat; background-size : 35px 35px; transform : rotate(90deg);}
+		/* content : "";을 써줘야 after가 보인다 */
+		
+		select {position : relative; z-index : 1; width : 300px; height : 70px; padding-left : 30px; border : none; background : none; appearance : none; font-size : 20px;}
+		
+		
+		
+	</style>
+</head>
+
+<body>
+	<div id = "wrap">
+		<div class = "s_wrap">
+			<select>
+				<option selected>쇼핑 기본 설정 *</option>
+				<option>남성용</option>
+				<option>여성용</option>
+			</select>
+		</div>
+	</div>
+</body>
+</html>

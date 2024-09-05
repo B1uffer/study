@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		#wrap {width : 495px; height : 400px; margin : 0 auto; background : red; overflow : hidden;}
+		/* 클라이언트가 보는 화면 */
+		#wrap .slide {width : 100%; height : 400px;}
+		
+		#wrap .slide ul {position : relative; width : 1980px; height : 400px; animation : motion 20s infinite;}
+		/* ul에 width를 주어야 이미지들이 가로로 펼쳐짐 / position : relative를 주어야 keyframes에서 left를 사용 가능 / ul에 animation을 주기 */
+		
+		#wrap .slide ul li {width : 495px; height : 400px; float : left;}
+		/* li에 크기를 주어야 백그라운드가 보임 */
+		#wrap .slide ul li:nth-child(1) {background : url("images/인스타그램오픈매장_동탄여울공원점-15-495x400.jpg"); background-size : cover;}
+		ul li:nth-child(2) {background : url("images/인스타그램오픈매장_인천만수2동점-22-495x400.jpg"); background-size : cover;}
+		ul li:nth-child(3) {background : url("images/인스타그램오픈매장_인천시민공원역-20-495x400.jpg"); background-size : cover;}
+		ul li:nth-child(4) {background : url("images/인스타그램오픈매장_동탄여울공원점-15-495x400.jpg"); background-size : cover;}
+		
+		@keyframes motion {
+			
+			0% {left : 0;} /* 초기값 */
+			
+			25% {left : 0;}
+			33% {left : -495px;}
+			
+			58% {left : -495px;}
+			66% {left : -990px;}
+			
+			91% {left : -990px;}
+			99% {left : -1485px;}
+			
+			100% {left : -1485px;}
+			
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		<div class = "slide">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
