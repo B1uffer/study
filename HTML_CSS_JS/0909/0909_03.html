@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0; color : #333;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		#wrap {position : fixed; top : 0; left : 0; z-index : 100; display : flex; align-items : center; width : 100%; height : 100px;}
+		/* align-items = center */
+		#wrap form {display : flex; width : 100%; height : 100px; background : #fff;}
+		#fsearch {width : calc(100% - 80px); height : 50px; padding : 30px; font-size : 32px; border : none; outline : none; background : blue;}
+		#fimage {width : 90px; height : 90px; padding : 10px; background : red;}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		<form>
+			<input type = "text" id = "fsearch" name = "fsearch" value = "" placeholder = "search">
+			<input type = "image" src = "images/004.png" id = "fimage" name = "fimage" value = "" alt = "취소">
+		</form>
+	</div>
+</body>
+</html>

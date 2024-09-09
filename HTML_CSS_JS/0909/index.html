@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+		
+		*{margin: 0; padding: 0; color : #333;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		<form method = "post" action = "check.php">		<!-- 사용자가 입력한 값을 암호화해서 전송하는데, name속성이 있는 태그값만 전송함 -->
+
+			<textarea name = "notice" style = "resize : none;"></textarea>
+			<select name = "select">
+				<option>칭찬</option>
+				<option>불만</option>
+			</select>
+			
+			<input type = "checkbox" id = "check" name = "check" value = "약관">
+			<label for = "check">약관</label>
+			
+			<button>보내기</button>
+		</form>
+	</div>
+</body>
+</html>

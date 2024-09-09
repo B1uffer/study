@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0; color : #333;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		
+		form {display : flex; flex-wrap : wrap; justify-content : space-between; width : 580px;}
+		/* flex는 바로 다음 자식에게 뭘 하겠다라는 의미 */
+		/* justify-content : space-between */
+		
+		form .left {width : 410px;}
+		form .left input {width : 100%;}
+		form button {width : 150px;}
+		
+		form .help {display : flex; justify-content : space-between; width : 100%;}
+		form .help .first {}
+		form .help .first input {}
+		form .help .first label {}
+		
+		form .help .find {}
+		form .help .find a {}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<form>
+		
+		<div class = "left">
+			<input type = "text" name = "id" placeholder = "아이디">
+			<input type = "password" name = "pw" placeholder = "비밀번호">
+		</div>
+		
+		<button>로그인</button>
+		
+		<div class = "help">
+			
+			<div class = "first">
+				<input type = "checkbox" id = "save" name= "save">
+				<label for = "save">아이디 저장</label>
+				
+			</div>
+			
+			<div class = "find">
+				
+				<a href = "#">아이디 찾기</a>
+				<a href = "#">비밀번호 찾기</a>
+				
+			</div>
+			
+			
+		</div>
+		
+	</form>
+	
+</body>
+</html>
