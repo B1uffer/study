@@ -1,0 +1,49 @@
+input 태그
+인라인, 면적 o
+백그라운드, 보더, 아웃라인 기본값으로 적용
+탭키 접근성 o
+input태그는 폼(form) 태그와 무조건 함께 사용함
+(input 태그의 윗부모로 form태그 사용)
+
+
+input type = "button"
+-> 클릭 이벤트 자바스크립트
+폼 태그 안에서 백엔드 전송 x
+
+button 태그
+-> 클릭 이벤트 자바스크립트(폼 태그 안에서는 x)
+폼 태그 안에서 백엔드 전송 o
+
+input type = "submit"
+-> 폼 태그 안에서 백엔드 전송 o
+
+
+php언어(백앤드)
+파이썬 -> 장고(백앤드)
+자바 -> 스프링(백)
+자바스크립트 -> node.js(백)
+
+자바스크립트(프론트앤드)
+
+라이브러리
+프레임워크
+
+
+form method = "" 속성
+get : 주소로 값을 auction파일로 보냄
+post : 암호화해서 값을 auction파일로 보냄
+검색은 보통 get을 씀
+회원가입 등은 post를 씀
+
+css, 자바스크립트
+태그를 선택해서 뭔가를 함
+
+if(조건) { 참값 } else { 거짓값 }
+
+and : 조건이 모두 충족되면 true, 1개라도 충족이 안되면 false
+
+or : 조건이 어느 하나라도 만족하면 true, 전부 만족하지 않으면 false
+
+
+https://jinnnkcoding.tistory.com/140
+https://studiomeal.com/archives/197
