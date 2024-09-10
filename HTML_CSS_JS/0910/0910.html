@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0; color : navy;}
+		a{text-decoration: none; color: inherit;}
+		ul{list-style: none;}
+		table{border-collapse: collapse;}
+		em, i, address{font-style: normal;}
+		textarea {resize : none;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		form {width : 400px; margin : 20px auto;}
+		form input {outline : none; box-sizing: border-box;}
+		form label {font-size : 14px; margin-bottom : 10px;}
+		input::placeholder {color : navy; text-align : center;}
+		.must {margin-right : 5px; color : red; font-size : 18px;}
+		
+		form .text {width : 100%; height : 100px; padding : 7px; box-sizing: border-box;  border : 1px solid #333; overflow-y : scroll; font-size : 12px;}
+		
+		form .check {margin : 10px 0 40px 0;}
+		form .checkbox {margin-right : 5px;}
+		
+		form #check {font-size : 14px; width : 0px; height : 0px;}
+		#check + label{}
+		#check + label span{display: inline-block; width: 30px; height: 30px; background: url("images/search.png"); background-size: 30px 30px;}
+		#check:checked + label span{background: url("images/asdf.png"); background-size : 30px 30px;}
+		
+		form .radio {margin-bottom : 10px;}
+		form .radio label {display : block; font-size : 14px;}
+		form .radio label .round {cursor : pointer;}
+		.radio>span {}
+		
+		form .name {width : 100%; height : 40px; margin-bottom : 20px; text-align : center; border : 1px solid #041387;}
+		
+		form .phone {margin-bottom : 20px;}
+		.phone .telbox {width : 20%; height : 30px; text-align : center; border : 1px solid #041387;}
+		.phone .telLine {}
+		
+		form .age {margin-bottom : 20px;}
+		.select {width : 100%; height : 40px; padding : 10px; border : 1px solid #041387;}
+		
+		form .adress {margin-bottom : 40px;}
+		.adress select {border : 1px solid #041387;}
+		.city {width : 35%; height : 40px; padding : 10px;}
+		.town {width : 27%; height : 40px; padding : 10px;}
+		.village {width : 32%; height : 40px; padding : 10px;}
+		
+		
+		button {width : 100%; height : 50px; border : none; background : navy; color : #fff; font-size : 18px; transition : 0.3s; cursor : pointer;}
+		button:hover {background : #fff; color : navy; border : 1px solid navy;}
+	</style>
+	
+</head>
+
+<body>
+	
+	<form>
+		<label><span class= "must">*</span>개인정보 수집 및 이용 동의</label>
+		<div class = "text">
+			이것은 개인정보 수집 및 이용동의에 대한 글입니다.<br>
+			가나다라마바사아자차카 타파하 아야어여오요우유으이ㄴㅁㄹㄴㅁㅇㅁㄴㅇㅁㄴㅇabcdefghijkmnopqrstuvwxyz<br>
+			동의하지 않는다면 매우 끔찍하고 위험한 일이 발생할 수 있습니다. 주의해주시길 바랍니다.<br>
+			법에 저촉되진 않지만 일단 해주세요 감사합니다.<br>
+			이 텍스트들은 내리면 스크롤이 되게끔 만들어졌어요 정말 놀라워라<br>
+			이 텍스트들은 내리면 스크롤이 되게끔 만들어졌어요 정말 놀라워라<br>
+			이 텍스트들은 내리면 스크롤이 되게끔 만들어졌어요 정말 놀라워라<br>
+			이 텍스트들은 내리면 스크롤이 되게끔 만들어졌어요 정말 놀라워라<br>
+			이 텍스트들은 내리면 스크롤이 되게끔 만들어졌어요 정말 놀라워라<br>
+			이 텍스트들은 내리면 스크롤이 되게끔 만들어졌어요 정말 놀라워라<br>
+			<br>
+			정보관리 담당자<br>
+			- 성명 : 신동진 나는무적팀 사원<br>
+			- 소속 : 더조은컴퓨터학원 춘천팀<br>
+			- 전화번호 : 033) 123 - 4567<br>
+		</div>
+		<div class = "check">
+			<input type = "checkbox" class = "checkbox" id = "check" name = "check" value = "체크">
+			<label for = "check"><span><!-- 체크박스 --></span>개인정보 수집 및 이용에 동의합니다.</label>
+		</div>
+		
+		<div class = "radio">
+			<label for = "agree">
+				<input type = "radio" class = "round" id = "agree" name = "agree" value = "동의" autocomplete="off">
+				<span>동의</span>
+			</label>
+			<label for = "disagree">
+				<input type = "radio" class = "round" id = "disagree" name = "agree" value = "비동의" autocomplete="off">
+				<span>비동의</span>
+			</label>
+		</div>
+		
+		
+			<label for = "ftext"><span class= "must">*</span>이름</label>
+		<input type = "text" class= "name" id = "ftext" name = "ftext" placeholder = "이름을 입력하세요.">
+		
+		<label for = "ftel"><span class= "must">*</span>연락처</label>
+		<div class = "phone">
+			<input type = "tel" class = "telbox" maxlength="3" id = "ftel" name = "ftel1"  autocomplete = "off">
+			<span class = "telLine">-</span>
+			<input type = "tel" class = "telbox" maxlength="4" id = "ftel2" name = "ftel2" autocomplete = "off">
+			<span class = "telLine">-</span>
+			<input type = "tel" class = "telbox" maxlength="4" id = "ftel3" name = "ftel3" autocomplete = "off">
+		</div>
+		
+			<label>연령</label>
+		<div class = "age">
+			<select class = "select">
+				<option>(선택)</option>
+				<option value = "20대">20대</option>
+				<option value = "30대">30대</option>
+				<option value = "40대">40대 이상</option>
+			</select>
+		</div>
+		
+		<label><span class= "must">*</span>주소</label>
+		<div class = "adress">
+			<select class = "city" name = "city">
+				<option>시도</option>
+				<option>강원특별자치도</option>
+				<option>경상남도</option>
+				<option>울릉도</option>
+				<option>짜잔</option>
+			</select>
+			<select class = "town" name = "town">
+				<option>구군</option>
+				<option>남구</option>
+				<option>어쩌고구</option>
+				<option>고구마</option>
+			</select>
+			<select class = "village" name = "village">
+				<option>읍면동</option>
+				<option>연습중입니다!</option>
+			</select>
+		</div>
+		
+		<button>작성</button>
+	</form>
+	
+</body>
+</html>
