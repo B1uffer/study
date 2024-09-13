@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* 메인페이지, 서브페이지 연동 */
+
+*{margin: 0; padding: 0; color : #333;}
+a{text-decoration: none; color: inherit;}
+ul{list-style: none;}
+table{border-collapse: collapse;}
+em, i, address{font-style: normal;}
+textarea {resize : none;}
+.clearfix::after{content: ""; clear: both; display: block;}
