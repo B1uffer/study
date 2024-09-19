@@ -9,15 +9,18 @@
 		}
 
 *{margin: 0; padding: 0; color : #333;}
-a{text-decoration: none; color: inherit;}
+a{text-decoration: none; color: inherit; font-family : 'Noto Sans CJK KR Medium';}
 ul{list-style: none;}
 table{border-collapse: collapse;}
 em, i, address{font-style: normal;}
 textarea {resize : none;}
 .clearfix::after{content: ""; clear: both; display: block;}
-button {background : #fff;}
+button {font-family : 'Arial'; background : #fff;}
+h2 {font-size : 20px; font-weight : normal;}
+h3 {font-size : 18px; font-weight : normal;}
 
-body {background : url("../img/background.jpg");background-repeat: no-repeat; background-size : cover;}
+
+body {background-color : #fff; background-image : url("../img/background.png"); background-repeat: no-repeat; background-size :contain;}
 
 header {height : 100px; margin : 0 auto; background : #fff;}
 
@@ -30,18 +33,18 @@ header {height : 100px; margin : 0 auto; background : #fff;}
 
 #menu {float : left; width : 1042px; height : 100px;}
 #menu nav {float : left; width : 1000px; margin-top : 37px;}
+/* menu m_left */
 #menu nav .m_left {padding-left : 20px;}
 #menu nav .m_left li {float : left; font-size : 18px; padding : 0 30px;}
 #menu nav .m_left li a {transition : 0.2s;}
 #menu nav .m_left li a:hover {color : var(--symbol-blue);}
 
+/* menu m_right */
 #menu nav .m_right {float : right;}
 #menu nav .m_right li {float : left; margin-left : 30px;}
 #menu nav .m_right li a {display : inline-block; width : 30px; height : 30px;}
-
 #menu nav .m_right li .search {background-image : url("../img/icon_search.png"); background-size: 30px 30px; transition : 0.3s;}
 #menu nav .m_right li .search:hover {background-image : url("../img/icon_search_hover.png");}
-
 #menu nav .m_right li .user {background-image : url("../img/icon_user.png"); background-size : 30px 30px; transition : 0.3s;}
 #menu nav .m_right li .user:hover {background-image : url("../img/icon_user_hover.png");}
 
@@ -49,8 +52,12 @@ header {height : 100px; margin : 0 auto; background : #fff;}
 /* button은 너비 120px */
 .login:hover {background : var(--symbol-blue); color : #fff;}
 
+
+
 main {}
 
+
+/* subMenu */
 #subMenu {width : 100%; height : 80px; line-height : 80px; background : var(--sub-white);}
 /* display : none; */
 #subMenu ul {width : 900px; height : 80px; margin : 0 auto;}
@@ -61,4 +68,100 @@ main {}
 #subMenu .subMenu2 {display : none;}
 #subMenu .subMenu3 {display : none;}
 
-footer {}
+
+
+#mainBody {width : 1340px; margin : 0 auto;}
+
+
+/* slogan */
+#slogan {position : relative; width : 100%; height : 400px;}
+main #slogan .bigtext {position : absolute; top : 120px; left : 0; font-size : 60px; color : #fff;}
+#slogan .bigtext span:nth-child(1) {color : var(--symbol-blue);}
+#slogan .bigtext span:nth-child(2) {color : var(--symbol-green);}
+
+/* slideBox */
+#slideBox {width : 1340px; height : 540px; overflow : hidden; margin-bottom : 60px;}
+#slideBox>nav {width : 1340px; height : 70px; background : var(--sub-gray);}
+#slideBox .menuBox {display : flex; flex-wrap : wrap; width : 100px; margin : auto; padding-top : 27px; justify-content : space-between;}
+#slideBox .menuBox .menuButton {width : 15px; height : 15px; background : #000; border : none; border-radius : 50%; opacity : 0.5; cursor : pointer;}
+
+#slideBox .slide {}
+#slideBox .slide li {}
+#slideBox .slide li a {}
+#slideBox .slide li a img {width : 100%;}
+
+
+/* asideBox */
+aside {height : 1015px; margin-top : 200px; overflow : hidden; background : red;}
+#asideBox {}
+/* text */
+#asideBox .asideTxt_eng {font-size : 20px; background : yellow;}
+#asideBox .asideTxt_kor {font-size : 22px; background : green;}
+#asideBox .a_box .textBox {display : flex; flex-wrap : wrap; width : 200px;}
+#asideBox .b_box .textBox {display : flex; flex-wrap : wrap; width : 100px;}
+
+/* a_box */
+#asideBox .a_box {margin-top : 10px;}
+#asideBox .a_box .box1 {width : 5000px; height : 250px; background : orange;}
+#asideBox .a_box .box1 li {float : left; margin-right : 50px; width : 300px; height : 250px; background : blue;}
+#asideBox .a_box .box1 li a {}
+#asideBox .a_box .box1 li a img {width : 300px; height : 250px;}
+
+/* b_box */
+#asideBox .b_box {width : 1340px; margin-top : 10px; background: brown;}
+#asideBox .b_box .box2 {display : flex; width : 1340px; height : 300px; margin : auto;}
+#asideBox .b_box .box2 li { width : 450px;}
+#asideBox .b_box .box2 a {}
+#asideBox .b_box .box2 a img {width : 420px; height : 250px;}
+#asideBox .b_box .box2 a .dateBox {}
+
+/* indicator, font-size는 em을 사용 */
+#indicator {height : 800px; margin-top : 100px; background : red;}
+#indicator h3 {font-size : 3em;}
+#indicator h3 a {}
+#indicator .in_text1 {font-size : 2em; margin-top : 5px;}
+#indicator .in_text2 {font-size : 1.2em; margin-top : 3px;}
+#indicator .graphBox{height : 560px; margin-top : 20px; padding : 30px; background : yellow;}
+#indicator .graphBox .graph_textBox {float : left; width : 40%; height : 200px; margin-top : 60px; background : orange;}
+#indicator .graphBox .graph_textBox .in_text3 {font-size : 2em;}
+#indicator .graphBox .graph_textBox .in_text4 {margin-top : 15px; line-height : 35px; font-size : 1em;}
+#indicator .graphBox .graph {float : right; width : 60%; height: 550px; background : green;}
+
+/* community */
+#community {margin-top : 50px;}
+#community h3 {font-size : 2em;}
+#community .communityBox {display : flex; justify-content : space-between; margin-top : 20px;}
+#community .communityBox li {float : left;}
+#community .communityBox li a {}
+#community .communityBox li a img {}
+
+/* siteMap */
+#siteMap {width : 1340px; height : 400px;}
+#siteMap .map_box {height : 280px;}
+#siteMap .map_box .sm_subBox {float : left; margin : 40px 100px 0 0;}
+#siteMap .map_box .sm_subBox .sm_title {margin-bottom : 10px;}
+#siteMap .map_box .sm_subBox ul {}
+#siteMap .map_box .sm_subBox ul li {}
+
+#siteMap #social {}
+#siteMap #social .social_icon {float : left;}
+#siteMap #social .social_icon a {margin-right : 20px;}
+#siteMap #social .social_icon a img {width : 50px;}
+#siteMap #social select {float : right; background : none; border : none;}
+#siteMap #social select option {}
+
+/* footer */
+footer {background-color : var(--sub-gray);}
+footer p {color : var(--sub-white);}
+footer address {color : var(--sub-white);}
+#footerBox {width : 1340px; margin : 0 auto; padding : 20px;}
+/* addressBox */
+#footerBox #addressBox {display : inline-block; margin-right : 30px;}
+#footerBox #addressBox .addressBox_kr {}
+#footerBox #addressBox .addressBox_eng {}
+#footerBox #addressBox .copyright {}
+
+/* telBox */
+#footerBox #telBox {display : inline-block;}
+#footerBox #telBox .telBox_top {}
+#footerBox #telBox .telBox_bot {}
