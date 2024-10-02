@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+	
+	<style>
+		
+		* {margin : 0; padding : 0;}
+		ul {list-style : none;}
+		a {text-decoration : none;}
+		.clearfix::after {content : ""; clear : both; display :block;}
+		
+		body {overflow-x: hidden;} /* 브라우저 가로로 튀어나가면, 스크롤바를 아예 없애버리겠다 */
+		
+		#wrap {width : 100%; background : #C2FBE8;}
+		#wrap .inner {position : relative; max-width : 1440px; margin : 0 auto; text-align : right; background : yellow;}
+		#wrap .inner .text {position : absolute; left : 0; top : 90px; text-align : left;}
+		#wrap .inner .text h2 {}
+		#wrap .inner .text p {}
+		#wrap .inner .text a {}
+		#wrap .inner img {width : 90%;}
+		#wrap .inner img.img_R {background : white; display : none;}
+		
+		@media all and (max-width : 1300px){
+			
+			#wrap .inner .text {top : 50px;}
+			
+		}
+		
+		@media all and (max-width : 720px) {	/* 720px 이하부터 이미지가 내려감 */
+			
+			#wrap .inner .text {position : static; padding : 40px 0;}
+			#wrap .inner {display : block; width : 100%;}
+			#wrap .inner img.img_P {display : none;}
+			#wrap .inner img.img_R {display : block;}
+			
+		}
+		
+	</style>
+
+<body>
+	
+	<div id = "wrap">	<!-- 100%영역, 민트색 -->
+		<div class = "inner">	<!-- 안쪽 영역 -->
+			<div class = "text">
+				<h2>TWOZZIM MENU</h2>
+				<p>오늘은 너로</p>
+				<a href = "#">전체 메뉴보기</a>
+				
+			</div>
+			<img class = "img_P" src = "images/두찜.png" alt = "1">	<!-- 모바일에서 아래로 배치해야됨 -->
+			<img class = "img_R" src = "images/두찜.png" alt = "1">
+		</div>
+	</div>
+	
+	<script>
+		
+		
+	</script>
+	
+</body>
+</html>

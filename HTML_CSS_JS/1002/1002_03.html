@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport'content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>   
+    <title>RESPONSIVE</title>
+    <style>
+        * {margin:0;padding:0;}
+        img {vertical-align:middle;} /* img태그 기본 여백 제거 */
+        #wrap {width:100%;max-width:1600px;margin:0 auto;}
+        #wrap #section1 {width:100%; padding : 0 20px; box-sizing : border-box;}  
+		/* padding : 0 20px; box-sizing : border-box; 좌우 여백을 생기게 함 */
+		/* #wrap #section1 {width : calc(100% - 40px); margin : 0 20px;} */
+		/* 두가지 방법이 있는데 padding이 실무에서 자주 쓰임 */
+		
+        #wrap #section1 ul {width:100%;list-style:none;}
+        #wrap #section1 ul li {float:left;width:25%; padding : 10px; box-sizing : border-box;}
+		/* padding : 10px; box-sizing : border-box; */
+		
+        #wrap #section1 ul li img {width:100%;} /* 브라우저 크기 줄이면 높이도 비율에 맞게 줄어듬 (높이 x) */
+        @media screen and (max-width:1000px){
+            #wrap #section1 ul li  { width:33.333% }
+			#wrap #section1 ul li:nth-of-type(n+7) {width : 50%;} /* 7번째 이후 이미지는 width : 50% */
+			/* max width 600px, 400px에서도 nth-of-type은 선택자가 다르기 때문에 남아있다 */
+        }    
+        @media screen and (max-width:600px){
+            #wrap #section1 ul li  { width:50% }   
+        }
+        @media screen and (max-width:400px){
+            #wrap #section1 ul li  { width:100% }
+			#wrap #section1 ul li:nth-of-type(n+7) {width : 100%;}
+			/* nth-of-type을 위에서 사용했을 경우 따로 작성해줘야한다 */
+        }
+        
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <section id="section1">
+        <ul>
+            <li><img src="../img/work-1.jpg" alt=""></li>
+            <li><img src="../img/work-2.jpg" alt=""></li>
+            <li><img src="../img/work-3.jpg" alt=""></li>
+            <li><img src="../img/work-4.jpg" alt=""></li>
+            <li><img src="../img/work-5.jpg" alt=""></li>
+            <li><img src="../img/work-6.jpg" alt=""></li>
+            <li><img src="../img/work-7.jpg" alt=""></li>
+            <li><img src="../img/work-8.jpg" alt=""></li>
+        </ul>
+    </section>    
+    
+</div>
+</body>
+</html>

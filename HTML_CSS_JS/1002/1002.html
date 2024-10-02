@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<!-- <meta name = "viewport" content = "width=device-width, initial-scale=1"> -->
+	
+	<style>
+		* {margin : 0; padding : 0;}
+		ul {list-style : none;}
+		a {text-decoration: none;}
+		.clearfix::after {content : ""; clear : both; display : block;}
+		
+		#wrap {max-width : 1000px; margin : 0 auto; padding : 0 80px; box-sizing : border-box; background : yellow;}
+		#wrap ul {}
+		#wrap ul li {float : left; width : 25%; padding : 0 20px; box-sizing : border-box;}
+		#wrap ul li img {width : 100%;} /* width : 100%를 적용해줘야 안겹친다 */
+		#wrap ul li p {}
+		
+		@media all and (max-width : 1024px) { /* 브라우저 가로 크기가 1024 이하면 뭔가를 하겠다 */
+			
+			#wrap {padding : 0 70px;}
+			#wrap ul li {width : 33.3333%; padding : 0 15px; box-sizing: border-box;}
+			#wrap ul li:nth-of-type(4) {display : none;}
+		}
+		
+		@media all and (max-width : 600px) {
+			
+			#wrap {padding : 0 50px;}
+			#wrap ul li {width : 50%;}
+			#wrap ul li:nth-of-type(3) {display : none;}
+			
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap" class = "clearfix">
+		
+		<ul>
+			<li>
+				<img src = "images/yoajung01.png" alt = "1">
+				<p>바나나시리얼 세트1</p>
+			</li>
+			<li>
+				<img src = "images/yoajung01.png" alt = "1">
+				<p>바나나시리얼 세트2</p>
+			</li>
+			<li>
+				<img src = "images/yoajung01.png" alt = "1">
+				<p>바나나시리얼 세트3</p>
+			</li>
+			<li>
+				<img src = "images/yoajung01.png" alt = "1">
+				<p>바나나시리얼 세트4</p>
+			</li>
+			
+		</ul>
+		
+	</div>
+	
+</body>
+</html>
