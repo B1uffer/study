@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>여행가이드</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+		*{margin: 0; padding: 0;}
+		li{list-style: none;}
+		a{text-decoration: none;}
+		.clearfix::after{content: ""; display: block; clear: both;}
+		
+		#header{max-width: 1200px; margin: 0 auto;}
+		#header ul{display: flex; flex-wrap: wrap;}
+		#header ul li{width: 20%; padding: 10px; border: 1px solid #000; box-sizing: border-box;}
+		#header ul li img{display: block; width: 100%;}
+		
+		@media all and (max-width: 700px){
+			#header{padding: 0 10px;}
+			#header ul li{width: 50%;}
+			#header ul li:last-of-type{width: 100%;}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="header" class="clearfix">
+		<ul>
+			<li><img src="images/img.jpg" alt="이미지"></li>
+			<li><img src="images/img.jpg" alt="이미지"></li>
+			<li><img src="images/img.jpg" alt="이미지"></li>
+			<li><img src="images/img.jpg" alt="이미지"></li>
+			<li><img src="images/img.jpg" alt="이미지"></li>
+		</ul>
+	</div>
+</body>
+</html>

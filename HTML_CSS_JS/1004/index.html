@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		* {margin : 0; padding : 0;}
+		ul {list-style : none;}
+		a {text-decoration: none;}
+		.clearfix::after {content : ""; clear : both; display : block;}
+		
+		#wrap {max-width : 1340px; margin : 0 auto; text-align : center; padding: 0 20px;}
+		#wrap h3 {font-size : 32px; margin : 20px 0 40px 0;}
+		#wrap .flexBox {display : flex; justify-content: space-between;}
+		#wrap .flexBox .box {width : 45%; height : 215px; padding : 40px; margin : 0 auto; box-sizing : border-box; box-shadow : inset 0 0 5px; border-radius : 15px; cursor : pointer;}
+		#wrap .flexBox .box p {height : 50px; padding : 5px 0 15px 0; margin-bottom : 20px;}
+		#wrap .flexBox .box button {width : 150px; padding : 10px; box-sizing : border-box; transition : 0.2s; cursor : pointer; border : none; border-radius : 50px; background-image : linear-gradient(orange, red); color : #fff;}
+		
+		@media all and (max-width : 950px) {
+			
+			#wrap .flexBox .box button {margin-top : 30px;}
+			#wrap .flexBox .box {height : 240px;}
+			
+		}
+		
+		@media all and (max-width : 758px) {
+			
+			#wrap .flexBox {display : block;}
+			#wrap .flexBox .box {width : 100%; margin-bottom : 25px;}
+
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		<h3>빙그레 임직원 및 종사자 온라인제보</h3>
+		
+		<div class = "flexBox">
+			<div class = "box">
+
+				<p>빙그레 임직원의 부당한 요구 또는 업무처리,<br>인권고충, 기타 부정행위 제보</p>
+				<button>사이버 신고센터</button>
+
+			</div>
+			<div class = "box">
+
+				<p>빙그레 종사자의 유해·위험요소 및 안전·보건에 관한 의견 제보</p>
+				<button>안전신문고</button>
+
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
