@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+		
+		* {margin : 0; padding : 0;}
+		ul {list-style : none;}
+		a {text-decoration: none;}
+		.clearfix::after {content : ""; clear : both; display : block;}
+		
+		#wrap {max-width : 1500px; margin : 0 auto; padding : 0 100px; box-sizing: border-box; word-break : keep-all;}
+		/* word-break : keep-all; */
+		
+		#wrap h2 {padding : 20px 0;}
+		#wrap h2 span {color : red;}
+		#wrap .box {}
+		#wrap .box ul {display : flex; justify-content : space-between; width : 100%;}
+		#wrap .box ul li {position : relative; width : 24%; margin-bottom : 20px; padding : 25px; box-sizing: border-box; border-radius : 10px; background-image : linear-gradient(330deg, rgba(50,0,0), rgba(74,0,0), rgba(114,0,0), rgba(154,0,0), rgba(174,0,0));}
+		#wrap .box ul li h3 {color : #fff; margin-bottom : 20px;}
+		#wrap .box ul li p {color : #fff; padding-bottom : 100px; box-sizing: border-box;}
+		#wrap .box ul li i {position : absolute; bottom : 20px; right : 20px;}
+		#wrap .box ul li i img {width : 60px; height : 60px;}
+		
+		@media all and (max-width : 1280px) {
+			
+			#wrap .box ul {flex-wrap : wrap;}
+			#wrap .box ul li {width : 49%; margin-bottom : 20px;}
+			
+		}
+		
+		@media all and (max-width : 960px) {
+			
+			#wrap .box ul li {width : 100%;}
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		<h2>가입해야 하는 <span>또 다른</span> 이유</h2>
+		
+		<div class = "box">
+			
+			<ul>
+				<li>
+					<h3>TV로 즐기세요</h3>
+					<p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
+					<i class = "icon1"><img src = "images/001.png" alt = "1"></i>
+				</li>
+				<li>
+					<h3>즐겨 보는 콘텐츠를 저장해 오프라인으로 시청하세요</h3>
+					<p>간편하게 저장하고 빈틈없이 즐겨보세요.</p>
+					<i class = "icon2"><img src = "images/002.png" alt = "2"></i>
+				</li>
+				<li>
+					<h3>다양한 디바이스로 시청하세요</h3>
+					<p>각종 영화와 시리즈를 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요.</p>
+					<i class = "icon3"><img src = "images/003.png" alt = "3"></i>
+				</li>
+				<li>
+					<h3>어린이 전용 프로필을 만들어 보세요</h3>
+					<p>자기만의 공간에서 좋아하는 캐릭터와 즐기는 신나는 모험. 자녀에게 이 특별한 경험을 선물하세요. 넷플릭스 회원이라면 무료입니다.</p>
+					<i class = "icon4"><img src = "images/004.png" alt = "4"></i>
+				</li>
+			</ul>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>

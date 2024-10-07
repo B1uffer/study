@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<script src = "script/jquery-3.3.1.min.js"></script>
+	
+	<style>
+		
+		* {margin : 0; padding : 0;}
+		ul {list-style : none;}
+		a {text-decoration: none;}
+		.clearfix::after {content : ""; clear : both; display : block;}
+		
+		#wrap {}
+		#wrap p {line-height : 100px; background : yellow;}
+		#wrap address {display : none;}
+		
+		@media all and (max-width : 620px) {
+			
+			
+			
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		<p>넷플릭스에서 어던 컨텐츠를 시청할 수 있나요?</p>
+		<address>저도 잘 모르겠어요!</address>
+		<p>넷플릭스에서 어던 컨텐츠를 시청할 수 있나요?</p>
+		
+	</div>
+	
+	<div id = "wrap2">
+		<p>asdasdadad<span>스판</span></p>
+	</div>
+	
+	<script>
+		
+		$('#wrap p').click(function() {
+			
+			$('#wrap address').toggle();
+			
+		})
+		
+		$('#wrap2').children('span').css('color','red');
+		/* $('#wrap2').find('span').css('color','red'); */
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<script src = "script/jquery-3.3.1.min.js"></script>
+	
+	<style>
+		
+		* {margin : 0; padding : 0;}
+		ul {list-style : none;}
+		a {text-decoration: none;}
+		.clearfix::after {content : ""; clear : both; display : block;}
+		
+		#wrap {}
+		#wrap ul {}
+		#wrap ul li {}
+		#wrap ul li a {}
+		#wrap ul li p {display : none;}
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		<ul>
+			
+			<li>
+				<a href = "javascript:;">넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</a>
+				<!-- javascript:; -->
+				<p>저도 모르겠어요!</p>
+			</li>
+			<li>
+				<a href = "javascript:;">넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</a>
+				<p>글쎄요!</p>
+			</li>
+			<li>
+				<a href = "javascript:;">넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</a>
+				<p>알것도 같은데!</p>
+			</li>
+			<li>
+				<a href = "javascript:;">넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</a>
+				<p>아~ 모르겠음!</p>
+			</li>
+			
+		</ul>
+		
+	</div>
+	
+	<script>
+		
+		$('#wrap ul li a').click(function() {
+		//웹 접근성 등의 이유로 a까지 지정해줘야함
+			
+			$(this).siblings('p').toggle(); // 사용자가 클릭한 a태그의 형제 p태그를 선택함
+			// 형제가 하나뿐일 땐 siblings()에 아무것도 쓰지 않아도 되지만 2개 이상일땐 써야한다
+			
+			$(this).parent().siblings().children('p').hide();
+			// 사용자가 클릭한 a태그의 부모 li를 선택하여 그 li의 형제를 모두 찾는다, 그 후 찾은 li들의 자식 p들을 숨긴다
+			
+		})
+		
+	</script>
+	
+</body>
+</html>
