@@ -2,7 +2,7 @@
 제이쿼리 css, addClass
 
 반응형 홈페이지
-제이쿼리 addClass
+제이쿼리 addClass (css 클래스 x)
 
 자바스크립트 제이쿼리 css는 인라인 스타일로 적용
 (우선순위 : 1000점 최우선)
