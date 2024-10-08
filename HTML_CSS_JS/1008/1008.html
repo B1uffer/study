@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<script src = "script/jquery-3.3.1.min.js"></script>
+	
+	<style>
+		
+		#wrap {position : fixed; right : -300px; top : 0; z-index : 10; width : 300px; height : 100%; transition : 0.3s; background : yellow;}
+		#wrap.on {right : -300px;}
+		button {display : none;}
+		
+		@media all and (max-width : 1000px) {
+			#wrap.on {right : 0;}
+			button {display : block;}
+			
+		}
+		
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		메뉴
+		
+	</div>
+	
+	<button>버튼</button>
+	
+	<script>
+		
+		/* $('button').click(function() {
+			
+			$('#wrap').css('right',0);
+			얘가 최우선으로 적용되다보니 위 style의 media에 있는 right : 0;이 적용되지 않음
+		}) */
+		
+		/* $('button').click(function() {
+			
+			$('#wrap').addClass('on');
+			wrap에게 on 클래스를 부여함
+		}) */
+		
+		$('button').click(function() {
+			
+			$('#wrap').toggleClass('on');
+			
+		})
+		
+	</script>
+	
+</body>
+</html>

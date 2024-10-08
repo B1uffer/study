@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	
+	<script src = "script/jquery-3.3.1.min.js"></script>
+	<script src = "script/swiper.min.js"></script>
+	<link rel = "stylesheet" href = "css/swiper.min.css">
+	
+	<style>
+		*{margin: 0 auto; padding: 0; font-family: 'Noto Sans KR', sans-serif; font-size: 20px;}
+		li{list-style: none;}
+		a{text-decoration: none;}
+		em{font-style: normal;}
+		
+		#kia {position : relative; max-width : 1400px; margin : 0 auto; padding : 0 80px 50px; background : yellow;}
+		#kia .swiper-container {}
+		#kia .swiper-container ul {}
+		#kia .swiper-container ul li {border : 1px solid #000;  padding : 40px 30px; box-sizing : border-box;}
+		#kia .swiper-container ul li img {width : 100%;}
+		#kia .swiper-container ul li dl {display : flex; justify-content: space-between;}
+		#kia .swiper-container ul li dl dt {}
+		#kia .swiper-container ul li dl dd {}
+		#kia .btn {}
+		#kia .btn button {width : 50px; height : 50px; background : none; border : none;}
+		#kia .btn .swiper-button-prev {left : 40px; background-image : url("images/001.png"); background-size : 50px 50px;}
+		#kia .btn .swiper-button-next {right : 40px; background-image : url("images/002.png"); background-size : 50px 50px;}
+		#kia .swiper-pagination {display : flex; align-items : center; justify-content : center; bottom : 0; left : 0; width : 100%;}
+		#kia .swiper-pagination .swiper-pagination-bullet {width : 10px; height : 10px; margin : 0 7px; border-radius : 10px; border : 2px solid #000; background : #fff; opacity : 1;}
+		#kia .swiper-pagination .swiper-pagination-bullet-active {width : 12px; height : 12px; background : #000;}
+		
+		@media all and (max-width : 1366px) {
+			
+			#kia .btn {display : none;}
+			
+		}
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "kia">
+		
+		<div class = "swiper-container">
+			
+			<ul class = "swiper-wrapper">
+				
+				<li class = "swiper-slide">
+					
+					<img src = "images/ray-ev_tmjc5vn3f_a_eu3.png" alt = "d">
+					<dl><dt>출시일</dt><dd>2024-10-02</dd></dl>
+					<dl><dt>배기량</dt><dd>998 cc</dd></dl>
+					
+				</li>
+				<li class = "swiper-slide">
+					
+					<img src = "images/ray-ev_tmjc5vn3f_a_eu3.png" alt = "d">
+					<dl><dt>출시일</dt><dd>2024-10-02</dd></dl>
+					<dl><dt>배기량</dt><dd>998 cc</dd></dl>
+					
+				</li>
+				<li class = "swiper-slide">
+					
+					<img src = "images/ray-ev_tmjc5vn3f_a_eu3.png" alt = "d">
+					<dl><dt>출시일</dt><dd>2024-10-02</dd></dl>
+					<dl><dt>배기량</dt><dd>998 cc</dd></dl>
+					
+				</li>
+				<li class = "swiper-slide">
+					
+					<img src = "images/ray-ev_tmjc5vn3f_a_eu3.png" alt = "d">
+					<dl><dt>출시일</dt><dd>2024-10-02</dd></dl>
+					<dl><dt>배기량</dt><dd>998 cc</dd></dl>
+					
+				</li>
+				<li class = "swiper-slide">
+					
+					<img src = "images/ray-ev_tmjc5vn3f_a_eu3.png" alt = "d">
+					<dl><dt>출시일</dt><dd>2024-10-02</dd></dl>
+					<dl><dt>배기량</dt><dd>998 cc</dd></dl>
+					
+				</li>
+				
+				
+			</ul>
+			
+		</div>
+		
+		<!-- 컨테이너 밖 -->
+		
+		<div class = "btn">
+			<button class = "swiper-button-prev"></button>
+			<button class = "swiper-button-next"></button>
+		</div>
+		
+		<div class = "swiper-pagination"></div>
+		
+	</div>
+	
+	<script>
+		
+		var swiper1 = new Swiper('#kia .swiper-container', {
+			
+			slidesPerView : 3,
+			spaceBetween : 25,
+			slidesPerGroup : 2,
+			loopFillGroupWithBlank : false,
+			
+			breakpoints: {
+				
+				1366: {
+					
+					slidesPerView : 2,
+					spaceBetween : 17,
+					slidePerGroup : 2,
+				},
+				
+				766: {
+					
+					slidesPerView : 1,
+					spaceBetween : 0,
+					slidesPerGroup : 1,
+					
+				},
+				
+			},
+			
+			
+			
+			loop : false,
+			navigation : { // 좌우 화살표
+				
+				nextEl : '#kia .swiper-button-next',
+				prevEl : '#kia .swiper-button-prev',
+				
+			},
+			
+			pagination : { // 하단에 점 표시 적용
+				
+				el : '#kia .swiper-pagination',
+				clickable : true,
+				
+			},
+			
+			effect : 'slide',
+			speed : 500,
+			
+		})
+			
+
+	</script>
+	
+</body>
+</html>
