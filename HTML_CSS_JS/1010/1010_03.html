@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		li{list-style: none;}
+		em, i, address{font-style: normal;}
+		
+		body {height : 3000px;}
+		body.on{hegith : 100vh; overflow-y : hidden;}
+		
+		#header {display : flex; justify-content: space-between; align-items : center; max-width : 1800px; height : 90px; margin : 0 auto; background : yellow;}
+		#header h1 {}
+		#header h1 a {}
+		#header h1 a img {width : 50px;}
+		#header nav {}
+		#header nav.on {display : none;}
+		#header nav ul {display : flex;}
+		#header nav ul li {}
+		#header nav ul li a {}
+		
+		#header aside {}
+		#header aside.on {display : none;}
+		#header aside ul {display : flex;}
+		#header aside ul li {}
+		#header aside ul li.nav_M {}
+		#header aside ul li a {}
+		#header aside ul li a img {width : 30px;}
+		
+		#header .search {position : absolute; left : 0; top : 90px; width : 100%; height : 370px; background : red;}
+		#header .search form {display : flex; align-item : center; width : 810px; height : 75px; margin : 0 auto; border-radius : 30px; background : green; opacity : 0; transform : translateY(-30px); transition : 1s;}
+		#header .search form.on {opacity: 1; transform: translateY(0px);}
+		
+		#header .search form img {width : 30px; padding-left : 20px;}
+		#header .search form input {width : calc(100% - 90px); padding : 0 20px; font-size : 1.5em; background : none; border : none; outline : none;}
+		#header .search form input::placeholder {color : #fff;}
+		#header .search ul {}
+		#header .search ul li {}
+		#header .search ul li a{}
+		
+		@media all and (max-width : 1024px) {
+			
+			#header nav {display : none;}
+			#header aside ul li.dark {display : none;}
+			#header aside ul li.nav_M {display : block;}
+			
+			#header .search form {width : 80%;}
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "header">
+		
+		<h1><a href = "#"><img src = "images/story_img02.jpg" alt = "1"></a></h1>
+		
+		<nav>
+		
+			<ul>
+			
+				<li><a href = "#">소개</a></li>
+				<li><a href = "#">이야기</a></li>
+				<li><a href = "#">기술과 서비스</a></li>
+				<li><a href = "#">약속과 책임</a></li>
+				<li><a href = "#">뉴스</a></li>
+				<li><a href = "#">투자정보</a></li>
+				
+			</ul>
+			
+		</nav>
+		
+		<aside>
+			<ul>
+				<li class = "search_btn"><a href = "#"><img src = "images/001.png" alt = "검색"></a></li>
+				<li class = "dark"><a href = "#"><img src = "images/002.png" alt = "달님"></a></li>
+				<li class = "nav_M"><a href = "#"><img src = "images/003.png" alt = "햄버거"></a></li>
+				
+			</ul>
+		</aside>
+		
+		<div class = "search">
+			
+			<form>
+				<img src = "images/003.png" alt = "검색">
+				<input type = "text" placeholder = "무엇이 궁금하신가요?">
+				
+			</form>
+			
+			<ul>
+				<li><a href = "#">글로벌흥행</a></li>
+				<li><a href = "#">AI탐험</a></li>
+			</ul>
+			
+		</div>
+		
+	</div>
+	
+	
+	<script>
+		
+		$('#header aside ul li.nav_M').click(function(){
+			
+			$('body, nav, aside').addClass('on');
+			$('#header .search').slideDown(500,function(){
+          	$('#header .search form').addClass('on');
+      		});
+			
+		})
+		
+	</script>
+	
+</body>
+</html>
