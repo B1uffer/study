@@ -37,7 +37,20 @@
 		
 		#header {width : 100%; height : 70px; background : red;}
 		
-		#header .menu {width : 100%; height : 100vh; background : blue;}
+		#header .menu {width : 100%; height : 100vh; background-image : url("img/bg_menu.jpg"); background-size: cover;}
+		#header .menu .menu_head {display : flex; justify-content : flex-end; width : 100%; padding : 30px 100px; box-sizing: border-box; background : red;}
+		#header .menu .menu_head .lang {font-size : 18px;}
+		#header .menu .menu_head .lang .eng {font-family : "eng";}
+		#header .menu .menu_head .lang a {background : blue;}
+		#header .menu .menu_head .lang ul {position : fixed; top : 70px; background : orange; padding : 15px 20px; border-radius : 15px;}
+		#header .menu .menu_head .lang ul li {}
+		#header .menu .menu_head .logIn {margin-left : 30px; font-family : "korL"; background : yellow;}
+		#header .menu .menu_head .btn_close {padding : 40px; box-sizing : border-box; margin-left : 30px; border-radius : 50%; background : green; }
+		#header .menu .menu_head .btn_close::before {}
+		#header .menu .menu_head .btn_close::after {}
+		
+		
+		
 		
 		#header .inner {display : flex; justify-content: space-between; width : 95%; margin : 0 auto;}
 		#header .inner .logo {margin-top : 20px; box-sizing : border-box;}
@@ -74,6 +87,24 @@
 			
 			<div class ="menu">
 				
+				<div class = "menu_head">
+					
+					<div class = "lang">
+						
+						<a href = "#" class = "eng">KOR</a>
+						<ul>
+							<li class = "eng">KOR</li>
+							<li class = "eng">ENG</li>
+						</ul>
+						
+					</div>
+					
+					<a href = "#" class = "logIn">로그인</a>
+					
+					<a href = "#" class = "btn_close"><!-- menu_head의 X버튼 --></a>
+					
+				</div>
+				
 			</div>
 			
 			<div class = "inner">
@@ -87,7 +118,7 @@
 				</div>
 				
 				<ul class = "lang">
-					<li class = "active"><a href = "#" class = "kor">KOR</a></li>
+					<li class = "active"><a href = "#" class = "eng">KOR</a></li>
 					<li><a href = "#" class = "eng">ENG</a></li>
 				</ul>
 				
