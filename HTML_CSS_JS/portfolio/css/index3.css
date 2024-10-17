@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+
+:root { /* common.css 상단에 입력 권장 */
+			--symbol-blue: #0060b0;
+			--symbol-green : #009475;
+			--sub-gray : #5a5a5a;
+			--sub-white : #f5f5f5;
+			--main-white : #ffffff;
+		}
+
+@font-face {
+	
+	font-family : "notoM";
+	src:url("../font/NotoSansCJKkr-Medium.otf");
+	
+}
+
+@font-face {
+	
+	font-family : "notoL";
+	src : url("../font/NotoSansCJKkr-Light.otf")
+	
+}
+
+@font-face {
+	
+	font-family : "arial";
+	src : url("../font/ArialTh.ttf");
+	
+}
+
+@font-face {
+	
+	font-family : "gmarketB";
+	src : url("../font/GmarketSansBold.otf");
+	
+}
+
+*{margin: 0; padding: 0; color : #333;}
+a{text-decoration: none; color: inherit; font-family : 'Noto Sans CJK KR Medium';}
+ul{list-style: none;}
+table{border-collapse: collapse;}
+em, i, address{font-style: normal;}
+textarea {resize : none;}
+.clearfix::after{content: ""; clear: both; display: block;}
+button {font-family : 'Arial'; background : #fff;}
+h2 {font-size : 20px; font-weight : normal;}
+h3 {font-size : 18px; font-weight : normal;}
+
+body {background-color : #fff;}
+
+/* header */
+header {height : 100px; margin : 0 auto; background : #fff;}
+
+#h_box {width : 1340px; height : 100px; margin : 0 auto;}
+#logo {float : left; line-height : 100px;}
+/* logo는 너비 178px */
+#logo a {}
+#logo a h1 {}
+#logo a h1 img {}
+
+#menu {float : left; width : 1042px; height : 100px;}
+#menu nav {float : left; width : 1000px; margin-top : 37px;}
+/* menu m_left */
+#menu nav .m_left {padding-left : 20px;}
+#menu nav .m_left li {float : left; font-size : 18px; padding : 0 30px;}
+#menu nav .m_left li h2 {}
+#menu nav .m_left li a {transition : 0.2s; font-family : "notoM";}
+#menu nav .m_left li a:hover {color : var(--symbol-blue);}
+
+/* menu m_right */
+#menu nav .m_right {float : right;}
+#menu nav .m_right li {float : left; margin-left : 30px;}
+#menu nav .m_right li a {display : inline-block; width : 30px; height : 30px;}
+#menu nav .m_right li .search {background-image : url("../img/icon_search.png"); background-size: 30px 30px; transition : 0.3s;}
+#menu nav .m_right li .search:hover {background-image : url("../img/icon_search_hover.png");}
+#menu nav .m_right li .user {background-image : url("../img/icon_user.png"); background-size : 30px 30px; transition : 0.3s;}
+#menu nav .m_right li .user:hover {background-image : url("../img/icon_user_hover.png");}
+
+.login {float : right; width : 120px; height : 40px; margin-top : 30px; border : 2px solid var(--symbol-blue); border-radius : 5px; cursor : pointer; transition : 0.3s;}
+/* button은 너비 120px */
+.login:hover {background : var(--symbol-blue); color : #fff;}
+
+
+
+/* main */
+main {position : relative;}
+
+
+/* subMenu */ /* display : none; */
+#subMenu {position : absolute; top : 0; left : 0; width : 100%; height : 80px; line-height : 80px; background : var(--sub-white); display : none;}
+
+#subMenu ul {width : 900px; height : 80px; margin : 0 auto;}
+#subMenu ul li {float : left; padding-right : 50px;}
+#subMenu ul li a {transition : 0.2s;}
+#subMenu ul li a:hover {color : var(--symbol-blue);}
+#subMenu .subMenu1 {}
+#subMenu .subMenu2 {display : none;}
+#subMenu .subMenu3 {display : none;}
+
+/* main_head */
+#main_head {height : 300px; background-image : url("../img/main_head2.png"); background-size : cover; background-repeat : no-repeat; background-position : 50% 70%;}
+#main_head .mainHead_box {width : 1340px; height : 300px; margin : 0 auto;}
+#main_head .mainHead_box .textBox {}
+#main_head .mainHead_box .textBox .top {padding-top : 50px;}
+#main_head .mainHead_box .textBox .top .yellow {float : left; color : yellow;}
+#main_head .mainHead_box .textBox .top .selectBox {position : relative;}
+#main_head .mainHead_box .textBox .top .selectBox select {float : right; border : none; background : none; color : var(--symbol-blue); font-weight : bold; font-size : 14px; cursor : pointer;}
+#main_head .mainHead_box .textBox .bottom {clear : both;}
+#main_head .mainHead_box .textBox .bottom h2 {font-size : 60px; color : var(--main-white); font-family : "notoM";}
+#main_head .mainHead_box .textBox .bottom p {font-size : 24px; color : var(--main-white); font-family : "notoM";}
+
+
+
+
+/* mainBody */
+#mainBody {width : 1340px; margin : 0 auto;}
+
+#mainBody>a {float : right;  display : block; margin : 30px 15px 10px 0;}
+#mainBody>a>p {color : var(--symbol-blue);}
+#mainBody>a>p>span {display : inline-block; width : 15px; height : 10px; margin-left : 5px; background-image : url("../img/cursor_blue_bottom.png"); background-repeat : no-repeat; background-size : contain;}
+#mainBody .pastDocs {}
+#mainBody .pastDocs .pastBox {float : left; display : none;}
+
+/* bodyHead */
+#mainBody .bodyHead {clear : both; margin-bottom : 30px;}
+#mainBody .bodyHead a p {}
+#mainBody .bodyHead a p span {}
+#mainBody .bodyHead .pastDocs {}
+#mainBody .bodyHead .pastDocs .pastBox p {}
+#mainBody .bodyHead .pastDocs .pastBox li {}
+#mainBody .bodyHead h3 {display : inline; font-weight : bold; font-size : 30px;}
+
+/* search, 편집 필요함 */
+#mainBody #fsearch {width : 250px; height : 47px; border : 3px solid var(--symbol-blue); float : right;}
+
+
+
+
+/* documentBox */
+#mainBody #documentBox {}
+#mainBody #documentBox .yearBox {width : 1340px; height : 88px; margin-bottom : 50px; box-shadow : 0 0 5px #333;}
+#mainBody #documentBox .yearBox a {display : flex; line-height : 88px;}
+#mainBody #documentBox .yearBox a .gradient {width : 25px; height : 88px; margin-right : 35px; background-image : linear-gradient(rgba(76,180,191),rgba(0,96,176));}
+#mainBody #documentBox .yearBox a span {display : inline-block; width : 20px; height : 20px; background-image : url("../img/point_blue_right.png"); background-repeat: no-repeat; background-size: contain; margin : 33px 10px 0 0;}
+#mainBody #documentBox .yearBox a p {font-size : 20px; font-weight : bold;}
+
+/* contents */
+#mainBody #documentBox .contents {width : 1300px; margin : -30px auto; margin-bottom : 40px; display : none;} /* display : none */
+#mainBody #documentBox .contents ul {}
+#mainBody #documentBox .contents ul li {color : var(--sub-gray);border-bottom : 2px dashed var(--sub-gray); padding : 15px;}
+#mainBody #documentBox .contents ul li .left {}
+#mainBody #documentBox .contents ul li .left span {display : inline-block; border : 3px solid var(--sub-gray); margin : 0 7px 2px 0; border-radius : 5px;}
+#mainBody #documentBox .contents ul li .right {float : right;}
+#mainBody #documentBox .contents ul li .right span {color : var(--symbol-blue);}
+#mainBody #documentBox .contents ul li .right .link {margin-left : 20px; color : var(--symbol-blue);}
+
+
+/* siteMap */
+#siteMap {height: 400px; margin-top : 200px; background : var(--sub-white);}
+#siteMap .map_box {width : 1200px; height : 280px; margin : 0 auto;}
+#siteMap .map_box .sm_subBox {float : left; margin : 40px 100px 0 0;}
+#siteMap .map_box .sm_subBox .sm_title {margin-bottom : 15px; font-family : "notoM";}
+#siteMap .map_box .sm_subBox ul {}
+#siteMap .map_box .sm_subBox ul li {margin-bottom : 3px;}
+#siteMap .map_box .sm_subBox ul li a {font-family : "notoL";}
+
+#siteMap #social {width : 1200px; margin : 0 auto;}
+#siteMap #social .social_icon {float : left;}
+#siteMap #social .social_icon a {margin-right : 20px;}
+#siteMap #social .social_icon a img {width : 50px;}
+#siteMap #social select {float : right; background : none; border : none;}
+#siteMap #social select option {}
+
+
+/* footer */
+footer {background-color : var(--sub-gray);}
+footer p,address,span {color : var(--sub-white);}
+#footerBox {width : 1340px; margin : 0 auto; padding : 20px;}
+#footerBox .ft_nameText {font-family : "notoM";}
+
+/* addressBox */
+#footerBox #addressBox {display : inline-block; margin-right : 30px;}
+#footerBox #addressBox address {font-size : 14px; font-family : "notoL";}
+#footerBox #addressBox .addressBox_kr {}
+#footerBox #addressBox .addressBox_eng {}
+#footerBox #addressBox .copyright {font-size : 14px; font-family : "notoL";}
+#footerBox #addressBox .copyright span {margin : 0 5px;}
+
+
+/* telBox */
+#footerBox #telBox {display : inline-block;}
+#footerBox #telBox .tel {font-family : "notoL"; font-size : 14px;}
+#footerBox #telBox .telBox_top {}
+#footerBox #telBox .telBox_bot {}

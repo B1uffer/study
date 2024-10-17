@@ -6,18 +6,49 @@
 			--symbol-green : #009475;
 			--sub-gray : #5a5a5a;
 			--sub-white : #f5f5f5;
+			--main-white : #ffffff;
 		}
 
+@font-face {
+	
+	font-family : "notoM";
+	src:url("../font/NotoSansCJKkr-Medium.otf");
+	
+}
+
+@font-face {
+	
+	font-family : "notoL";
+	src : url("../font/NotoSansCJKkr-Light.otf")
+	
+}
+
+@font-face {
+	
+	font-family : "arial";
+	src : url("../font/ArialTh.ttf");
+	
+}
+
+@font-face {
+	
+	font-family : "gmarketB";
+	src : url("../font/GmarketSansBold.otf");
+	
+}
+
 *{margin: 0; padding: 0; color : #333;}
-a{text-decoration: none; color: inherit; font-family : 'Noto Sans CJK KR Medium';}
+a{text-decoration: none; color: inherit;}
 ul{list-style: none;}
 table{border-collapse: collapse;}
 em, i, address{font-style: normal;}
 textarea {resize : none;}
 .clearfix::after{content: ""; clear: both; display: block;}
-button {font-family : 'Arial'; background : #fff;}
-h2 {font-size : 20px; font-weight : normal;}
-h3 {font-size : 18px; font-weight : normal;}
+button {font-family : "Arial"; background : #fff;}
+h2 {font-size : 20px; font-weight : normal; font-family : "notoM";}
+h3 {font-size : 18px; font-weight : normal; font-family : "gmarketB";}
+p {font-family : "notoL";}
+body {background-color : #fff;}
 
 
 body {background-color : #fff; background-image : url("../img/background.png"); background-repeat: no-repeat; background-size :contain;}
@@ -54,11 +85,11 @@ header {height : 100px; margin : 0 auto; background : #fff;}
 
 
 
-main {}
+main {position : relative;}
 
 
 /* subMenu */
-#subMenu {width : 100%; height : 80px; line-height : 80px; background : var(--sub-white);}
+#subMenu {position : absolute; top : 0; left : 0; width : 100%; height : 80px; line-height : 80px; background : var(--sub-white); display : none;}
 /* display : none; */
 #subMenu ul {width : 900px; height : 80px; margin : 0 auto;}
 #subMenu ul li {float : left; padding-right : 50px;}
@@ -70,55 +101,79 @@ main {}
 
 
 
-#mainBody {width : 1340px; margin : 0 auto;}
+#mainBody {}
 
 
 /* slogan */
-#slogan {position : relative; width : 100%; height : 400px;}
-main #slogan .bigtext {position : absolute; top : 120px; left : 0; font-size : 60px; color : #fff;}
-#slogan .bigtext span:nth-child(1) {color : var(--symbol-blue);}
-#slogan .bigtext span:nth-child(2) {color : var(--symbol-green);}
+#slogan {position : relative; width : 1340px; height : 430px; margin : 0 auto;}
+main #slogan .bigtext {position : absolute; top : 150px; left : 0; font-size : 72px; color : #fff; font-family : "gmarketB";}
+#slogan .bigtext .s_text1 {color : var(--symbol-blue);}
+#slogan .bigtext .s_text2 {color : var(--symbol-green);}
 
 /* slideBox */
-#slideBox {width : 1340px; height : 540px; overflow : hidden; margin-bottom : 60px;}
-#slideBox>nav {width : 1340px; height : 70px; background : var(--sub-gray);}
-#slideBox .menuBox {display : flex; flex-wrap : wrap; width : 100px; margin : auto; padding-top : 27px; justify-content : space-between;}
-#slideBox .menuBox .menuButton {width : 15px; height : 15px; background : #000; border : none; border-radius : 50%; opacity : 0.5; cursor : pointer;}
+#mainBody .swiper-container {width : 1340px; height : 540px;  margin-bottom : 60px;}
+#mainBody .swiper-container .swiper-wrapper {width : 100%; height : 540px;}
+#mainBody .swiper-container .swiper-wrapper .slide1 {width : 100%; height : 540px; background : url("../img/slide01.jpg") center center no-repeat; background-size : cover;}
+#mainBody .swiper-container .swiper-wrapper .slide2 {width : 100%; height : 540px; background : url("../img/slide02.jpg") center center no-repeat; background-size : cover;}
 
-#slideBox .slide {}
-#slideBox .slide li {}
-#slideBox .slide li a {}
-#slideBox .slide li a img {width : 100%;}
+#mainBody .swiper-container .swiper-pagination{bottom: 25px;}
+#mainBody .swiper-container .swiper-pagination-bullet{width: 15px; height: 15px; background: #666; opacity: 1;}	/* 하단 버튼 비활성화 */
+#mainBody .swiper-container .swiper-pagination-bullet-active{width: 70px; height: 15px; border-radius: 7.5px; background: red;}	/* 하단 버튼 활성화 */
+#mainBody .swiper-container .arrow{width: 50px; height: 50px; margin-top: -25px; position: absolute; left: 50%; top: 50%; z-index: 100; font-size: 50px; background: #666; color: #fff; line-height: 40px; text-align: center; cursor: pointer;}
+#mainBody .swiper-container .arrow.prev{margin-left: -600px;}
+#mainBody .swiper-container .arrow.next{margin-left: 550px;}
 
+
+/* gradation */
+#gradation {padding : 50px 0 100px 0;background-image : linear-gradient(180deg, rgba(0, 0, 0, 0), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue), var(--symbol-blue));}
 
 /* asideBox */
-aside {height : 1015px; margin-top : 200px; overflow : hidden; background : red;}
+aside {width : 1340px; height : 1015px; margin : 0 auto; margin-top : 200px;  overflow : hidden;}
 #asideBox {}
+
 /* text */
-#asideBox .asideTxt_eng {font-size : 20px; background : yellow;}
-#asideBox .asideTxt_kor {font-size : 22px; background : green;}
-#asideBox .a_box .textBox {display : flex; flex-wrap : wrap; width : 200px;}
-#asideBox .b_box .textBox {display : flex; flex-wrap : wrap; width : 100px;}
+#asideBox .asideTxt_eng {font-size : 20px; color : var(--sub-white); font-family : "arial";}
+#asideBox .asideTxt_eng:hover {color : var(--symbol-blue);}
+#asideBox .asideTxt_kor {font-size : 22px; color : var(--sub-white); font-family : "notoM";}
+#asideBox .asideTxt_kor:hover {color : var(--symbol-blue);}
+
 
 /* a_box */
-#asideBox .a_box {margin-top : 10px;}
-#asideBox .a_box .box1 {width : 5000px; height : 250px; background : orange;}
-#asideBox .a_box .box1 li {float : left; margin-right : 50px; width : 300px; height : 250px; background : blue;}
+#asideBox .a_box {position : relative; padding-top : 30px;}
+#asideBox .a_box .textBox {display : flex; flex-wrap : wrap; width : 200px;}
+#asideBox .a_box .box1 {width : 5000px; height : 250px;}
+#asideBox .a_box .box1 .aside_imageBox1 {width : 250px; height : 250px; background-image: url("../img/aside01.png");}
+#asideBox .a_box .box1 .aside_imageBox2 {width : 250px; height : 250px; background-image: url("../img/aside02.png");}
+#asideBox .a_box .box1 li {float : left; margin-right : 70px;}
 #asideBox .a_box .box1 li a {}
-#asideBox .a_box .box1 li a img {width : 300px; height : 250px;}
+#asideBox .a_box .box1 li a .aside_textBox1 {width : 180px; height : 210px; padding : 20px; background-color : rgba(0,0,0,0.5); }
+#asideBox .a_box .box1 li a .aside_textBox1 p {color : var(--sub-white);}
+#asideBox .a_box .box1 li a .aside_textBox1 .aside_textBox1_text1 {font-size : 16px; padding-bottom : 10px;font-family : "notoM";}
+#asideBox .a_box .box1 li a .aside_textBox1 .aside_textBox1_text2 {font-size : 14px;}
+#asideBox .a_box .box1 li a .aside_textBox1 .aside_textBox1_text3 {font-size : 12px; position : absolute; top : 270px; left : 20px;}
+
+#asideBox .a_box .box1 li a .aside_textBox2 .aside_textBox2_text1 {font-size : 16px; margin-bottom : 10px; font-family : "notoM"}
+#asideBox .a_box .box1 li a .aside_textBox2 .aside_textBox2_text2 {font-size : 14px;}
+#asideBox .a_box .box1 li a .aside_textBox2 .aside_textBox2_text3 {position : absolute; top : 200px; left : 20px; font-size : 12px;}
+#asideBox .a_box .box1 li a .aside_textBox2 {position : relative; width : 180px; height : 210px; padding : 20px; background-color : rgba(220,227,233); box-shadow: 0 0 5px;}
+
 
 /* b_box */
-#asideBox .b_box {width : 1340px; margin-top : 10px; background: brown;}
-#asideBox .b_box .box2 {display : flex; width : 1340px; height : 300px; margin : auto;}
-#asideBox .b_box .box2 li { width : 450px;}
-#asideBox .b_box .box2 a {}
-#asideBox .b_box .box2 a img {width : 420px; height : 250px;}
-#asideBox .b_box .box2 a .dateBox {}
+#asideBox .b_box {width : 1340px; padding-top : 30px;}
+#asideBox .b_box .textBox {width : 100px;}
+#asideBox .b_box .box2 {display : flex; width : 1340px; height : 300px; justify-content: space-between;}
+#asideBox .b_box .box2 li {}
+#asideBox .b_box .box2 li a {}
+#asideBox .b_box .box2 li a img {width : 420px; height : 250px;}
+#asideBox .b_box .box2 li span  {width : 420px; display : block; text-align : center;}
+
+
 
 /* indicator, font-size는 em을 사용 */
-#indicator {height : 800px; margin-top : 100px; background : red;}
-#indicator h3 {font-size : 3em;}
+#indicator {width : 1340px; height : 800px; margin : 0 auto; margin-top : 100px;}
+#indicator h3 {font-size : 3em; color : var(--sub-white);}
 #indicator h3 a {}
+#indicator p {color : var(--sub-white);}
 #indicator .in_text1 {font-size : 2em; margin-top : 5px;}
 #indicator .in_text2 {font-size : 1.2em; margin-top : 3px;}
 #indicator .graphBox{height : 560px; margin-top : 20px; padding : 30px; background : yellow;}
@@ -128,7 +183,7 @@ aside {height : 1015px; margin-top : 200px; overflow : hidden; background : red;
 #indicator .graphBox .graph {float : right; width : 60%; height: 550px; background : green;}
 
 /* community */
-#community {margin-top : 50px;}
+#community {width : 1340px; margin : 0 auto; margin-top : 50px;}
 #community h3 {font-size : 2em;}
 #community .communityBox {display : flex; justify-content : space-between; margin-top : 20px;}
 #community .communityBox li {float : left;}
@@ -136,14 +191,15 @@ aside {height : 1015px; margin-top : 200px; overflow : hidden; background : red;
 #community .communityBox li a img {}
 
 /* siteMap */
-#siteMap {width : 1340px; height : 400px;}
-#siteMap .map_box {height : 280px;}
+#siteMap {height: 400px; margin-top : 200px; background : var(--sub-white);}
+#siteMap .map_box {width : 1200px; height : 280px; margin : 0 auto;}
 #siteMap .map_box .sm_subBox {float : left; margin : 40px 100px 0 0;}
-#siteMap .map_box .sm_subBox .sm_title {margin-bottom : 10px;}
+#siteMap .map_box .sm_subBox .sm_title {margin-bottom : 15px; font-family : "notoM";}
 #siteMap .map_box .sm_subBox ul {}
-#siteMap .map_box .sm_subBox ul li {}
+#siteMap .map_box .sm_subBox ul li {margin-bottom : 3px;}
+#siteMap .map_box .sm_subBox ul li a {font-family : "notoL";}
 
-#siteMap #social {}
+#siteMap #social {width : 1200px; margin : 0 auto;}
 #siteMap #social .social_icon {float : left;}
 #siteMap #social .social_icon a {margin-right : 20px;}
 #siteMap #social .social_icon a img {width : 50px;}
@@ -152,16 +208,21 @@ aside {height : 1015px; margin-top : 200px; overflow : hidden; background : red;
 
 /* footer */
 footer {background-color : var(--sub-gray);}
-footer p {color : var(--sub-white);}
-footer address {color : var(--sub-white);}
+footer p,address,span {color : var(--sub-white);}
 #footerBox {width : 1340px; margin : 0 auto; padding : 20px;}
+#footerBox .ft_nameText {font-family : "notoM";}
+
 /* addressBox */
 #footerBox #addressBox {display : inline-block; margin-right : 30px;}
+#footerBox #addressBox address {font-size : 14px; font-family : "notoL";}
 #footerBox #addressBox .addressBox_kr {}
 #footerBox #addressBox .addressBox_eng {}
-#footerBox #addressBox .copyright {}
+#footerBox #addressBox .copyright {font-size : 14px; font-family : "notoL";}
+#footerBox #addressBox .copyright span {margin : 0 5px;}
+
 
 /* telBox */
 #footerBox #telBox {display : inline-block;}
+#footerBox #telBox .tel {font-family : "notoL"; font-size : 14px;}
 #footerBox #telBox .telBox_top {}
 #footerBox #telBox .telBox_bot {}
