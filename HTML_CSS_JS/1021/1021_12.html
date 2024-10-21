@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<button class = "left">빼기</button>
+	<input type = "text" value = "1">
+	<button class = "right">더하기</button>
+	
+	<p class = "price">500</p>
+	
+	<p>총 금액</p>
+	<p class = "result"></p>
+	
+	<script>
+		
+		const left = document.querySelector('.left');	// left클래스에 관련된 변수 left
+		const input = document.querySelector('input'); // input태그에 관련된 변수 input
+		const right = document.querySelector('.right'); // right클래스에 관련된 변수 right
+		
+		var result = document.querySelector('.result');
+		var price = document.querySelector('.price');
+		
+		var price2 = 500;
+		
+		
+		
+		
+		right.addEventListener('click',function() { // right 변수에 대해 클릭하면 뭔가를 함
+			
+			var a = input.value; // 손님이 입력한 값을 가져와서 a 변수에 넣는다
+			// value로 가져온 값은 문자화 되어 숫자와 더하면 나열된다
+			// Number() 문자화된 숫자를 숫자화함
+			var a = Number(input.value);
+			
+			a += 1;
+			input.value = a; // a 변수값을 input값에 넣음
+			
+			
+			
+			price.innerHTML = price2 * a;
+			
+			
+			/* var c = Number(price.value);
+			console.log(c);
+			
+			price.innerHTML = a * c; */
+			
+			
+			
+			console.log(a);
+			
+		})
+		
+		
+		
+		
+		left.addEventListener('click',function() {
+			
+			var b = Number(input.value);
+			b -= 1;
+			input.value = b;
+			
+			price.innerHTML = price2 * b;
+			
+		})
+		
+	
+		
+		
+	</script>
+	
+</body>
+</html>

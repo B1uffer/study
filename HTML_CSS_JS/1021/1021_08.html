@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<ul>
+		
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		
+		<button>버튼</button>
+	</ul>
+	
+	<script>
+		
+		
+		const sub2 = document.querySelectorAll('ul li')[2];
+		
+		sub2.style.background = "red";
+		
+		var abc = sub2.innerHTML;
+		
+		document.write(abc);
+		
+		
+		const BTN = document.querySelector('button');
+		
+		BTN.addEventListener('click',function() {
+			
+			sub2.innerHTML = "춘천시";
+			
+		})
+	</script>
+	
+</body>
+</html>
