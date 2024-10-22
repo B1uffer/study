@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<h2>로그인하기</h2>
+	<p style = "color : red">통과조건 : ID와 패스워드가 모두 일치해야 한다.</p>
+	
+	<label for = "ID">id : </label>
+	<input type = "text" id = "ID">
+	<label for = "PW">pw : </label>
+	<input type = "password" id = "PW">
+	
+	<button>로그인</button>
+	<script>
+		
+		var btn = document.querySelector("button"); // button태그를 선택해서 btn변수에 넣음
+		
+		
+		var id = 'asdf123';
+		var pw = 'asdf1234';
+		
+		btn.addEventListener("click",function() {
+			
+			var userID = document.querySelector("#ID").value; // value는 입력된 값을 가져옴
+			var userPW = document.querySelector("#PW").value;
+			// 위 2개의 변수는 btn을 누를 때 가져와야하므로 밖이 아닌 이곳에 작성한다
+			
+			console.log(userID);
+			console.log(userPW);
+			
+			var result = id === userID && pw === userPW;
+			console.log(result);
+			
+			
+			if(result) {
+				
+				alert("로그인 성공");
+				
+			} else {
+				
+				alert("로그인 실패 ㅋㅋ");
+				
+			}
+		})
+		
+	</script>
+	
+</body>
+</html>

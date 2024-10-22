@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<input type = "text" id = "price" value = "500">
+	<button class = "price">판매금액등록</button>
+	
+	<button class = "left">빼기</button>
+	<input type = "text" id = "count" value = "1">
+	<button class = "right">더하기</button>
+	<p>500원</p>
+	
+	<script>
+		
+		var price = document.querySelector('#price');
+		
+		var price2 = Number(price);
+		
+		
+		
+		const left = document.querySelector('.left');
+		const right = document.querySelector('.right');
+		const input = document.querySelector('#count');
+		const p = document.querySelector('p');
+		var a = 1; // 갯수
+		
+		left.addEventListener('click',function() {
+			
+			a = Number(input.value);
+			
+			a -= 1;
+			
+			input.value = a;
+			
+			p.innerHTML = price2 * a + '원';
+			
+		})
+		
+		right.addEventListener('click',function() {
+			
+			a = Number(input.value);
+			a += 1;
+			
+			input.value = a;
+			
+			p.innerHTML = price2*a + '원';
+			
+		})
+	</script>
+	
+</body>
+</html>
