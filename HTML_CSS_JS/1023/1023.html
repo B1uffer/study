@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<script>
+		
+		var classRoom = prompt("학년을 입력하세요","1학년:1, 2학년:2, 3학년:3, 기타:4"); // prompt는 첫 문자열은 안내문, 두번째 문자열은 미리입력됨
+		
+		switch(classRoom) { // switch()괄호 안에 classRoom변수를 넣었으므로 case는 classRoom이 됨
+				
+			case '1':{document.write('2층으로 가세요.');} // classRoom 변수값이 1이랑 같으면 2층으로 가세요 표시
+				
+				break;
+				
+			case '2':{document.write('3층으로 가세요.');}
+				
+				break;
+				
+			case '3':{document.write('별관으로 가세요.');}
+				
+				break;
+				
+			default:{document.write('1층 안내실로 가세요.');}
+				
+		}
+		
+	</script>
+	
+</body>
+</html>

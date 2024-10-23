@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<button>주사위 굴리기</button>
+	<p></p>
+	
+	<script>
+	
+		const btn = document.querySelector("button");
+		const p = document.querySelector("p");
+		
+		/* btn.addEventListener("click",function() {
+			
+			var num1 = Math.ceil(Math.random() * 6); // Math.ceil(Math.random() * 6), ceil?
+			var num2 = Math.ceil(Math.random() * 6);
+			
+			p.innerHTML = `주사위 1번 : ${num1} / 주사위 2번 : ${num2}`;
+			
+			while(num1 == num2) {
+				
+				//2개 변수 num1, num2가 일치하면 실행문 적용, 무한반복 (일치하지 않으면 while문 탈출)
+				alert('더블!');
+				
+				var num1 = Math.ceil(Math.random() * 6);
+				var num2 = Math.ceil(Math.random() * 6);
+				
+				p.innerHTML += `<br>주사위 1번 : ${num1} / 주사위 2번 : ${num2}`;
+				// = 가 아니라 +=를 통해 p에 추가하는것
+				
+			}
+			
+		}) */
+		
+		btn.addEventListener("click",function() {
+		
+		p.innerHTML = ""; // 초기화
+		
+		do {
+			
+			var num1 = Math.ceil(Math.random() * 6);
+			var num2 = Math.ceil(Math.random() * 6);
+			p.innerHTML += `주사위 1번 : ${num1} / 주사위 2번 : ${num2}<br>`;
+			
+		} while(num1 == num2)
+			
+		})
+	</script>
+	
+</body>
+</html>

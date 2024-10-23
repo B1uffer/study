@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<select></select>
+	
+	<script>
+	
+		const select = document.querySelector("select");
+		var option = "<option>년도를 선택하세요.</option>";
+		
+		var age = 1920;
+		
+		for(var i = 0; i<=200; i++) {
+			
+			
+			if(age+i<=2024) {
+			   
+			   
+			   option += `<option>${age+i}</option>`;
+			   
+			   } else {
+				   
+				   break;
+				   
+			   }
+			
+			select.innerHTML = option;
+			
+		}
+	
+	</script>
+	
+	
+</body>
+</html>

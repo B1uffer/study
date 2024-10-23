@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		li{list-style: none;}
+		em, i, address{font-style: normal;}
+		
+		body {height : 2000px;}
+		
+		#wrap {color : #fff;}
+		#wrap .box1 {height : 100vh; background : aqua; opacity : 0.3;}
+		#wrap .box2 {height : 500px; background : red;}
+		#wrap .box2 ul {display : flex; justify-content : space-between; width : 100%; height : 300px; padding : 30px 50px; box-sizing: border-box;  transform : translateY(200px); transition : 0.5s; background : orange;}
+		#wrap .box2 ul li {background : navy;}
+		#wrap .box2 ul li h4 {margin-bottom : 10px;}
+		#wrap .box2 ul li a {}
+		#wrap .box2 ul li a p {}
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		<div class = "box1">
+			
+			
+		</div>
+		
+		<div class = "box2">
+			<ul>
+
+				<li>
+					<h4>뉴스</h4>
+					<a href = "#"><p>기아, 서울 성수에서 '오퍼짓 유나이티드' 전시 개최</p></a>
+				</li>
+				<li>
+					<h4>뉴스</h4>
+					<a href = "#"><p>기아, '더 기아 타스만' 티저 공개</p></a>
+				</li>
+				<li>
+					<h4>공지</h4>
+					<a href = "#">개인정보 처리방침 변경 안내(2024.10.21)</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	
+	<script>
+		
+		const ul = document.querySelector("ul");
+		
+		window.addEventListener("scroll",function() {
+			
+			var y = window.scrollY; // y축 추출
+			console.log(y); // 로그로 보임
+			
+			if(y >= 200 && y <= 699) {
+				
+				ul.style.transform = "translateY(0px)";
+				
+			} else if(y >= 700 && y <= 1000) {
+				
+				ul.style.transform = "translateY(100px)";
+				
+			} else {
+				
+				ul.style.transform = "translateY(200px)";
+				
+			}
+			
+		})
+		
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		body {height : 5000px; transition : 0.7s;}
+		
+		#header {position : fixed; left : 0; top : 0; width : 100%; height : 100px; background : none; transition : 0.5s;}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "header">
+		<p>헤더 로고 헤더 메뉴</p>
+	</div>
+	
+	<script>
+		
+		
+		const header = document.querySelector("#header");
+		
+		
+		window.addEventListener("scroll",function() { // 브라우저 스크롤이 움직이면 뭔가를 함
+			
+			var y = window.scrollY; // 브라우저 세로 스크롤값 추출,
+			console.log(y); // 로그로 확인 가능
+			
+			if(y <= 500) {
+				
+				document.querySelector("body").style.background = "red";
+				
+			} else if(y <= 1000) {
+				
+				document.querySelector("body").style.background = "orange";
+				
+			} else if(y <= 1500) {
+				
+				document.querySelector("body").style.background = "yellow";
+				
+			} else if(y <= 2000) {
+				
+				document.querySelector("body").style.background = "green";
+				
+			} else if(y <= 2500) {
+				
+				document.querySelector("body").style.background = "blue";
+				
+			} else if(y <= 3000) {
+				
+				document.querySelector("body").style.background = "navy";
+				
+			} else if(y<=3500) {
+				
+				document.querySelector("body").style.background = "purple";
+				
+			}
+			
+			if(y>=1) {
+				
+				header.style.background = "rgba(0,0,0,0.5)";
+				header.style.color = "#fff";
+				
+			} else {
+				
+				header.style.background = "none";
+				header.style.color = "#000";
+				
+			}
+			
+			
+			
+		}) // addEventListener
+		
+		
+		
+	</script>
+	
+</body>
+</html>
