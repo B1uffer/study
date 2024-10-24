@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+	
+		body {height : 5000px;}
+		
+		ul {display : flex; width : 600px; margin-top : 1000px; background : blue;}
+		ul li {transform : translateY(30px); opacity : 0;}
+		ul .on {transform : translateY(0px); opacity : 1;}
+		
+		ul li img {width : 200px;}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<ul>
+	
+		<li><img src = "images/Hello_kitty_character_portrait.png" alt = "1"></li>
+		<li><img src = "images/Hello_kitty_character_portrait.png" alt = "1"></li>
+		<li><img src = "images/Hello_kitty_character_portrait.png" alt = "1"></li>
+		<li><img src = "images/Hello_kitty_character_portrait.png" alt = "1"></li>
+		<li><img src = "images/Hello_kitty_character_portrait.png" alt = "1"></li>
+		<li><img src = "images/Hello_kitty_character_portrait.png" alt = "1"></li>
+		
+	
+	</ul>
+	
+	<script>
+		
+		const li = document.querySelectorAll("ul li");
+		var abc = 0; // 스크롤 이벤트 누적 방지용
+		
+		window.addEventListener("scroll",function() {
+			
+			var y = window.scrollY;
+			console.log(y);
+			
+			if(y >= 200 & y <= 2000) {
+			   
+				/*
+			   	li[0].classList.add("on");
+				li[1].classList.add("on");
+				li[2].classList.add("on");
+				li[3].classList.add("on");
+				li[4].classList.add("on");
+				li[5].classList.add("on");
+				*/
+				
+				
+				/*
+				setTimeout(function() {
+					
+					li[0].classList.add("on");
+					
+				},0)
+				
+				setTimeout(function() {
+					
+					li[1].classList.add("on");
+					
+				},100)
+				
+				setTimeout(function() {
+					
+					li[2].classList.add("on");
+					
+				},200)
+				
+				setTimeout(function() {
+					
+					li[3].classList.add("on");
+					
+				},300)
+				
+				setTimeout(function() {
+					
+					li[4].classList.add("on");
+					
+				},400)
+				
+				setTimeout(function() {
+					
+					li[5].classList.add("on");
+					
+				},500)
+				*/
+				
+				for(let i = 0; i < li.length; i++) { // var은 불가능, let만 가능
+					
+					setTimeout(function() {
+						
+						li[i].classList.add("on");
+						li[i].style.transition = "1s";
+						
+					},i*100)
+					
+				}
+			   
+			   } else {
+				   
+				  
+				   li[0].classList.remove("on");
+				   li[1].classList.remove("on");
+				   li[2].classList.remove("on");
+				   li[3].classList.remove("on");
+				   li[4].classList.remove("on");
+				   li[5].classList.remove("on");
+				   
+			   }
+			
+		})
+		
+	</script>
+	
+</body>
+</html>

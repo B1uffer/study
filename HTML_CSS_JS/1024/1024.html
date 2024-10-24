@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<script src = "script/jquery-3.3.1.min.js"></script>
+	<script src = "script/swiper.min.js"></script>
+	<link rel = "stylesheet" href = "css/swiper.min.css">
+	
+	<style>
+	
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: inherit;}
+		li{list-style: none;}
+		em, i, address{font-style: normal;}
+		
+		body {}
+		#wrap {position : relative; max-width : 1200px; height : 500px; background : red; margin : 20px auto; text-align : center; line-height : 200px;}
+		.swiper-container {position : relative; width : 1200px; height : 500px;}
+		#wrap .swiper-wrapper {width : 100%; height : 500px;}
+		#wrap .slide1 {width : 100%; height : 540px; background-image : url("images/about-imgbg01.gif"); background-repeat : no-repeat; background-size : cover; background-position : center;}
+		#wrap .slide2 {background-image : url("images/about-imgbg02.gif"); background-repeat : no-repeat; background-size : cover; background-position : center;}
+		#wrap .slide3 {background-image : url("images/about-imgbg03.gif"); background-repeat : no-repeat; background-size : cover; background-position : center;}
+		
+		#wrap .swiper-container .swiper-wrapper .swiper-slide p {font-size : 24px; color : #fff;}
+		
+		.swiper-pagination {}
+		button {position : absolute; width : 40px; height : 50px; z-index : 100; background : none; border : none; cursor : pointer; font-size : 20px; color : #fff;}
+		.prev {bottom : 50px; left : 500px;}
+		.next {bottom : 50px; right : 500px;}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+			<div class = "swiper-container">
+				<div class = "swiper-wrapper">
+
+					<div class = "swiper-slide slide1"><p>1번사진</p></div>
+					<div class = "swiper-slide slide2"><p>2번사진</p></div>
+					<div class = "swiper-slide slide3"><p>3번사진</p></div>
+					
+				</div>
+				<div class = "swiper-pagination"></div>
+			</div>
+			
+			<button class = "prev">이전</button>
+			<button class = "next">다음</button>
+	</div>
+	
+	
+	<script>
+		
+		var swiper = new Swiper('.swiper-container', {
+	
+			/* autoplay: {
+						
+            delay: 3500,	// 자동으로 화면 전환 3.5초
+            disableOnInteraction: false	// 손님이 넘길 때는 오토플레이 정지
+						
+            }, */
+						
+						
+            slidesPerView: 1,	// 화면에 보여주는 이미지 개수			
+            loop: true,	// 무한 루프 적용			
+			allowTouchMove: true,	// 터치유무 (기본값 true)
+			
+			/*pagination: {	// 하단에 점 표시 적용
+                el: '.swiper-pagination',
+                clickable: true,
+            }, */
+            navigation: {	// 좌우 화살표 적용
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+			
+					
+			effect: 'slide', // slide, fade, cube, coverflow, flip
+			speed: 1000
+						
+        });
+		
+	</script>
+	
+</body>
+</html>

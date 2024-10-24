@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+	
+	<style>
+		
+		* {margin : 0; padding : 0;}
+		
+		body {height : 5000px;}
+		
+		#wrap {height : 100%; background : orange;}
+		#head {position : sticky; top : 0; left : 0; width : 0; height : 200px; background : blue;}
+		/* #head::after {content : ""; display : inline-block; width : 50%; height: 20px; background : #fff;} after는 script에서 인식하지 않음 */
+		
+	</style>
+	
+<body>
+	
+	<div id = "wrap">
+		<div id = "head">
+			
+		</div>
+	</div>
+	
+	<script>
+		
+		// const line = document.querySelector("#head::after");
+		const head = document.querySelector("#head");
+		
+		window.addEventListener("scroll",function() {
+			
+			var y = window.scrollY;
+			console.log(y);
+			
+			/*if(y <= 5000) {
+				
+				head.style.width = "50%";
+				
+			}*/
+			
+			for(let i = 0; i<=100; i++) {
+				
+				if(y>= i * 40) { // 4038
+					
+					head.style.width = i + "%"; // 100%까지
+					
+				}
+				
+			}
+			
+		})
+		
+	</script>
+	
+	
+</body>
+</html>

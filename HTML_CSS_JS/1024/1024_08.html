@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		* {margin : 0; padding : 0;}
+		
+		body {height : 5000px;}
+		
+		#wrap {height : 100%; background : orange;}
+		#head {position : sticky; top : 0; left : 0; width : 0; height : 200px; background : blue;}
+		/* #head::after {content : ""; display : inline-block; width : 50%; height: 20px; background : #fff;} after는 script에서 인식하지 않음 */
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		<div id = "head">
+			
+		</div>
+	</div>
+	
+	<script>
+		
+		
+		const head = document.querySelector("#head");
+		
+		window.addEventListener("scroll",function() {
+			
+			var y = window.scrollY;
+			var height = 5000 - window.innerHeight; // 스크롤 세로값 최대 수치
+			console.log(y);
+		
+			
+			for(let i = 0; i <= 100; i++) {
+				
+				if(y >= height * (i * 0.01)) { // y >= height * (i * 0.01), height = 5000 - window.innerHeight
+					
+					head.style.width = i + "%";
+					
+				}
+				
+			}
+			
+			/* 원리
+			
+			if(y>=0) {
+				
+				head.style.width = 0 + "%";
+				
+			}
+			
+			if(y>= height * 0.01) {
+				
+				head.style.width = 1 + "%";
+				
+			}
+			
+			if(y>= height * 0.02) {
+				
+				head.style.width = 2 + "%";
+				
+			}
+			
+			if(y>= height * 0.03) {
+				
+				head.style.width = 3 + "%";
+				
+			}
+			*/
+			
+		})
+		
+	</script>
+	
+	
+</body>
+</html>

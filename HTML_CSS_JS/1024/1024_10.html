@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<script>
+		
+		var Picture = new Object();
+		Picture.image = "images/pic01.jpg";
+		Picture.title = "에펠탑의 신랑신부";
+		Picture.artist = "마르크 샤갈";
+		Picture.year = "유화";
+		Picture.art = function() {
+			
+			document.write('<dl><dt>',Picture.title,'</dt><dd><img src = "',Picture.image, '"></dd></dl>');
+			
+		}
+		
+		
+		
+		
+		console.log(Picture);
+		console.log(Picture.artist);
+		Picture.art();
+		
+	</script>
+	
+</body>
+</html>

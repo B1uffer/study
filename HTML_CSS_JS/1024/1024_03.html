@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<ul>
+		
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		
+	</ul>
+	
+	<script>
+		
+		var li = document.querySelectorAll("ul li"); // querySelectorAll을 사용해야 배열이됨, 선택자 배열변수
+		
+		
+		for(i = 0; i < li.length; i++) {
+			
+			li[i].style.background = `rgba(1${i}5, 2${i}5, ${i}5)`;
+			
+		}
+		
+		
+		var pen = new Array(2);
+		var pen2 = []; // pen2를 배열로 선언함
+		
+		pen[0] = "red";
+		pen[1] = "green";
+		
+		document.write(pen[1]);
+		
+		pen2[0] = "red";
+		pen2[1] = "green";
+		
+		document.write(pen2[0]);
+		
+	</script>
+	
+</body>
+</html>

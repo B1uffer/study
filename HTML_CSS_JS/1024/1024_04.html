@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<p></p>
+	
+	<script>
+	
+		const p = document.querySelector("p");
+		var num = [];
+		
+		/*num[0] = Math.ceil(Math.random() * 40);
+		num[1] = Math.ceil(Math.random() * 40);
+		num[2] = Math.ceil(Math.random() * 40);
+		num[3] = Math.ceil(Math.random() * 40);
+		num[4] = Math.ceil(Math.random() * 40);
+		num[5] = Math.ceil(Math.random() * 40); */
+		
+		
+		for(i = 0; i < 6; i++) {
+			
+			num[i] = Math.ceil(Math.random() * 40);
+			
+		}
+		
+		p.innerHTML = `1번공 : ${num[0]}, 2번공 : ${num[1]}, 3번공 : ${num[2]}, 4번공 : ${num[3]}, 5번공 : ${num[4]}, 6번공 : ${num[5]}`;
+		
+	</script>
+	
+</body>
+</html>
