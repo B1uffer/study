@@ -1,0 +1,116 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>최용수 웹퍼블리셔</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--일반(PC용) 홈페이지 작성X / 모바일, 테블릿, PC 반응형 홈페이지 작성O-->
+	<!--홈페이지 자동 축소 기능 제거-->
+	<!--일반 홈페이지에서 작성하면 잘려서 나옴-->
+	<!--반응형 홈페이지에서 작성을 안 하면 스마트폰에서 PC화면이 나옴-->
+	
+	<meta name="naver-site-verification" content="c65641b206eb7044fb0d7478d6f8223aa964a4a9" />
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link href="css/swiper.min.css" rel="stylesheet">
+	<script src="script/swiper.min.js"></script>
+	
+	<link rel="shortcut icon" href="img/search.png">
+	
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	
+	<style>
+		*{margin: 0; padding: 0}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		#wrap ul{}
+	</style>
+	
+	<script>
+		//document.querySelector('p').style.color = 'red';
+	</script>
+</head>
+
+<body>
+	
+	<button class="left" onClick = "slide(-1)">빼기</button>
+	<button class="right" onClick = "slide(1)">더하기</button>
+	
+	<div id="wrap">
+		<img src="img/images(0).jpg" alt="1">
+	</div>
+	
+	<p>1 / 5</p>
+	
+	<script>
+		
+		const LEFT = document.querySelector('.left');	// right클래스를 선택해서 RIGHT변수에 넣음
+		const RIGHT = document.querySelector('.right');	// right클래스를 선택해서 RIGHT변수에 넣음
+		const DIV = document.querySelector('#wrap');
+		const P = document.querySelector('p');
+		var count = 0;	// 이미지 번호 변수
+		
+		
+		function slide(a) {
+			
+			count += a;
+			
+			if(count < 0) {
+				
+				count = 4;
+				
+			} else if(count > 4) {
+				
+				count = 0;
+				
+			}
+			
+			/*if(count > 4) {
+				
+				count = 0;
+				
+			}*/
+			
+			DIV.innerHTML = '<img src="img/images(' + count + ').jpg" alt="1">';
+			// div태그 안에 img태그를 넣음
+			P.innerHTML = count + 1 + ' / 5';
+			
+		}
+		
+		/* LEFT.addEventListener('click',function(){	// 더하기 버튼을 클릭하면 뭔가를 하겠다
+			
+			count--;
+			
+			if(count < 0){	// count변수값이 4초과면 count변수값을 0으로 변경
+				count = 4;
+			}
+			
+			DIV.innerHTML = '<img src="img/images(' + count + ').jpg" alt="1">';
+			// div태그 안에 img태그를 넣음
+			P.innerHTML = count + 1 + ' / 5';
+		})
+		
+		RIGHT.addEventListener('click',function(){	// 더하기 버튼을 클릭하면 뭔가를 하겠다
+			count++;
+			
+			if(count > 4){	// count변수값이 4초과면 count변수값을 0으로 변경
+				count = 0;
+			}
+			
+			DIV.innerHTML = '<img src="img/images(' + count + ').jpg" alt="1">';
+			// div태그 안에 img태그를 넣음
+			P.innerHTML = count + 1 + ' / 5';
+		}) */
+		
+		
+	</script>
+</body>
+	
+</html>
+
+
+
+
+

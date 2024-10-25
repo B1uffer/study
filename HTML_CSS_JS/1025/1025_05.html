@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+		
+		*{margin: 0; padding: 0}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		body {}
+		#wrap{max-width : 1340px; margin : 20px auto; padding : 50px 100px; box-sizing : border-box;}
+		#wrap .inner { width : 200px; height : 200px; background : #D1D1D1; border-radius : 10px;}
+		#wrap .btn_box {}
+		
+		#wrap ul {position : relative;}
+		#wrap ul li {position : absolute; top : 0; left : 0; width : 200px; height : 200px; padding : 20px; border-radius : 10px; box-sizing : border-box; color : #fff; transition : 0.4s;}
+		#wrap ul li:nth-child(n+2) {opacity : 0;}
+		#wrap ul li a {}
+		#wrap ul li a .box_black {display : inline-block; margin-bottom : 10px; padding : 5px 10px; box-sizing : border-box; border-radius : 10px; background : #000;}
+		#wrap ul li a .box_yellow {display : inline-block; margin-bottom : 10px; padding : 5px 10px; box-sizing : border-box; border-radius : 10px; color : #000; background : yellow;}
+		#wrap ul li a .text {margin-bottom : 10px; color : #000;}
+		#wrap ul li a p {}
+		#wrap ul li a span {font-size : 14px; color : gray;}
+		
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		<ul class = "inner">
+			
+			<li><a href = "#">
+				<div class = "box_black"><p>다양성의 가치</p></div>
+				<p class = "text">2023<br>카카오 다양성 보고서</p>
+				<span>#다양성 #건강한디지털</span>
+				</a>
+			</li>
+			<li><a href = "#">
+				<div class = "box_yellow"><p>디지털 격차 줄이기</p></div>
+				<p class = "text">어르신을 위한<br>개인정보보호 안내</p>
+				<span>#기술복지 #피싱범죄예방</span>
+				</a>
+			</li>
+			<li><a href = "#">
+				<div class = "box_yellow"><p>카톡설명서</p></div>
+				<p class = "text">모두의 카톡을<br>더 가깝고 안전하게</p>
+				<span>#업데이트소식 #톡활용팁</span>
+				</a>
+			</li>
+			
+		</ul>
+		
+		<div class = "btn_box">
+			<button onClick = "slide(0)">1번</button>
+			<button onClick = "slide(1)">2번</button>
+			<button onClick = "slide(2)">3번</button>
+		</div>
+		
+	</div>
+	
+	<script>
+		
+		const li = document.querySelectorAll("li"); // [0, 1, 2]
+		// var count = 0;
+		
+		
+		/* function slide0(index) {  // index = 0
+			
+			
+			console.log(index);
+			// li[0].classList.add("on");
+			li[index].style.opacity = "1";
+			li[index+1].style.opacity = "0";
+			li[index+2].style.opacity = "0";
+			
+		}
+		
+		function slide1(index) {  // index = 1
+			
+			
+			console.log(index);
+
+			li[index-1].style.opacity = "0";
+			li[index].style.opacity = "1";
+			li[index+1].style.opacity = "0";
+			
+		}
+		
+		function slide2(index) {  // index = 2
+			
+			
+			console.log(index);
+
+			li[index-2].style.opacity = "0";
+			li[index-1].style.opacity = "0";
+			li[index].style.opacity = "1";
+			
+		} */
+		
+		/* function slide(index) {
+		
+			switch(index) {
+				
+			case 0 : 
+				
+				li[index].style.opacity = "1";
+				li[index+1].style.opacity = "0";
+				li[index+2].style.opacity = "0";
+				break;
+				
+			case 1 : 
+				
+				li[index-1].style.opacity = "0";
+				li[index].style.opacity = "1";
+				li[index+1].style.opacity = "0";
+				break;
+				
+			case 2 :
+				
+				li[index-2].style.opacity = "0";
+				li[index-1].style.opacity = "0";
+				li[index].style.opacity = "1";
+				break;
+				
+			}
+			
+		} */
+		
+		function slide(index) {
+			
+			/* 
+			
+			방법1
+			
+			li[0].style.opacity = 0;
+			li[1].style.opacity = 0;
+			li[2].style.opacity = 0; 
+			
+			li[index].style.opacity = 1;
+			
+			*/
+			
+			
+			/*
+			
+			for(let i = 0; i< li.length; i++) { // 3사이클 i = 0, 1, 2
+				
+				if(i != index) { // i = 0이었을 때 i = 1, 2인 경우
+					
+					li[i].style.opacity = 0; // opacity = 0;
+					
+				} else { // i = 0이라면
+					
+					li[i].style.opacity = 1;
+					
+				}
+				
+			}
+			
+			*/
+			
+			
+			
+			for(let i = 0; i < li.length; i++) {
+				
+				if(index == i) {
+					
+					// display : block, none 활용
+					li[i].style.display = "block";
+					setTimeout(function() {
+						
+						li[i].style.opacity = 1;
+						
+					},10)
+					
+					
+				} else {
+					
+					li[i].style.opacity = 0;
+					setTimeout(function() {
+						
+						li[i].style.display = "none";
+						
+					},400)
+				}
+				
+			}
+			
+			/* 
+			
+			방법2
+			
+			for(let i = 0; i < li.length; i++) {
+				
+				li[0].style.opacity = 0;
+				
+			}
+			
+			li[index].style.opacity = 1;
+			
+			*/
+		}
+		
+		// jQuery를 활용 : siblings
+		 
+	</script>
+	
+</body>
+</html>

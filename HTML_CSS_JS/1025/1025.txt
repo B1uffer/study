@@ -1,0 +1,29 @@
+자바스크립트 함수
+실행문들을 모아두는 공간(호출이 편함)
+
+input checkbox checked, input text value
+
+li태그 3개 선택자 변수로 저장
+이미지 위치 변수
+setAttribute 사용 x
+
+classList.add/style을 통해 opacity 변경
+if 필요없음
+
+하단버튼 3개 선택자 변수로 저장 - > 1025_05.html
+
+0.4초
+투명도 0 -> 0.4초 뒤에 display : none 적용
+디스플레이 block 적용 - > 0.01초 뒤에 투명도 1
+
+
+function 함수이름() { 실행문 }
+
+화살표 함수(새로 추가된 방식)
+function 스펠링 입력 x
+
+
+1025_11.html
+1버튼 (인수값 0) -> left : 0
+2버튼 (인수값 1) -> left : -20%
+3버튼 (인수값 2) -> left : -40%;

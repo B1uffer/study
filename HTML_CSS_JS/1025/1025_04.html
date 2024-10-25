@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+	
+		.btn a {display : inline-block; width : 20px; height : 20px; background : red;}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<button class = "left" onClick = "slide(-1)">왼쪽</button>
+	<button class = "right" onClick = "slide(1)">오른쪽</button>
+	<div id = "wrap">
+		
+		<img src = "images/001.png" alt = "1">
+		
+	</div>
+	
+	<p>1 / 5</p>
+	
+	<div class = "btn">
+		
+		<a href = "javascript:;" onClick = "btn(1)"></a>
+		<a href = "javascript:;" onClick = "btn(2)"></a>
+		<a href = "javascript:;" onClick = "btn(3)"></a>
+		<a href = "javascript:;" onClick = "btn(4)"></a>
+		<a href = "javascript:;" onClick = "btn(5)"></a>
+		
+	</div>
+	
+	
+	<script>
+		
+		const img = document.querySelector("#wrap img");
+		const left = document.querySelector(".left");
+		const right = document.querySelector(".right");
+		const p = document.querySelector("p");
+		
+		var count = 1; // 이미지 번호 변수
+		
+		function slide(index) {
+			
+			count += index;
+			
+			if(count <= 0) {
+				
+				count = 5;
+				
+			} else if (count >= 6) {
+				
+				count = 1;
+				
+			}
+			
+			btn(count);
+		}
+		
+		
+		
+		function btn(index) {
+			
+			count = index; // 이미지 변수 변경
+			
+			console.log(index);
+			img.setAttribute("src",'images/00'+(index)+'.png');
+			p.innerHTML = index + " / 5";
+			
+		}
+		
+	</script>
+	
+</body>
+</html>

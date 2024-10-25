@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+	<style>
+		*{height: 5000px;}
+		div{position: fixed; top: 0; left: 0; width: 0%; height: 100px; background-color: aqua;}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+		
+		var A = document.querySelector('div');
+		window.addEventListener('scroll',function(){
+			var Y = window.scrollY;
+			var height_S = 5000 - window.innerHeight; // 스크롤 세로값 최대 수치
+			
+			for(i = 0; i < 100; i++){
+				if(Y >= height_S * (i * 0.01)){
+					A.style.width = i + '%';
+				}
+			}
+			
+			/*
+			if(Y >= 0){
+				A.style.width = 0 + '%';
+			}
+			if(Y >= height_S * 0.01){
+				A.style.width = 1 + '%';
+			}
+			if(Y >= height_S * 0.02){
+				A.style.width = 2 + '%';
+			}
+			if(Y >= height_S * 0.03){
+				A.style.width = 2 + '%';
+			}
+			*/
+		});
+	</script>
+</body>
+</html>
