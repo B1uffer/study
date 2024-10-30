@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main_slide{position: relative; width: 100%; height: 530px; margin: 70px 0; overflow: hidden;}
+#main_slide ul{}
+#main_slide ul li{position : absolute; left: 0; top : 0; width: 100%; height: 100%; transition: 0.3s;}
+#main_slide ul li:nth-of-type(1){background: url("../img/slide1.png") center center no-repeat; background-size: cover;}
+#main_slide ul li:nth-of-type(2){background: url("../img/slide2.png") center center no-repeat; background-size: cover;}
+#main_slide ul li:nth-of-type(3){background: url("../img/slide3.png") center center no-repeat; background-size: cover;}
+#main_slide ul li:nth-of-type(4){background: url("../img/slide4.png") center center no-repeat; background-size: cover;}
+#main_slide ul li:nth-of-type(5){background: url("../img/slide5.png") center center no-repeat; background-size: cover;}
+
+#main_slide ul li:nth-of-type(n+2) {display : none; opacity : 0;}
+
+#main_slide .arrow{}
+#main_slide .arrow img{position: absolute; top: 250px; cursor: pointer; transition: 0.3s;}
+#main_slide .arrow img.prev{left: 70px;}
+#main_slide .arrow img.next{right: 70px;}
+#main_slide .button{display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 35px; left: 6%; width: 160px; height: 30px; padding: 0 20px; background: rgba(0,0,0,0.6); border-radius: 15px; transition: 0.3s;}
+#main_slide .button .dot{display: flex; justify-content: space-between; width: 110px;}
+#main_slide .button .dot a{display: block; width: 14px; height: 14px; background: #fff; border-radius: 7px; cursor: pointer;}
+#main_slide .button .dot a:first-of-type{background: #6ebe49;}
+#main_slide .button .play{}
+#main_slide .button .play button{background: none; border: none;}
+#main_slide .button .play button img{cursor: pointer;}
+
+#main_slide_M{display: none;}
+
+@media all and (max-width: 1024px){
+	#main_slide ul li{height: 85%;}
+	#main_slide .arrow img{top: 210px;}
+	#main_slide .arrow img.prev{left: 25px;}
+	#main_slide .arrow img.next{right: 25px;}
+	#main_slide .button{bottom: 20px; left: 50%; margin-left: -100px;}
+}
+
+
+
+
+
+
+
+
+
+

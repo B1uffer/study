@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+	
+		img {transition : 0.5s;}
+	
+	</style>
+	
+</head>
+
+<body>
+	
+	<img src = "images/001.png" alt = "1">
+	<button>버튼</button>
+	
+	<script>
+		/* setTimeout 기법 */
+		document.querySelector('button').addEventListener('click',function() {
+			
+			document.querySelector('img').style.opacity = 0;
+			setTimeout(function() {
+				
+				document.querySelector('img').style.display = 'none';
+				
+			},500)
+			
+		})
+	
+	</script>
+	
+</body>
+</html>

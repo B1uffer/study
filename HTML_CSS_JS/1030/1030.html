@@ -1,0 +1,121 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>최용수 웹퍼블리셔</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--일반(PC용) 홈페이지 작성X / 모바일, 테블릿, PC 반응형 홈페이지 작성O-->
+	<!--홈페이지 자동 축소 기능 제거-->
+	<!--일반 홈페이지에서 작성하면 잘려서 나옴-->
+	<!--반응형 홈페이지에서 작성을 안 하면 스마트폰에서 PC화면이 나옴-->
+	
+	<meta name="naver-site-verification" content="c65641b206eb7044fb0d7478d6f8223aa964a4a9" />
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link href="../자바스크립트 함수 슬라이드 이미지 변경/css/swiper.min.css" rel="stylesheet">
+	<script src="../자바스크립트 함수 슬라이드 이미지 변경/script/swiper.min.js"></script>
+	
+	<link rel="shortcut icon" href="../자바스크립트 함수 슬라이드 이미지 변경/img/search.png">
+	
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	
+	<style>
+		*{margin: 0; padding: 0}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		#wrap{position: relative; width: 500px; height: 300px; overflow: hidden;}
+		#wrap ul{position: absolute; left: 0; top: 0; display: flex; width: 500%; height: 100%; transition: 0.3s;}
+		#wrap ul li{width: 20%; height: 100%;}
+		#wrap ul li img{width: 100%; height: 100%; object-fit: cover;}
+		.btn{}
+		.btn a{display: inline-block; width: 20px; height: 20px; background: red;}
+	</style>
+</head>
+
+<body>
+	
+	<div id="wrap">
+		<ul>
+			<li><img src="../자바스크립트 함수 슬라이드 이미지 변경/img/images(1).jpg" alt="1"></li>
+			<li><img src="../자바스크립트 함수 슬라이드 이미지 변경/img/images(2).jpg" alt="1"></li>
+			<li><img src="../자바스크립트 함수 슬라이드 이미지 변경/img/images(3).jpg" alt="1"></li>
+			<li><img src="../자바스크립트 함수 슬라이드 이미지 변경/img/images(4).jpg" alt="1"></li>
+			<li><img src="../자바스크립트 함수 슬라이드 이미지 변경/img/images(5).jpg" alt="1"></li>
+		</ul>
+		
+	</div>
+	
+	<div class="btn">
+		<a href="javascript:;" onClick="btn(0);"></a>
+		<a href="javascript:;" onClick="btn(1);"></a>
+		<a href="javascript:;" onClick="btn(2);"></a>
+		<a href="javascript:;" onClick="btn(3);"></a>
+		<a href="javascript:;" onClick="btn(4);"></a>
+	</div>
+	
+	<button class="left" onClick="slide(-1);">왼쪽</button>
+	<button class="right" onClick="slide(1);">오른쪽</button>
+	
+	<button style = "background : #000"><img src = "images/Hello_kitty_character_portrait.png" alt = "정지"></button>
+	
+	<script>
+		
+		const UL = document.querySelector('#wrap ul');
+		const play_stop = document.querySelector("button img");
+		var count = 0;	// 이미지 번호 변수
+		var switch1 = 0; // 재생 정지 스위치 변수
+		
+		function slide(index){
+			count += index;
+			if(count < 0) count = 0;
+			if(count > 4) count = 4;
+			
+			UL.style.left = count * -100  + '%';
+		}
+		
+		function btn(index){	// 하단 버튼 이벤트
+			count = index;	// 이미지 번호 변경
+			
+			UL.style.left = count * -100  + '%';
+		}
+		
+		var abc = setInterval(function() { // setInterval 함수 앞에 변수 지정함
+			
+			slide(1); // 1초 뒤에 1초마다 1번씩 slide함수 실행함
+			
+		},3000)
+		
+		play_stop.addEventListener("click",function() { // 재생정지버튼 클릭 이벤트
+			
+			if(switch1 == 0) {
+				
+				clearInterval(abc);
+				this.setAttribute("src","images/depositphotos_103880126-stock-illustration-moscow-russia-march-23-2015.jpg");
+				
+				switch1 = 1;
+				
+			} else {
+				
+				abc = setInterval(function() {
+					
+					slide(1);
+					
+				},3000)
+				
+				this.setAttribute("src","images/Hello_kitty_character_portrait.png");
+				switch1 = 0;
+				
+			}
+		})
+		
+	</script>
+</body>
+	
+</html>
+
+
+
+
+

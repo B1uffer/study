@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+	
+	<script>
+		
+		var swidth = screen.width; // 고객의 모니터 width를 가져옴
+		var sheight = screen.height; // 고객의 모니터 height를 가져옴
+		var scolor = screen.colorDepth;
+		
+		console.log(swidth);
+		console.log(sheight);
+		console.log(scolor);
+		
+		if(screen.width >= 1024) { // 손님 모니터 해상도 가로사이즈가 1024 이상이라면, (pc)
+			
+			location.href = "https://www.megabox.co.kr/";
+			
+		} else {
+			
+			location.href = "https://m.megabox.co.kr/";
+			
+		}
+		
+	</script>
+	
+</body>
+</html>
