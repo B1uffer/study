@@ -1,0 +1,11 @@
+a태그 - > 손님이 클릭하면 지정 주소로 이동함
+Location - > 강제로 지정된 주소로 이동시킴
+
+setTimeout(function() { location.href = "https://www.ytn.co.kr/"; },3000)
+
+clearInterval -> setInterval 멈추기
+clearInterval을 사용하려면 setInterval 앞에 변수 지정 필수 (기능 변화 x)
+
+클릭이벤트를 넣을땐 클릭연사방지를 꼭 넣어야함
+
+재생정지, 무한반복 : setInterval
