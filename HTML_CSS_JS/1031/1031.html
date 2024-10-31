@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	
+</head>
+
+<body>
+	
+	<button id = "btn01">button</button>
+	<div id = "container">
+		
+		<nav>
+		
+			<ul class = "list">
+			
+				<li id = "first">One</li>
+				<li>Two</li>
+				<li>Three</li>
+			
+			</ul>
+		
+		</nav>
+		
+		<button id = "btn02">button</button>
+		<ul class = "nav1">
+		
+			<li>0</li>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		
+		</ul>
+		
+		<button id = "btn03">button</button>
+		<ul class = "nav2">
+		
+			<li>apple</li>
+			<li>banana</li>
+			<li></li>
+		
+		</ul>
+		
+		
+		<button id = "btn04">button</button>
+		<ul class = "nav3">
+		
+			<li>0</li>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			
+		</ul>
+		
+		<button id = "btn05">button</button>
+		<ul class = "nav4">
+			
+			<li>0</li>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			
+		</ul>
+	</div>
+	
+	
+	<script>
+		
+		// 1번
+		$('#btn01').click(function() {
+			
+			$('.list li:eq(1)').css('color','#fff').css('background','#9AB92E');
+			$('.list li').eq(2).css('color','red').css('background','#000');
+			
+		})
+		
+		
+		// 2
+		$('#btn02').click(function() {
+			
+			$('.nav1 li:not(:nth-of-type(2))').css('background-color','#9AB92E').css('border','1px solid #05184D');
+			//$('.nav1 li').not(:nth-of-type(2)).css('background-color','#9AB92E').css('border','1px solid #05184D'); 이건 안됨
+			
+		})
+		
+		// 3번
+		$('#btn03').click(function() {
+			
+			$('.nav2 li:empty').text('orange');
+			
+		})
+		
+		//4번
+		$('#btn04').click(function() {
+			
+			$('.nav3 li:lt(2)').css('background-color','#9AB92E').css('border','1px solid #05184D');
+			$('.nav3 li:gt(2)').css('background-color','#222').css('color','#fff');
+		})
+		
+		$('#btn05').click(function() {
+			
+			$('.nav4 li:lt(2)').css('background-color', '#9AB92E').css('border','1px solid #05184D');
+			$('.nav4 li:gt(2)').css('background-color', '#555555').css('color','#fff');
+		})
+		
+	</script>
+	
+</body>
+</html>

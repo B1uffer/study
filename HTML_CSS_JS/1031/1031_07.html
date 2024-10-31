@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dom</title>
+<style>
+    section{width:500px; margin:25px auto; text-align:center;}
+    div{display:none;}
+</style>
+<script src="file:///D|/신동진/자바스크립트 제이쿼리 예제/jquery/all/02/js/jquery.min.js"></script>
+</head>
+<body>
+    
+    <section>
+        <p class="btn">
+        <button id="btn01">이미지 가져오기</button>
+        <button id="btn02">링크 변경하기</button></p>
+        <p class="box01">
+            <img src="file:///D|/신동진/자바스크립트 제이쿼리 예제/jquery/all/02/images/img01.png" alt="sample"></p>
+        <p class="box02"><a href="http://www.naver.com">다음으로 변경하기</a></p>
+        
+        <div>
+            <img src="file:///D|/신동진/자바스크립트 제이쿼리 예제/jquery/all/02/images/img02.png" alt="sample"></div> <!-- display : none으로 제거한 상태 -->
+        </section>
+        <script>
+        $(function(){
+            $('#btn01').click(function(e){
+                var num01 = $('div>img').attr('src');
+                //console.log(num01);
+                $('.box01>img').attr('src',num01);
+            });
+            $('#btn02').click(function(e){
+                var num02 = "http://www.daum.net";
+                $('.box02>a').attr('href',num02).text('다음사이트');
+            });
+        });
+        </script>
+</body>
+
+</html>

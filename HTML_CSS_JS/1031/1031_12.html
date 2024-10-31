@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>연습</title>
+</head>
+<body>
+    
+    <textarea cols="50" row="3" placeholder="댓글을 입력하세요"></textarea>
+    <button id="btn01">입력</button>
+    
+    <p id="view"></p>
+
+<script>
+  var abc = '';  
+  $('#btn01').click(function(){
+    var re = $('textarea').val(); 
+      abc += (re) + ' 라고 댓글을 남겼습니다.<br>';
+    $('#view').html(abc);
+    alert('댓글 작성 완료');
+
+  });
+
+</script>
+</body>
+</html>

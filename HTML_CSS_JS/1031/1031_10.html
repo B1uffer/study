@@ -1,0 +1,107 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>최용수 웹퍼블리셔</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--일반(PC용) 홈페이지 작성X / 모바일, 테블릿, PC 반응형 홈페이지 작성O-->
+	<!--홈페이지 자동 축소 기능 제거-->
+	<!--일반 홈페이지에서 작성하면 잘려서 나옴-->
+	<!--반응형 홈페이지에서 작성을 안 하면 스마트폰에서 PC화면이 나옴-->
+	
+	<meta name="naver-site-verification" content="c65641b206eb7044fb0d7478d6f8223aa964a4a9" />
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link href="file:///D|/신동진/Documents/최용수88/html/css/swiper.min.css" rel="stylesheet">
+	<script src="file:///D|/신동진/Documents/최용수88/html/script/swiper.min.js"></script>
+	
+	<link rel="shortcut icon" href="file:///D|/신동진/Documents/최용수88/html/img/search.png">
+	
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	
+	<style>
+		*{margin: 0; padding: 0}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		body{height: 5000px;}
+		
+		#btn{position: fixed; left: 0; top: 0;}
+		#btn button{padding: 5px 10px;}
+		#header{height: 150px; background: red;}
+		#section1{height: 500px; background: orange;}
+		#section2{height: 400px; background: yellow;}
+		#section3{height: 300px; background: green;}
+		#footer{height: 100px; background: blue;}
+	</style>
+	
+	
+</head>
+
+<body>
+	<div id="btn">
+		<button onClick="dot(0);">1번</button>
+		<button onClick="dot(1);">2번</button>
+		<button onClick="dot(2);">3번</button>
+		<button onClick="dot(3);">4번</button>
+		<button onClick="dot(4);">5번</button>
+	</div>
+	
+	<div id="header"></div>
+	
+	<div id="section1"></div>
+	
+	<div id="section2"></div>
+	
+	<div id="section3"></div>
+	
+	<div id="footer"></div>
+	
+	<script>
+		const BTN = document.querySelectorAll('#btn button');	// 버튼 선택자
+		const header_H = document.querySelector('#header').clientHeight;	// 헤더 높이값
+		const section1_H = document.querySelector('#section1').clientHeight;	// 섹션1 높이값
+		const section2_H = document.querySelector('#section2').clientHeight;
+		const section3_H = document.querySelector('#section3').clientHeight;
+		const HEIGHT = [header_H, section1_H, section2_H, section3_H];	// 각각 높이를 배열로 저장
+		
+		var slide_click = true;
+		
+		function dot(e){
+			
+			
+				if(slide_click == true) { // 클릭 연사방지
+					
+					slide_click = false;
+					
+					setTimeout(function() {
+						
+						slide_click = true;
+						
+					},500); // 클릭 연사방지
+					
+			
+					let scroll_Y = window.scrollY;	// 브라우저 현재 스크롤 위치 변수
+					let sum = 0;	// 높이값 합계 보관 변수
+					for(let i = 0; i < e; i++){
+						sum += HEIGHT[i];
+					}
+
+					for(let i = 1; i <= 100; i++){
+						setTimeout(function(){
+							window.scroll(0, ((sum - scroll_Y) / 100) * i  + (scroll_Y)); // 매우 중요
+						},i * 5)
+					} // for
+			 
+				} // if
+		}
+	</script>
+</body>
+	
+</html>
+
+
+
+
+
