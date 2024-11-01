@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>최용수</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<link href="자바스크립트 슬라이드 무한루프 재생정지 (2)/css/index.css" rel="stylesheet">
+	
+	<style>
+		*{margin: 0; padding: 0;}
+		li{list-style: none;}
+		em, i, address{font-style: normal;}
+		a{text-decoration: none; color: inherit;}
+		.clearFix::after{content: ""; clear: both; display: block;}
+		
+		@media all and (max-width:768px){
+			
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div id="main_slide">
+		<ul><!--백그라운드 이미지-->
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="arrow">
+			<img src="자바스크립트 슬라이드 무한루프 재생정지 (2)/img/slide-prev.png" alt="이전" class="prev" onClick="slide(-1)">
+			<img src="자바스크립트 슬라이드 무한루프 재생정지 (2)/img/slide-next.png" alt="다음" class="next" onClick="slide(1)">
+		</div>
+		<div class="button">
+			<div class="dot">
+				<a href="javascript:;" title="이미지 슬라이드 1" onClick="dot(1)"></a>
+				<a href="javascript:;" title="이미지 슬라이드 2" onClick="dot(2)"></a>
+				<a href="javascript:;" title="이미지 슬라이드 3" onClick="dot(3)"></a>
+				<a href="javascript:;" title="이미지 슬라이드 4" onClick="dot(4)"></a>
+				<a href="javascript:;" title="이미지 슬라이드 5" onClick="dot(5)"></a>
+			</div>
+			<div class="play">
+				<button onClick="play()"><img src="자바스크립트 슬라이드 무한루프 재생정지 (2)/img/slide_stop.png" alt="정지"></button>
+			</div>			
+		</div>
+	</div>
+	
+	<script>
+		const UL = document.querySelector('#main_slide ul');
+		const dot_a = document.querySelectorAll('#main_slide .button .dot a');
+		const play_img = document.querySelector('#main_slide .button .play button img');
+		var index = 1;	// 이미지 위치값 변수
+		var slide_click_s = true;	// 클리연사방지 스위치 변수
+		var slide_play_s = true;	// 플레이 함수 스위치 변수
+
+		function slide(e){	// 이전 다음 클릭 이벤트
+			if(slide_click_s == true){
+				slide_click_s = false;
+				setTimeout(function(){
+					slide_click_s = true;
+				}, 300);
+
+				index += e;
+				dot(index);
+
+				if(index >= 6){
+					index = 1;
+					setTimeout(function(){
+						UL.style.cssText = `left : ${index * -100}%; transition : 0s`;
+					}, 300);
+					dot_a[index - 1].style.background = '#6ebe49';
+				}
+
+				if(index <= 0){
+					index = 5;
+					setTimeout(function(){
+						UL.style.cssText = `left : ${index * -100}%; transition : 0s`;
+					}, 300);
+					dot_a[index - 1].style.background = '#6ebe49';
+				}
+			}
+		}
+
+		function dot(e){	// dot버튼 클릭 이벤트
+			index = e;
+			UL.style.cssText = `left : ${index * -100}%; transition : 0.3s`;
+			
+			for(i = 0; i < dot_a.length; i++){
+				dot_a[i].style.background = '#fff';
+			}
+			if(index >= 1 && index <= 5){
+				dot_a[index - 1].style.background = '#6ebe49';
+			}
+		}
+
+		var play_stop = setInterval(function() {	// 재생 정지 코드
+			slide(1);
+		}, 5000);
+		
+		function play(){
+			if(slide_play_s == true){
+				slide_play_s = false;
+				play_img.setAttribute('src','img/slide_play.png');
+				clearInterval(play_stop);
+			} else {
+				slide_play_s = true;
+				play_img.setAttribute('src','img/slide_stop.png');
+				play_stop = setInterval(function() {
+					slide(1);
+				}, 5000);
+			}
+		}
+	</script>
+	
+</body>
+	
+</html>

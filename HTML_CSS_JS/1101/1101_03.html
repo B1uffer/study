@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>더조은학원</title>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	
+	<meta name="Description" content="홈페이지 설명">
+	<meta name="Keywords" content="최용수 더조은">	
+	<link rel="shortcut icon" href="img/search.png">
+	
+	<style>
+		*{margin: 0; padding: 0;} /* 전체 선택자 (우선순위 0) */
+		a{text-decoration: none; color: inherit;}
+		li{list-style: none;} /* 점(글머리 기호) 표시 제거 */
+		table{border-collapse: collapse;} /* 틈새 제거 */
+		textarea{resize: none;}
+		body{height: 3000px;}
+		
+		nav{position: relative; width: 200px;}
+		nav .bg{display: none; position: absolute; left: 0; top: 20px; width: 200px; height: 200px; background: red;}
+		nav>ul{display: flex;}
+		nav>ul>li{position: relative; width: 100px;}
+		nav>ul>li>a{}
+		nav>ul>li>ul{display: none; position: absolute; left: 0; top: 20px;}
+		nav>ul>li>ul>li{}
+		nav>ul>li>ul>li>a{}
+		
+		@media all and (max-width: 1000px){	 /* 브라우저 가로 크기가 1000이하면 뭔가를 하겠다 */
+			
+		}
+	</style>
+	
+	
+</head>
+	
+<body>
+	
+	<nav>
+		<span class="bg"></span> <!--서브메뉴 배경-->
+		<ul>
+			<li>
+				<a href="#">주메뉴1</a>
+				<ul>
+					<li><a href="#">서브1</a></li>
+					<li><a href="#">서브2</a></li>
+					<li><a href="#">서브3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">주메뉴2</a>
+				<ul>
+					<li><a href="#">서브1</a></li>
+					<li><a href="#">서브2</a></li>
+					<li><a href="#">서브3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+	
+	<script>
+		
+		$('nav>ul>li>a').on('mouseover focus',function(){ // on(), focus는 탭키
+			$('nav>ul>li>ul').show();
+			$('nav .bg').show();
+		});
+		$('nav').mouseleave(function(){ // 마우스가 벗어나
+		//$('nav').mouseout(function(){
+			$('nav>ul>li>ul').hide();
+			$('nav .bg').hide();
+		});
+		$('nav>ul>li>ul>li:last-of-type>a').blur(function(){ // li 마지막 타입에서 커서가 벗어나면 숨김, 탭키전용
+			$('nav>ul>li>ul').hide();
+			$('nav .bg').hide();
+		})
+		
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	
+	<style>
+	
+		*{margin: 0; padding: 0}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		body {}
+		
+		#wrap {max-width : 1000px; height : 500px; margin : 20px auto;}
+		aside {display : flex; width : 100%; margin-bottom : 30px;}
+		aside .left {width : 50%; height : 100%;}
+		aside .left h2 {text-align : center; background : #fff;}
+		aside .left ul {}
+		aside .left ul li {display : flex; text-align : center;}
+		aside .left ul .menu {text-align : center;}
+		aside .left ul .menu p {width : 80%;}
+		aside .left ul .menu span {width : 20%;}
+		aside .left ul .color {background : #555;}
+		aside .left ul li a {width : 80%;}
+		aside .left ul li span {width : 20%;}
+		
+		
+		aside .right {width : 50%; background-image : url("images/about-imgbg03.gif"); background-position : center; background-size : cover;}
+		aside .right h2 {text-align : center; background : #fff;}
+		aside .right .inner {position : relative; width : 100%; height : 100%; cursor : pointer;}
+		aside .right .inner a {}
+		aside .right .inner a p {position : absolute; top : 10px; right : 20px; font-size : 24px; color : #fff;}
+		aside .right .inner a .innerImg {position: absolute; bottom : 40px; left : 5px; width : 20%; height : 40%; background-image : url("images/001.png"); background-position : center; background-size : cover; background-repeat: no-repeat;}
+		
+		#menu {max-width : 800px; margin : 0 auto; padding : 10px 20px; box-sizing : border-box; text-align : center;}
+		#menu .inner {}
+		#menu .inner .content_box {display : flex; height : 250px; justify-content:space-between;}
+		#menu .inner .content_box a {width : 30%;}
+		#menu .inner .content_box a .img1 {display : inline-block; width : 100%; height : 100%; background-image : url("images/Hello_kitty_character_portrait.png"); background-position : center; background-size : cover; background-repeat: no-repeat;}
+		#menu .inner .content_box a .img2 {display : inline-block; width : 100%; height : 100%; background-image : url("images/depositphotos_103880126-stock-illustration-moscow-russia-march-23-2015.jpg"); background-position : center; background-size : cover; background-repeat: no-repeat;}
+		#menu .inner .content_box a .img3 {display : inline-block; width : 100%; height : 100%; background-image : url("images/Hello_kitty_character_portrait.png"); background-position : center; background-size : cover; background-repeat: no-repeat;}
+		#menu .inner .content_box a p {display : inline-block; color : #fff; background : green; padding : 5px 10px; border-radius : 10px;}
+		
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		<aside>
+			
+			<div class = "left">
+				
+				<h2>공지사항</h2>
+				
+				<ul>
+					<li class = "menu"><p>내용</p><span>날짜</span></li>
+					
+					<li class = "color"><a href = "javascript:;">다도해 풍광을 한눈에... 해남 땅끝 해안누리길 여행하기</a><span>2018-01-10</span></li>
+					<li><a href = "javascript:;">국토순례 기차여행에 참가하는 학교, 청소년단체 등...</a><span>2017-12-21</span></li>
+					<li class = "color"><a href = "javascript:;">설악산 1월초 설경 절정, 기차 여행 상품이 출시되었...</a><span>2017-12-15</span></li>
+					<li><a href = "javascript:;">여행가이드가 추천하는 국내 겨울여행지 & 관광열차</a><span>2017-12-07</span></li>
+					<li class = "color"><a href = "javascript:;">신나는 겨울여행 대관령 눈꽃축제, 고니골 빛축제로...</a><span>2017-12-01</span></li>
+				
+				</ul>
+			
+			</div>
+			
+			<div class = "right">
+				
+				<h2>정보나눔</h2>
+				
+				<div class = "inner"><!-- 이미지 -->
+					
+					<a href = "javascript:;">
+						<p>여행정보제공</p>
+						<div class = "innerImg"><!-- 작은이미지 --></div>
+					</a>
+				
+				</div>
+			
+			</div>
+		</aside>
+		
+		<div id = "menu">
+			
+			<div class = "inner">
+				
+				<div class = "content_box">
+					
+					<a href = "javascript:;">
+					
+						<div class = "img1"></div>
+						<p>새소식</p>
+					
+					</a>
+					
+					<a href = "javascript:;">
+					
+						<div class = "img2"></div>
+						<p>여행음악</p>
+					
+					</a>
+					
+					<a href = "javascript:;">
+					
+						<div class = "img3"></div>
+						<p>여행매뉴얼</p>
+					
+					</a>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>이벤트</title>
+<script src="file:///D|/신동진/자바스크립트 제이쿼리 예제/jquery/all/04/js/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn01">화면을 변경</button>
+    <span><a href="file:///D|/신동진/자바스크립트 제이쿼리 예제/jquery/all/04/img/sea.jpg">화면 변경</a></span>
+    <p><img id="img01" src="file:///D|/신동진/자바스크립트 제이쿼리 예제/jquery/all/04/img/flower.jpg" alt="꽃"></p>
+    <script>
+    $(function(){
+    $('button').click(function(e){
+      $('p>img').attr('src','img/building.jpg');
+    });
+    $('a').click(function(e){
+      $('p>img').attr('src','img/Jellyfish.jpg');
+      return false; // 이동 링크를 막음, 폼태그에 주로 사용함
+    });
+    });
+    </script>
+</body>
+</html>

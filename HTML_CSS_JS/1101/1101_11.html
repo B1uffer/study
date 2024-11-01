@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>스와이퍼 재생 정지</title>
+	<link rel="stylesheet" href="플러그인 스와이퍼 G마켓/swiper.min.css">
+	<script src="플러그인 스와이퍼 G마켓/jquery-3.3.1.min.js"></script>
+	<script src="플러그인 스와이퍼 G마켓/swiper.min.js"></script>
+	
+	<style>
+		*{margin: 0 auto; padding: 0;}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		
+		#main{width: 100%; height: 800px;}
+		#main .swiper-container{width: 100%; height: 800px;}
+		#main .swiper-container ul{}
+		#main .swiper-container ul li{display : flex; /*align-items : flex-end; */}
+		#main .slide1{background: url("플러그인 스와이퍼 G마켓/images(1).jpg") center center no-repeat; background-size: cover;}
+		#main .slide2{background: url("플러그인 스와이퍼 G마켓/images(2).jpg") center center no-repeat; background-size: cover;}
+		#main .slide3{background: url("플러그인 스와이퍼 G마켓/images(3).jpg") center center no-repeat; background-size: cover;}
+		#main .slide4{background: url("플러그인 스와이퍼 G마켓/images(4).jpg") center center no-repeat; background-size: cover;}
+		#main .swiper-container ul li .text {margin : auto auto 0 0; padding : 0 0 100px 30px; }
+		#main .swiper-container ul li .text p {color : #fff; padding-bottom : 30px; transform: translateX(500px); opacity : 0;}
+		#main .swiper-container ul li .text p.on {animation: ani 0.5s forwards;}
+		#main .swiper-container ul li .text h2 {color : #fff; transform: translateX(500px); opacity: 0;} /* forwards는 마지막 값을 유지하겠다 */
+		#main .swiper-container ul li .text h2.on {animation: ani 0.5s 0.3s forwards;}
+		#main .swiper-pagination{bottom: 25px;}
+		#main .swiper-pagination-bullet{width: 15px; height: 15px; background: #666; opacity: 1;}	/* 하단 버튼 비활성화 */
+		#main .swiper-pagination-bullet-active{width: 70px; height: 15px; border-radius: 7.5px; background: red;}	/* 하단 버튼 활성화 */
+		
+		@keyframes ani {
+			
+			0% {transform: translateX(500px); opacity: 0;}
+			100% {transform: translateX(0px); opacity: 1;}
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div id="main">
+		<div class="swiper-container">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide slide1"><!--백그라운드 이미지-->
+					<div class = "text">
+						<p class = "on">월드 프리미어</p>
+						<h2 class = "on">The Kia Tasman</h2>
+					</div>
+				
+				</li>
+				<li class="swiper-slide slide2"><!--백그라운드 이미지-->
+					<div class = "text">
+						<p>월드 프리미어</p>
+						<h2>The Kia asdf</h2>
+					</div>
+				
+				</li>
+				<li class="swiper-slide slide3"><!--백그라운드 이미지-->
+					<div class = "text">
+						<p>월드 프리미어</p>
+						<h2>The Kia asdf</h2>
+					</div>
+				
+				</li>
+				<li class="swiper-slide slide4"><!--백그라운드 이미지-->
+					<div class = "text">
+						<p>월드 프리미어</p>
+						<h2>The Kia asdf</h2>
+					</div>
+				
+				</li>
+			</ul>
+           
+			<div class="swiper-pagination"></div>
+			
+		</div>
+		
+		
+	</div>
+</body>
+	<script>
+		var swiper01 = new Swiper('#main .swiper-container', { // 스와이퍼를 담는 변수명
+			
+			loop: true,	// 무한 루프 적용
+			
+            pagination: {	// 하단에 점 표시 적용
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+			effect: 'slide', // slide, fade, cube, coverflow, flip
+			speed: 300
+        });
+			
+		/*
+		
+		var random = Math.ceil(Math.random() * 4);	// 경우의 수 1 ~ 4, 핵심!
+		
+		swiper01.slideTo(random, 0);	// slideTo(이미지 위치번호, 슬라이드 시간), 슬라이드가 무작위로 뜬다
+		// 1~4의 무작위 수를 slideTo에 넣어서 홈페이지 접속하자마자 해당 번호에 맞게 이미지를 띄움
+		$('.number span').text(random + ' / 4');
+		
+		*/
+		
+		swiper01.on('snapIndexChange',function(){	// 스와이퍼 위치 번호가 바뀌면 뭔가를 하겠다, snapIndexChange는 스와이퍼 전용 용어
+			
+			$('#main .swiper-container ul li p').css('animation','none');
+			$('#main .swiper-container ul li h2').css('animation', 'none');
+			
+			setTimeout(function() {
+				
+				$('#main .swiper-container ul li p').css('animation', 'ani 0.5s forwards');
+				$('#main .swiper-container ul li h2').css('animation', 'ani 0.5s 0.3s forwards');
+				
+			},50)
+			
+		})
+		
+	</script>
+</html>

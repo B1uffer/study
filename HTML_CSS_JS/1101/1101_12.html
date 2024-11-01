@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>스와이퍼 재생 정지</title>
+	<link rel="stylesheet" href="플러그인 스와이퍼 네코스테이/swiper.min.css">
+	<script src="플러그인 스와이퍼 네코스테이/jquery-3.3.1.min.js"></script>
+	<script src="플러그인 스와이퍼 네코스테이/swiper.min.js"></script>
+	
+	<style>
+		*{margin: 0 auto; padding: 0;}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		
+		#main{width: 100%; height: 800px;}
+		#main .swiper-container{width: 100%; height: 800px;}
+		#main .swiper-container ul{}
+		#main .swiper-container ul li{}
+		#main .swiper-container ul li img{}
+		#main .swiper-container ul li img.on{width: 1200px;}
+		#main .text{}
+		#main .text p{}
+		#main .text p.on{font-weight: bold;}
+	</style>
+</head>
+
+<body>
+	<div id="main">
+		<div class="swiper-container">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide slide1"><img src="플러그인 스와이퍼 네코스테이/images(1).jpg" alt="1"></li>
+				<li class="swiper-slide slide2"><img src="플러그인 스와이퍼 네코스테이/images(2).jpg" alt="1"></li>
+				<li class="swiper-slide slide3"><img src="플러그인 스와이퍼 네코스테이/images(3).jpg" alt="1"></li>
+				<li class="swiper-slide slide4"><img src="플러그인 스와이퍼 네코스테이/images(4).jpg" alt="1"></li>
+			</ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+		</div>
+		
+		<div class="text">
+			<p onMouseOver="over1(0)" class="on">JACUZZI</p> <!-- onMouseOver -->
+			<p onMouseOver="over1(1)">JACUZZI</p>
+			<p onMouseOver="over1(2)">JACUZZI</p>
+			<p onMouseOver="over1(3)">JACUZZI</p>
+		</div>
+	</div>
+</body>
+	<script>
+		var swiper01 = new Swiper('#right .swiper-container', {
+			slidesPerView: 1,	// 화면에 보여주는 이미지 개수
+			loop: true,	// 무한 루프 적용
+			spaceBetween: 0,	// 이미지 사이 간격
+			effect: 'slide', // slide, fade, cube, coverflow, flip
+			speed: 500
+        });
+		
+		var swiper02 = new Swiper('#main .swiper-container', {
+			slidesPerView: 1,	// 화면에 보여주는 이미지 개수
+			loop: true,	// 무한 루프 적용
+			spaceBetween: 0,	// 이미지 사이 간격
+            navigation: {	// 좌우 화살표 적용
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+			effect: 'slide', // slide, fade, cube, coverflow, flip
+			speed: 500 //500
+        });
+		
+	//	swiper01.slideTo(random, 0);	// slideTo(이미지 위치번호, 슬라이드 시간)
+		// 1~4의 무작위 수를 slideTo에 넣어서 홈페이지 접속하자마자 해당 번호에 맞게 이미지를 띄움
+	//	$('.number span').text(random + ' / 4');
+		
+		swiper02.on('snapIndexChange',function(){	// 스와이퍼 위치 번호가 바뀌면 뭔가를 하겠다
+			var index = swiper02.realIndex;	// 현재 보고 있는 이미지 위치 번호
+			$('.text p').removeClass('on'); // text p의 on클래스를 제거한다
+			// $('.text p').eq(index).siblings().removeClass('on');
+			$('.text p').eq(index).addClass('on'); // 내가 보고 있는 이미지 번호에 맞춰서 on 클래스를 넣음
+		})
+		
+		function over1(e){	// p태그에 마우스 올리면 뭔가를 하겠다
+			$('.text p').removeClass('on');
+			$('.text p').eq(e).addClass('on');
+
+			swiper02.slideTo(e + 1, 500); // 500
+		}
+		
+	</script>
+</html>

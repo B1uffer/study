@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>더조은학원</title>
+	<link href="플러그인 스와이퍼 슬라이드 세로/css/swiper.min.css" rel="stylesheet">
+	<script src="플러그인 스와이퍼 슬라이드 세로/script/swiper.min.js"></script>
+	<script src="플러그인 스와이퍼 슬라이드 세로/script/jquery-3.3.1.min.js"></script>
+	
+	<style>
+		*{margin: 0; padding: 0;} /* 전체 선택자 (우선순위 0) */
+		a{text-decoration: none; color: inherit;}
+		li{list-style: none;} /* 점(글머리 기호) 표시 제거 */
+		table{border-collapse: collapse;} /* 틈새 제거 */
+		textarea{resize: none;}
+		button{background: none; border: none;}
+		
+		#main{}
+		#main .swiper-container{width: 100%; height: 980px; background: red;}
+		#main .swiper-wrapper{}
+		#main .swiper-wrapper .swiper-slide{}
+		#main .swiper-wrapper .swiper-slide img{width: 100%; height: 980px; object-fit: cover;}
+		#main .swiper-wrapper .swiper-slide .text{position: absolute; top: 470px; left: 50%; z-index: 10; margin-left: -600px;}
+		#main .swiper-wrapper .swiper-slide .text h2{}
+		#main .swiper-wrapper .swiper-slide .text p{}
+		#main .swiper-pagination{left: 40px; bottom: 30px; text-align: left;}
+		#main .swiper-pagination-bullet{width: 18px; height: 18px; margin: 0 7px; background: yellow; opacity: 1;}	/* 하단 버튼 비활성화 */
+		#main .swiper-pagination-bullet-active{width: 18px; height: 18px; background: red;}
+		#main button{width: 40px; height: 70px;}
+		#main button.swiper-button-prev{background: url("플러그인 스와이퍼 슬라이드 세로/img/new_main_crt2.png"); background-size: 40px 70px;}
+		#main button.swiper-button-next{background: url("플러그인 스와이퍼 슬라이드 세로/img/new_main_crt2_ov.png"); background-size: 40px 70px;}
+		
+		#main_M{display: none;}
+		@media all and (max-width: 1000px){
+			#main{display: none;}
+			#main_M{display: block;}
+		}
+	</style>
+</head>
+	
+<body>
+	
+	
+	<div id="main"> <!-- PC -->
+		<div class="swiper-container">
+			
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide">
+					<img src="플러그인 스와이퍼 슬라이드 세로/img/images(1).jpg" alt="슬라이드">
+					<div class="text">
+						<h2>kodak<br>SUMMER ITEM</h2>
+						<p>우리의 빛나고 뜨거운 여름을 위해</p>
+					</div>
+				</li>
+				<li class="swiper-slide bb">
+					<img src="플러그인 스와이퍼 슬라이드 세로/img/images(2).jpg" alt="슬라이드">
+				</li>
+				<li class="swiper-slide">
+					<img src="플러그인 스와이퍼 슬라이드 세로/img/images(3).jpg" alt="슬라이드">
+				</li>
+			</ul>
+			
+			<button class="swiper-button-prev"></button>
+			<button class="swiper-button-next"></button>
+			
+		</div>
+	</div>
+	
+	<div id="main_M"> <!-- MOBILE -->
+		<div class="swiper-container">
+			
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide">
+					<img src="플러그인 스와이퍼 슬라이드 세로/img/images(1).jpg" alt="슬라이드">
+					<div class="text">
+						<h2>kodak<br>SUMMER ITEM</h2>
+						<p>우리의 빛나고 뜨거운 여름을 위해</p>
+					</div>
+				</li>
+				<li class="swiper-slide bb">
+					<img src="플러그인 스와이퍼 슬라이드 세로/img/images(2).jpg" alt="슬라이드">
+				</li>
+				<li class="swiper-slide">
+					<img src="플러그인 스와이퍼 슬라이드 세로/img/images(3).jpg" alt="슬라이드">
+				</li>
+			</ul>
+			
+			<button class="swiper-button-prev"></button>
+			<button class="swiper-button-next"></button>
+			
+		</div>
+	</div>
+	
+	
+	<script>
+		var swiper1 = new Swiper('#main .swiper-container', {
+            
+            loop: true,	// 무한 루프 적용
+			direction: 'vertical', // 슬라이드 방향 세로
+			
+            navigation: {	// 좌우 화살표 적용
+                nextEl: '#main .swiper-button-next',
+                prevEl: '#main .swiper-button-prev',
+            },
+			effect: 'slide', // slide, fade, cube, coverflow, flip
+			speed: 500
+        });
+		
+		/* 모바일용 */
+		var swiper2 = new Swiper('#main_M .swiper-container', {
+            
+            loop: true,	// 무한 루프 적용
+            navigation: {	// 좌우 화살표 적용
+                nextEl: '#main_M .swiper-button-next',
+                prevEl: '#main_M .swiper-button-prev',
+            },
+			effect: 'slide', // slide, fade, cube, coverflow, flip
+			speed: 500
+        });
+		
+		swiper1.controller.control = swiper2;	// 1번이 변경되면 2번도 변경하겠다 스와이퍼 전용 명령어, 핵심
+		swiper2.controller.control = swiper1;	// 2번이 변경되면 1번도 변경하겠다 스와이퍼 전용 명령어, 핵심
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
