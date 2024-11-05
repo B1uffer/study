@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>toggleClass() 메서드</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+		body{height: 3000px;}
+		body.on{height: 100vh; overflow-y: hidden;} /* body의 높이를 감춤 */
+        li {
+            list-style: none;
+        }
+        a {
+            font-family: "굴림", sans-serif;
+            color: #999;
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+		.bg{display: none; position: fixed; right: 0; top: 100px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);}
+        #m_menu{
+            position: fixed; right: -50%; top: 100px;
+            width: 50%;
+            height: 100%;
+            background: #262626; transition: 0.3s;
+        }
+		#m_menu.on{right: 0%;}
+        #m_menu a{
+            display: block;
+            padding: 20px;
+            border-top: 1px solid #2e2e2e;
+            border-bottom: 1px solid #2e2e2e;            
+        }
+        #m_menu a.m{  /*주메뉴*/          
+            background: #111; 
+            font-weight: bold;
+        }
+		#m_menu a.m::after{content: "♠"; float: right; transition: 0.3s;}
+		#m_menu a.m.on::after{transform: rotate(180deg);}
+        #m_menu a.m.on{
+            color: #ff6600;            
+        }
+        #m_menu ul a{
+            background: #3a3a3a;
+        }
+        #m_menu li ul{
+            display: none;
+        } 
+        #m_menu li ul.on{
+            display: block;
+        }
+    </style>
+    
+</head>
+<body>
+	<button>버튼</button>
+	
+	<span class="bg"><!--모바일 메뉴 뒷배경--></span>
+	
+    <ul id="m_menu">
+        <li>
+			<a href="#" class="m">메뉴1</a>
+            <ul>
+                <li><a href="#" class="m">메뉴1_1</a>
+                    <ul>
+                        <li><a href="#">메뉴1_1_1</a></li>
+                        <li><a href="#">메뉴1_1_2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="m">메뉴1_2</a>
+                    <ul>
+                        <li><a href="#">메뉴1_2_1</a></li>
+                        <li><a href="#">메뉴1_2_2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="m">메뉴1_3</a>
+                    <ul>
+                        <li><a href="#">메뉴1_3_1</a></li>
+                        <li><a href="#">메뉴1_3_2</a></li>
+                    </ul>
+                </li>
+             </ul>
+        </li>
+        <li>
+			<a href="#" class="m">메뉴2</a>
+            <ul>
+                <li><a href="#">메뉴2_1</a></li>
+                <li><a href="#">메뉴2_2</a></li>
+                <li><a href="#">메뉴2_3</a></li>
+            </ul>
+        </li>
+        <li>
+			<a href="#" class="m">메뉴3</a>
+            <ul>
+                <li><a href="#">메뉴3_1</a></li>
+                <li><a href="#">메뉴3_2</a></li>
+                <li><a href="#">메뉴3_3</a></li>
+            </ul>
+        </li>
+    </ul>
+	
+	<script>
+		$('button').click(function(){
+			$('#m_menu').toggleClass('on');
+			$('body').toggleClass('on');
+			$('.bg').fadeToggle(300); // 선택자가 안 보이면 페이드인 적용하고 보이면 페이드아웃 적용
+		})
+		
+		$('.bg').click(function(){
+			$('#m_menu').removeClass('on');
+			$('body').removeClass('on');
+			$('.bg').fadeOut(300);
+		})
+		
+		$("#m_menu a.m").click(function(){
+			
+		    $(this).next().addBack().toggleClass("on");
+			// next : 다음 형제 태그, addBack : 현재 선택자와 이전 선택자 모두 선택
+		    $(this).parent().siblings().find(".m, ul").removeClass("on");
+			// parent : 부모 선택, siblings : 형제 선택, find : 자식 선택
+			
+			return false;  // a태그 링크 제거 (href="javascript:;")
+		});
+    </script>
+</body>
+</html>

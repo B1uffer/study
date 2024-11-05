@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>최용수 연습용</title>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	
+	<meta name="Description" content="더조은아카데미! 모두가 취업하는 그날까지!">
+	<meta name="Keywords" content="더조은 춘천, 웹퍼블리셔 춘천">
+	<link rel="shortcut icon" href="img/ch2.png">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+		*{margin: 0; padding: 0;} /* 전체 선택자 (우선순위 0) */
+		a{text-decoration: none; color: inherit;}
+		li{list-style: none;} /* 점(글머리 기호) 표시 제거 */
+		table{border-collapse: collapse;} /* 틈새 제거 */
+		textarea{resize: none;}
+		em, i, address{font-style: normal;}
+		
+		
+	</style>
+	
+	
+</head>
+	
+<body>
+	
+	<p></p>
+	
+	<script>
+		/*
+		setTimeout(function(){
+			$('p').html('웹');
+		},500)
+		
+		setTimeout(function(){
+			$('p').html('웹퍼');
+		},1000)
+		
+		setTimeout(function(){
+			$('p').html('웹퍼블');
+		},1500)
+		
+		setTimeout(function(){
+			$('p').html('웹퍼블리');
+		},2000)
+		
+		setTimeout(function(){
+			$('p').html('웹퍼블리셔');
+		},2500)
+		*/
+		
+		var text = []; // 배열변수로 선언
+		text = ['웹','퍼','블','리','셔',' ','최','용','수','입','니','다'];
+		
+		for(let i = 0; i < text.length; i++){
+			setTimeout(function(){
+				document.querySelector('p').innerHTML += text[i];
+			},500 + i * 75)
+		}
+		
+	</script>
+	
+</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

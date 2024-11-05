@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>최용수</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	
+	<style>
+		*{margin: 0; padding: 0;}
+		li{list-style: none;}
+		em, i, address{font-style: normal;}
+		a{text-decoration: none; color: inherit;}
+		.clearFix::after{content: ""; clear: both; display: block;}
+		
+		header{position: relative; width: 100%; height: 100px; background: pink;}
+		header>button{float: right;}
+		header nav.menu_M{position: absolute; right: 0; top: 0; width: 0; padding: 0; box-sizing: border-box; background: #fff; overflow: hidden; transition: 0.3s;}
+		header nav.menu_M.on{width: 100%; padding: 35px;}
+		header nav.menu_M>button{}
+		header nav.menu_M>ul{}
+		header nav.menu_M>ul>li{}
+		header nav.menu_M>ul>li>a{line-height: 90px; font-size: 30px;}
+		header nav.menu_M>ul>li>ul{display: none;}
+		header nav.menu_M>ul>li>ul>li{}
+		header nav.menu_M>ul>li>ul>li>a{line-height: 90px; font-size: 30px;}
+		
+		main{width: 100%; height: 3000px; background: yellow;}
+
+		@media all and (max-width:768px){
+			
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<button>버튼</button>
+		
+		<nav class="menu_M">
+			<button>닫기</button>
+			<ul>
+				<li>
+					<a href="javascript:;">메뉴1</a>
+					<ul>
+						<li><a href="#">서브메뉴1</a></li>
+						<li><a href="#">서브메뉴1</a></li>
+						<li><a href="#">서브메뉴1</a></li>
+						<li><a href="#">서브메뉴1</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">메뉴2</a>
+					<ul>
+						<li><a href="#">서브메뉴2</a></li>
+						<li><a href="#">서브메뉴2</a></li>
+						<li><a href="#">서브메뉴2</a></li>
+						<li><a href="#">서브메뉴2</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">메뉴3</a>
+					<ul>
+						<li><a href="#">서브메뉴3</a></li>
+						<li><a href="#">서브메뉴3</a></li>
+						<li><a href="#">서브메뉴3</a></li>
+						<li><a href="#">서브메뉴3</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">메뉴4</a>
+					<ul>
+						<li><a href="#">서브메뉴4</a></li>
+						<li><a href="#">서브메뉴4</a></li>
+						<li><a href="#">서브메뉴4</a></li>
+						<li><a href="#">서브메뉴4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">메뉴5</a></li>
+				<li><a href="#">메뉴6</a></li>
+				<li><a href="#">메뉴7</a></li>
+				<li><a href="#">메뉴8</a></li>
+				<li><a href="#">메뉴9</a></li>
+				<li><a href="#">메뉴10</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+	</main>
+	
+	<script>
+		$('header button').click(function(){
+			$('header nav.menu_M').addClass('on');
+			setTimeout(function(){
+				$('main').hide(); // main을 숨김
+			}, 300);
+		});
+		
+		$('header nav.menu_M>button').click(function(){
+			$('header nav.menu_M').removeClass('on');
+			$('main').show();
+		});
+		
+		
+		$('header nav.menu_M>ul>li>a').click(function(){
+			$(this).siblings('ul').stop().slideToggle(500);
+		});
+	</script>
+</body>
+	
+</html>

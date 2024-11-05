@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>수업용</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	
+	<style>
+		*{margin: 0; padding: 0;}
+		li{list-style: none;}
+		em, i, address{font-style: normal;}
+		a{text-decoration: none; color: inherit;}
+		
+		body{height: 3000px;}
+		
+		#view{position: relative; width: 800px; height: 200px; overflow: hidden;}
+		#view ul{position: absolute; left: 0; top: 0; width: 1800px; height: 200px; transition: 0.3s;}
+		#view ul li{float: left; width: 200px; height: 200px; background: yellow;}
+		
+		#modal{display: none; position: fixed; left: 100px; top: 100px; width: 400px; height: 400px;}
+		#modal ul{position: relative; width: 400px; height: 400px;}
+		#modal ul li{display: none; position: absolute; left: 0; top: 0; width: 400px; height: 400px; background: green;}
+		
+		@media all and (max-width:768px){
+			
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div id="view">
+		<ul>
+			<li onClick="view(0)">1</li> <!-- 누르면 view 함수 실행 -->
+			<li onClick="view(1)">2</li>
+			<li onClick="view(2)">3</li>
+			<li onClick="view(3)">4</li>
+			<li onClick="view(4)">5</li>
+			<li onClick="view(5)">6</li>
+			<li onClick="view(6)">7</li>
+			<li onClick="view(7)">8</li>
+			<li onClick="view(8)">9</li>
+		</ul>
+	</div>
+	
+	<button onClick="cys(-1)">왼쪽</button>
+	<button onClick="cys(1)">오른쪽</button>
+	
+	<div id="modal">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+		</ul>
+		<button onClick="cys_modal(-1)">왼쪽</button>
+		<button onClick="cys_modal(1)">오른쪽</button>
+		<button class="close">닫기</button>
+	</div>
+	
+	<script>
+		
+		var index = 0; // 위치변수
+		var index_modal = 0; // 모달폼 위치변수
+		var SWITCH = true; // 클릭연사방지 
+		
+		function cys(e){ // view 슬라이드
+			
+			if(SWITCH == true){
+				SWITCH = false;
+				setTimeout(function(){
+					SWITCH = true;
+				}, 300)
+				
+				index += e;
+				if(index < 0) index = 0;
+				if(index > 5) index = 5;
+
+				$('#view ul').css('left', -200 * index + 'px');  // 핵
+			}
+			
+		}
+		
+		function view(e){ // view 모달폼 클릭 이벤트
+			index_modal = e;
+			$('#modal').show();
+			$('#modal ul li').eq(index_modal).show();
+		}
+		
+		function cys_modal(e){ // modal 슬라이드
+			index_modal += e;
+			if(index_modal < 0) index_modal = 0;
+			if(index_modal > 8) index_modal = 8;
+			
+			$('#modal ul li').hide();
+			$('#modal ul li').eq(index_modal).show();
+		}
+		
+		$('.close').click(function(){
+			$('#modal').hide();
+			$('#modal ul li').hide();
+		})
+		
+	</script>
+	
+</body>
+	
+</html>
