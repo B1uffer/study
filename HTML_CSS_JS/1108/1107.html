@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+		
+		*{margin: 0; padding: 0}
+		li{list-style: none;}
+		a{text-decoration: none; color: inherit;}
+		em, i, address{font-style: normal;}
+		.clearfix::after{content: ""; clear: both; display: block;}
+		
+		#wrap {width : 800px; margin : 20px auto;}
+		#wrap .info {display : flex; justify-content : space-between; padding : 5px 10px 15px 5px; box-sizing : border-box; border-bottom : 2px solid #555;}
+		#wrap .info h3 {}
+		#wrap .info p {}
+		
+		#wrap form {}
+		#wrap form ul {}
+		#wrap form ul li {display : flex; justify-content: space-between; padding : 13px 150px 13px 10px; box-sizing: border-box; border-bottom : 1px solid #c5c5c5; line-height : 30px;}
+		#wrap form ul li p {}
+		.star {color : red; font-size : 20px;}
+		#wrap form ul li input {width  : 400px; padding : 8px 10px; box-sizing : border-box;}
+		
+		#wrap .btnBox {margin-top : 50px; text-align : center;}
+		#wrap .btnBox button {padding : 10px 50px; box-sizing: border-box;}
+		#wrap .btnBox button:nth-of-type(1) {margin-right : 20px;}
+	</style>
+</head>
+
+<body>
+	
+	<div id = "wrap">
+		
+		<div class = "info">
+			<h3>기본정보</h3>
+			
+			<p><span class = "star">*</span>표시는 필수입력 항목입니다.</p>
+		</div>
+		
+		<form>
+			<ul>
+				<li>
+					<p><span class = "star">*</span>아이디</p><input type = "text" id = "wid" name= "wid" placeholder="아이디 입력">
+				</li>
+				<li>
+					<p><span class = "star">*</span>비밀번호</p>
+					<input type = "password" id = "wpassword" name = "wpassword" placeholder="영문,숫자,특수문자 총 3개 이상 조합하여 8~20자 입력">
+				</li>
+				<li><p><span class = "star">*</span>비밀번호 확인</p>
+					<input type = "password" id = "wpassword_repeat" name = "wpassword" placeholder="비밀번호 한 번 더 입력">
+				</li>
+				<li>
+					<p><span class = "star">*</span>이름</p>
+					<input type = "text" id = "wname" name = "wname" placeholder="이름 입력">
+				</li>
+			</ul>
+		</form>
+		
+		<div class = "btnBox">
+			<button>이전단계</button>
+			<button type = "submit">가입완료</button>
+		</div>
+	</div>
+	
+</body>
+</html>
