@@ -1,0 +1,24 @@
+sql파일
+num 식별자 필드
+name 이름 필드(text)
+phone 핸드폰(text)
+shop 점포명(text)
+comment 문의내용(text)
+
+myadmin 가서 테이블 추가
+
+AJAX 비용 X
+폼태그 (동기식 o)
+폼태그 안에 name 4개 작성
+폼태그 method = "post"
+action = "파일명 자유롭게.php"
+
+select 조회 필요없음
+
+action 파일 제작
+$name = $_POST('네임명');
+$phone = $_POST('네임명').$_POST('네임명').$_POST('네임명');
+$shop = $_POST('네임명');
+$content = $_POST('네임명');
+
+$sql = "insert into 테이블명(name, phone, shop, content) values('$name', '$phone', '$shop', '$content');

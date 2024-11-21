@@ -1,0 +1,30 @@
+기본키(식별자 필드)
+POST -> 암호화해서 값을 전송함
+GET -> 홈페이지주소로 값을 전송
+
+데이터베이스 명령어(mysql 명령어)
+insert 추가
+select 조회
+delete 제거
+update 변경 (회원정보 변경 등)
+
+
+<?php
+	
+		if($count == 0) {
+	
+
+	<script>
+		
+		alert('존재하지 않는 회원입니다.');
+		location.href = 'login.html';
+		
+	</script>
+	
+	<?php
+	
+		}
+	
+	?>
+
+?>
